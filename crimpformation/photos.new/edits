@@ -1,0 +1,11 @@
+fig12		cropped left edge to remove what I think is a bubble
+ 		rotated so fibres horizontal like fig13
+fig13		no edit
+fig14		sharpened and angle=90
+fig17		is now the wool photo only
+fig18		unaligned, stretched and unfolded are 3 parts of one figure
+		Had to constrain  each part to scale=0.33 to fit all 3 on a                     page.  
+
+THe issue of what magnification ends up on the printed page has not been dealt with. The nominal 25x is what is seen in the eyepiece ( or camera) of the microscope. The .jpg image from the camera comes at resolution 2592 x 1944 pixels. This can change if it is cropped or rotated. This can display at any size, depending on the software used to display it on screen or paper.
+ 
+Need an image of a graduated slide to work out final magnification on paper.
