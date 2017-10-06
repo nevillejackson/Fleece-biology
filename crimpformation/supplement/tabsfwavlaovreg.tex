@@ -1,0 +1,21 @@
+%\documentclass{article}
+%\usepackage{lscape}
+%\begin{document}
+
+\begin{table}[htp]
+\centering
+\caption{Analysis of variance of wavelength (mm) measured on 15 sheep with 15 fibres per sheep and 30 waves per fibre. Wools were of three crimp types with several sheep representing each crimp type. An effect of Region has been introduced to remove any systematic variation along the staple from the variance of WaveNo within FibreNo.}
+\label{tab:sfwavlaovreg}
+\vspace{0.1in}
+\begin{tabular}{|p{1.4in}|p{0.4in}|p{0.4in}|p{0.4in}|p{0.4in}|p{0.8in}|} \hline
+     Source of Variation & Df & Sum Sq  & Mean Sq  & F Value  & Significance  \\  \hline
+ CrimpType & 2 & 115.4 & 57.72 & 0.95 & NS  \\
+ SheepNo/CrimpType & 18 & 1085.3 & 49.01 &  49.01 & ***    \\ 
+ FibreNo/SheepNo & 294 & 361.7 & 1.23 & 5.48 & ***  \\
+ Region & 2 & 67.0 & 33.49 & 155.3 &  *** \\
+ CrimpType:Region & 4 & 12.6 & 3.16 & 14.6 & *** \\
+ Residuals (WaveNo/FibreNo) & 9129 & 1968.8 & 0.216 & & \\ \hline
+\end{tabular}
+\end{table}
+
+%\end{document}
