@@ -1,0 +1,9 @@
+Package: crimpsoftware
+Type: Package
+Title: Calculations Related to the Documents 'crimp.pdf' and 'crimpmeas.pdf'
+Version: 1.0-1
+Date: 2017-10-06
+Author: Neville Jackson
+Maintainer: Neville Jackson <nanddjackson@bigpond.com>
+Description: Given amplidude and wavelength and staple length calculates fibre length and fibre length to staple length ratio for unfolded and stretched helix crimp types. For unfolded helix also calculates angle between unfoldings.
+License: GPL-2
