@@ -25,12 +25,9 @@ Returns intrinsic radius of curvature in mm
 \author{
 Neville Jackson
 }
-\note{
-}
-
-
 \seealso{
 }
 \examples{
+curvtoirad(40)
 }
 \keyword{misc}

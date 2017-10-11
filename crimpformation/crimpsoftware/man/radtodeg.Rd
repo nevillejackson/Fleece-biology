@@ -25,12 +25,11 @@ Vector of angles in degrees
 \author{
 Neville Jackson
 }
-\note{
-}
 
 \seealso{
 Function degtorad()
 }
 \examples{
+radtodeg(.7854)
 }
 \keyword{ misc }

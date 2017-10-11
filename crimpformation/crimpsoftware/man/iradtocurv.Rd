@@ -26,13 +26,11 @@ Curvature in radians per mm is the reciprocal of intrinsic radius of curvature i
 \author{
 Neville Jackson
 }
-\note{
-}
-
 
 \seealso{
 
 }
 \examples{
+iradtocurv(0.5)
 }
 \keyword{ misc }

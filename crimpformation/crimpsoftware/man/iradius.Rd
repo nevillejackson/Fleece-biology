@@ -36,5 +36,6 @@ Neville Jackson
 Functions unfold(() and unfoldt()
 }
 \examples{
+iradius(2,0.5)
 }
 \keyword{ misc }

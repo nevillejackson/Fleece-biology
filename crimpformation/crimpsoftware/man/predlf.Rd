@@ -71,5 +71,15 @@ Neville Jackson
 Function pred()
 }
 \examples{
+wavl <- matrix(c(2,3,4),3,1)
+ampl <- matrix(c(.5,.5,.5),3,1)
+type <- rep("stretched",3)
+stlen <- rep(80,3)
+predlf(wavl,ampl,type,stlen,0.5,0.10)
+rm(wavl)
+rm(ampl)
+rm(type)
+rm(stlen)
+
 }
 \keyword{ misc }

@@ -25,13 +25,11 @@ Vector of angles in radians
 \author{
 Neville Jackson
 }
-\note{
-}
-
 
 \seealso{
 Function radtodeg()
 }
 \examples{
+degtorad(45)
 }
 \keyword{ misc }

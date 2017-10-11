@@ -1,24 +1,19 @@
 \name{crimpsoftware-package}
 \alias{crimpsoftware-package}
 \alias{crimpsoftware}
-\docType{package}
 \title{
-\packageTitle{crimpsoftware}
+Calculations Related to the Documents 'crimp.pdf' and 'crimpmeas.pdf'
 }
 \description{
-\packageDescription{crimpsoftware}
+Given amplidude and wavelength and staple length calculates fibre l
+ength and fibre length to staple length ratio for unfolded and stretched helix c
+rimp types. For unfolded helix also calculates angle between unfoldings.
 }
 \details{
-
-The DESCRIPTION file:
-\packageDESCRIPTION{crimpsoftware}
-\packageIndices{crimpsoftware}
-This package provides functions for calculation of fibre length and fibre length to staple length ration, given crimp amplitude and wavelength and staple length.
+This package provides functions for calculation of fibre length and fibre length to staple length ratio, given crimp amplitude and wavelength and staple length.
 }
 \author{
-\packageAuthor{crimpsoftware}
-
-Maintainer: \packageMaintainer{crimpsoftware}
+Neville Jackson
 }
 \references{
   crimp.pdf, crimpmeas.pdf available in \url{https://github.com/nevillejackson/Fleece-biology/crimpformation}
