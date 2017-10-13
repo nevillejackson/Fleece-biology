@@ -1,0 +1,328 @@
+%
+% Draft  document skinstap.tex
+% Latent variable analysis of skin factors affecting staple structure
+%
+ 
+\documentclass[titlepage]{article}  % Latex2e
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{bm}
+\usepackage{textcomp}
+\usepackage[flushleft]{threeparttable}
+ 
+
+\title{Latent variable analysis of skin factors affecting staple structure}
+\author{Neville Jackson,  Jim Watts and Philip Moore}
+\date{13 Apr 2017} 
+
+ 
+\begin{document} 
+ 
+\maketitle      
+\tableofcontents
+
+\clearpage
+\section{Introduction} 
+Nothing is more characteristic of wool than its tendency to grow in consistently formed units referred to as {\em locks} or {\em staples}. The word {\em staple} used to be synonymous with wool. In England in the middle ages wool traders were referred to as  {\em staplers} and belonged to an organization called 'Merchants of the Staple' (Powell(1957)~\cite{powe:51}. Even the modern meaning of the word {\em staple} refers to something which holds things together.
+
+One would expect, then,  that in the modern technology-driven wool industry, there would be some understanding of what a wool staple is, and how it forms. We do, after all, have an entire objective measurement system for length and strength, which is based on staples as the sampling unit.
+
+There is, however, very little to report.  There has been a long history of conflicting theories of staple crimp formation ( see Jackson and Watts(2016)~\cite{jack:16} ), but staple crimp is only part of the picture. We know practically nothing about alignment of fibres in staples, or about what controls the size and shape of staples as they form.  The non-wool components of staples ( wax and suint) have not been studied at the staple level, but there is considerable information on their variation at the multi-staple level (see review of Jackson(1973)~\cite{jack:73}). In terms of appearance under reflected light staples  and bulk greasy wool samples have been characterized by colour ( scattered reflection) and lustre ( specular reflection) (ref?). There seems to be some agreement that the cream to yellow color of wool grease is due to suint components (ref?..). There have been studies showing that lustre is affected by the size and shape of fibre scales (ref?..)
+
+There was an extensive CSIRO research project called 'The Style Project' ( Woolspec 94 ~\cite{wool:94}) which attempted to replace visual assessment of wool in the market place with imaging and analysis of images of wool staples.  It included measurement of staple size and shape, crimp, greasy colour, dust and weathering. Prototype instruments were built, but the technology was not adopted by the wool industry. There was investigation into the effects of staple image measurements on wool processing, but no research into the causes of staple characteristics.
+
+The relationship between skin characteristics and major wool growth characteristics has been extensively studied (for example Jackson,Nay, and Turner (1976)~\cite{jack:76}). We know something about the relationship between follicle curvature score and staple crimp, and we ( ie Jackson and Watts(2016a)~\cite{jack:16a}) have recently postulated that follicle curvature is in fact the same thing as intrinsic fibre curvature. However none of this  clarifies the role of skin characteristics in staple formation.
+
+What we try to do in this study is to open up work on the development of skin characteristics and the function of wool follicles, with a view to clarifying their role in determining staple structure.
+
+\section{Methods}
+\subsection{Description of staple structure}
+\label{sec:stapstruct}
+We need to be able to comprehensivly describe the size and appearance of a staple, its fibre population, the arrangement of the fibres, mechanical properties of the staple unit, and the non-fibre components. It is not easy to be both comprehensive and unambiguous. We can overlook things, and we can confuse the issue by defining the same thing twice.  What we do here is list the traits that we have considered. Some of these may be discarded or reparameterized in particular analyses.
+\begin{description}
+\item[CrimpType] the precise laboratory determination of crimp type as {\em stretched}, {\em unaligned}, or {\em unfolded} used by Watts and Jackson(2017)~\cite{watt:17} has been modified for this study. The {\em unaligned} category has been removed ( collapsed into stretched) so we just make 2 categories {\em stre
+tched} and {\em unfolded}. We treat alignment as a separate trait listed below.
+\item[FibreAlign] the fibre mount preparations used for CrimpType were also used to make an appraisal of fibre alignment or entanglement, as a score ranging from 1=poor to 5=good, in the first crimp wave as seen in the fibre mounts. 
+\item[CrimpFreq] the number of crimps per cm measured with a ruler. May be transformed to {\bf WaveLength} in $mm$ for analysis
+\item[StapMaxD] the largest diameter of the staple at the base end in mm.  Mean of 5 staples.
+\item[StapMinD] the smallest diameter of the staple at the base end in $mm$.  Mean of 5 staples.
+\item[StapArea] the product of StapMaxD and StapMinD for each of 5 staples, then averaged over 5 staples. Units are $mm^{2}$. Estimates cross sectional area of a staple assuming it to be rectangular in cross section.
+\item[CompEx] amount by which staple crimp waves will compress and extend when staple is pulled  and pushed gently in a longitudinal direction by hand. Score 1 = least, 5 = most. Describes how easily the staple decrimps under load. Influenced by CrimpType and fibre alignment.
+\item[Softness] softness of handle. Score 1 = harsh or springy, 5 = soft or doesnt resist lateral compression. Influenced by properties of the fibre cortex and by bulk compressional behaviour, and perhaps by scale structure.
+\item[Lustre] presence of specular reflection. Score, 1 = least, 5 = most. Influenced by fibre scale structure and by fibre arrangement in the staple.
+\item[Whiteness] colour of the wool grease component of the staple. Score, 1 = yellow, 5 = white.  Reflects presence of pigmented compounds from the siunt component of wool grease.
+\item[PeelScore] a score for fibre entanglement within the staple obtained by carefully stripping a small number of fibres from the staple and observing difficulty of removal. Score, 1 = highly entangled, 5 = highly aligned. 
+\item[Zigzag] a score for presence of planar ( ie side to side ) crimp. Score, 1 = not present, 5 = prominant zigzag appearance. Influenced by CrimpType.
+\item[StapLen] staple length in $mm$. Actual length, not adjusted for growth period.
+\item[FibLenovStaLen] fibre length to staple length ratio. No units. Influenced by crimp amplitude and wavelength and by variation in fibre length between fibes within a staple. Part of a description of the fibre structure of a staple.
+\item[StapFibNo] average number of fibres forming a staple. Calculated from the Ktex reading of 5 staples placed in the jaws of the thickness guage described by Bauman(1981)~\cite{baum:81} and the average fibre diameter obtained from skin sections. 
+\end{description}
+In addition we calculate the following from the above basic traits
+\begin{description}
+\item{CrimpWavl} crimp wavelength in $mm$ calculated as $CrimpWave = 10/CrimpFreq$.
+\item[StapMeanD] geometric mean of StapMaxD and StapMinD, equal to the length of the side of a square of equal area to the rectangle defined by StapMaxD and StapMinD. Calculated as $StapMeanD = \sqrt{StapMaxD * StapMinD}$.
+\item[StapShape] ratio of StapMaxD to StapMinD. Calculated as $StapShape = StapMaxD/StapMinD$.
+\end{description}
+
+These measurements are simply tools for describing a staple. It is hoped that they will also serve as indicators of other unobservable or latent variables which are associated with the various aspects of staple formation, to which we now address our attention.
+
+\subsection{Processes of staple formation}
+Staple formation in a growing fleece is a complex event. It is dynamic, that is it is continuous in time. It occurs slowly, as the fleece grows, over a period that is usually around 12 months. There are many things that happen during staple formation. What we try to do here is to break it down conceptually into a number of processes, each of which might be associated with one or more latent variables, which we might be able to identify in the analyses which follow. 
+
+The processes which we identify are as follows
+\begin{description}
+\item[growth process] the staple getting longer with time. Obviously the result of growth of individual fibres, but there is considerable fibre-fibre interaction due to the fibres being curved and the planes of curvature not necessarily being aligned. Crimp formation is a vital part of this growth process. Crimp is what makes the staple length different from fibre length.
+\item[separation process] the fibres agglomerate into units which separate as they grow. Separation seems to start at the tip, and does not appear until some time after shearing when around 20 mm of wool is present. Clearly the increase in space as the wool moves away from the skin of the sheep plays a role. The final degree of separation varies, some fleeces have lots of 'cross-fibres', some very few. The size ( width) of staples and the number of fibres they contain represent the endpoints of this process.
+\item[binding process]  something obviously holds the fibres within a staple together. They are bound much tighter within a staple than between staples.  The degree of binding varies. Candidates for binding parameters are crimp, wool grease, fibre entanglement. It may be that binding and separation are two sides of the same coin.  The distinctness of staples end how well they hold together represent the endpoints of this process.
+\item[felting process] fibres in a staple try to move toward the base end because of the scale structure of fibres. If the base end is anchored in wool follicles, the crimp waves compress up (Watts and Jackson (2016)~\cite{watt:16}. This is a small effect; however if fibres are shed or broken it becomes dramatic and results in a cotted fleece in which most or all staple structure is destroyed by an aggressive matting of fibres.
+\item[tip degeneration process] sometimes the crimp formation at the staple tip degenerates by the crimp waves unravelling due to the tip end being free to move. There is also degredation and loss of wool grease, dirt entry, and photochemical damage to the wool fibres. These effects are not prominant in top quality stud sheep like in the present study.
+\end{description}
+
+\subsection{Description of skin structure}
+\label{sec:skinstruct}
+The skin of sheep is the organ which produces the fibres that form the fleece. Clearly most of the causes of variation in fibre growth and staple structure should have associated variations in skin structure, and function. Descriptions of skin structure are reliant on histological techniques (Maddocks and Jackson (1988)~\cite{madd:88}. We outline below a range of traits observable on skin sections which serve as descriptions of the adult structure of of the skin.
+
+\begin{description}
+\item[Dp]  mean diameter of primary fibres $(\mu m^2)$.
+\item[SDDp] standard deviation of diameter of primary fibres $(\mu m^2)$.
+\item[Ds] mean diameter of secondary fibres $(\mu m^2)$.
+\item[SDDs] standard deviation of diameter of secondary fibres $(\mu m^2)$.
+\item[SovP] ratio of number of secondary follicles to number of primary follicles. No units
+\item[Fn] follicle number per $mm^2$. Determined by counting follicles in skin sections viewed under a projection microscope at 50x magnification.
+\item[IGNorth]  inter-group distance in the north direction $(\mu m)$. Distance between adjacent follicle groups measured from the outer edge of the sebaceous glands of the primary central follicle to the lateral margin of the follicle group above it. The 'North' direction on a skin section is defined as the 'top' of the image when the rows of follicle groups are from side to side and the primary fibres are on the 'top' margin of the groups.
+\item[IGSouth] inter-group distance in the South direction $(\mu m)$. Measured from the lateral margin of the same follicle group as used for IGNorth to the outer edge of the sebacious glands of the central primary follicle of the follicle group below it.
+\item[IGEast] inter-group distance in the East direction $(\mu m)$.
+\item[IGWest] inter-group distance in the West direction $(\mu m)$.
+\item[FollGpArea] mean area of a follicle group $(mm^2)$.
+\item[AreaPerFoll] mean area per follicle calculated as FollGpArea/FollperGp $(mm^2)$
+\item[IntGpDens] density of follicles within a follicle group $(no per mm^2)$
+\item[FollperGp] mean number of follicles per group
+\item[IFDist] mean inter-follicle distance $(\mu m)$. Measured as the distance between a follicle and its nearest neighbour.
+\item[FollCurv] follicle curvature score. 1 = straight, 7 = curved.
+\item[FollDep] follicle depth vertically from skin surface to bulb $(mm)$.
+\end{description}
+ In addition we calculate the following from the above basic traits
+\begin{description}
+\item[Fnp] number of primary follicles per $mm^2$. Calculated as $Fnp = Fn/(Sovp + 1)$.
+\item[Fns] number of secondary follicles per $mm^2$. Calculated as $Fns = Fnp * Sovp$.
+\end{description}
+These measurements are simply tools for describing skin structure as the end point of skin development. It is hoped that they will also serve as indicators of other unobservable or latent variables which are associated with the various processes of skin development.
+
+\subsection{Description of skin function}
+\label{sec:skinfunc}
+Skin function is a more difficult issue. The only practical measures of follicle function which we have are the properties of the resultant fibres such as fibre length growth rates, diameter, curvature, and their variations.  So what we do here is annex fibre characteristics as a proxy for direct measurements of skin function. The proxy function measures which we have are outlined below.
+
+\begin{description}
+\item[Dskin] mean fibre diameter $(\mu m)$. Obtained from fibre measurements on skin sections.
+\item[SDDskin] standard deviation of fibre diameter $(\mu m)$. Obtained from fibre measurements on skin sections.
+\item[FibLen] mean fibre length per unit time $(mm/day)$. Obtained by withdrawing 50 fibres from n staples and measuring the stretched length.
+\item[SDFiblen] standard deviation of fibre length per unit time $(mm/day)$.
+\item[CVFiblen] coefficient of variation of fibre length, as a percentage.
+\item[FibCurvRadius] fibre radius of curvature derived from follicle curvature score $(mm)$, by the procedure of Jackson and Watts(2016)~\cite{jack:16b}.
+\item[Softness] softness of handle. Score 1 = harsh or springy, score 5 = soft or doesnt resist lateral compression. The same score as was listed as a staple structure descriptor. Included here because it is partly a descriptor of properties of the fibre cortex.
+\item[Lustre] presence of specular reflection. Score 1 = least, 5 = most. The same score as was listed as a staple structure descriptor. Included here because it is partly a descriptor of fibre scale size and structure.
+\end{description}
+In addition we calculate the following 
+\begin{description}
+\item[FibCurvRads] fibre curvature in $radians/mm$. Calculated as $FibCurvRads = 1/FibCurvRadius$.
+\item[FibCurvDeg] fibre curvature in $degrees/mm$. Calculated as $FibCurvDeg = FibCurvRads * 180/\pi$.
+\end{description}
+
+
+\subsection{Processes of skin development and function}
+What we are seeing with the traits describing skin structure outlined above is the adult endpoint of differentiation and development of wool follicles and associatd organs in the skin. There has been considerable research into the dynamics of wool follicle development ( see Fraser and Short(1960)~\cite{fras:60} and Ryder and Stevenson(1968)~\cite{ryde:68} for reviews). We know far less about the dynamics of fibre growth. We again try to break it down conceptually into a number of processes which might be associated with latent variables in later analyses.
+
+The processes which we identify are as follows
+\begin{description}
+\item[pre-papilla cell process] the pre-papilla cell theory of Moore etal(1996)~\cite{moor:96} explains how follicle formation depends on a population of cells which multiply and move out over the skin to the sites at which follicles form and ther initiate follicle formation and end up occupying the papilla space in the bulb of each follicle. The dynamics of this cell population results, in Merino sheep, in there being cells 'left over' after all sites have formed follicles, and these cells initiate follicles which branch from existing follicles and thereby form the compound follicles which are almost a unique characteristic of Merino sheep. Compound follicles have important effects on the spatial arrangement of fibres emerging from the skin, on fibre alignment in the staple, and on the non-wool components of the staple.
+\item[follicle site determining process] some as-yet unidentified sequence of events in skin development determines when and where follicles form ( called 'sites' above) and whether they will be primary or secondary follicles . When primary follicles first appear they are laid out in ordered rows across the skin of the foetus. When secondary original follicles appear they form on one side of the rows of primary follicles, and form groups consisting of three primary follicles and a number of closeby secondary follicles, with connective tissue beteen the groups.  When compound follicles form, the secondary derived follicles form within these groups and greatly increase the follicle density. When there are few or no compound follicles, the ordered rows of groups seen in the lamb tend to become distorted as the adult skin develops. When there are many compound follicles, especially follicles with many branches, the ordered rows of groups seen in the lamb tend to be retained in the adult skinand large spacings tend to appear between the rows of groups.
+\item[fibre growth process] this includes all the activities in the follicle bulb which lead to formation of a fibre, its cortical structure, its cuticle, its diameter, its curvature, and its length growth rate. The hair growth cycle, shedding, and seasonality are obviously part of this, but in Merino sheep these are suppressed to a minimal level. Most variation in fibre growth is attributed to follicle bulb cell function, but there are systemic effects such as hormones and overall nutrition. The non-wool products of follicles can also be included here.
+\end{description}
+
+
+
+
+\subsection{The sheep flocks studied}
+Sheep from twelve flocks were used in this study. For two of the flocks the sheep were a random sample of a drop of ewes, and therefore contain a wide range of fleece and skin types. The other ten flocks were SRS Merino studs, and the sheep studied represent the 'top' animals of their drop and are mostly rams.
+
+Table~\ref{tab:flocks} shows the type of sheep sampled for each flock.
+\input{tabflocks.tex}
+The flock names have been suppressed for privacy considerations.
+ 
+This is not a designed experiment. We are making use of whatever observations become available. As such, the data could not be used, for example, to compare flocks. However, for latent variable analysis, where the aim is to tudy the correlation structure of defined groups of traits, it is reasonable to use such heterogeneous data, and may even be of advantage because the traits will have a full range of variation. This is a phenotypic study. If it were a genetic analysis there would be some concern, because one would want the correlations and variations studied to be relevant to a single flock of a particular strain of Merino sheep.
+
+
+
+\subsection{Statistical analysis}
+
+ Data were imported into the R statistical program~\cite{rprog:13}. The traits listed above were organised into two sets
+\begin{description}
+\item[staple structure traits] as listed in Section~\ref{sec:stapstruct}
+\item[skin structure and function traits] as listed in Section~\ref{sec:skinstruct}
+\end{description}
+
+Canonical correlation analysis is an exploratory technique which looks for two sets of latent variables, one for skin structure and function, and one for staple structure. The two sets are chosen to maximize correlation between succesive pairs of skin and staple latent variables. Each skin latent variable is defined as a linear function of the the skin structure and function traits. Each staple latent variable is defined as a linear function of the staple structure traits. The object is to try and identify these linear functions with the various skin and staple processes defined above.
+ 
+The R package used for canonical correlation analysis is called CCA~\cite{rpack:1}. For the statistical theory behind canonical analysis see Cooley and Lohnes(1962)~\cite{cool:62} or Morrison(1967)~\cite{morr:67}. The technique is quite old, and was originally developed by Hotelling(1936)~\cite{hote:36}.
+
+The analysis procedure involves finding the eigenvalues of the determinental equation
+\begin{equation}
+\mid R_{22}^{-1} R_{21} R_{11}^{11} R_{12} - \lambda_{i}I \mid = 0
+\end{equation}
+where R represents a correlation matrix and the various subscripts refer to the two sets of traits.
+The corresponding eigenvectors define transforms to the two sets of latent variables, in our case one set for staple structure and one set for skin structure and function. The transforms are simple linear functions of the original traits. Their unique characteristicare that the staple structure latent variables are orthogonal ( ie uncorrelated) to each other, the skin structure latent variables are orthogonal to each other, and the correlations between succesive pairs of staple and skin latent variables are maximised. THis eanbles us to see how many independent factors are operating in staple formation, and how these are correlated with independent factors operating in skin development and function.
+There are procedures to test how many of the latent variables are significant.
+
+
+
+\section{Results}
+\subsection{Data summary}
+NOTE THIS SECTION IS OLD STUFF FROM THE CLASSIFICATION WRITEUP - IGNORE
+
+Table~\ref{tab:means} gives the means and standard deviations for each of the on-sheep scores and measurements, separately for each of the 3 crimptype classes.
+\input{tabmeans.tex}
+It can be seen that all of the measures and scores differ between crimp types. Analyses of variance showed that differences between crimp types were significant at the 0.0001 level for every measure and score. All 10 traits are therefore potentially useful for classifying wools into crimp types. 
+
+However CrimpType is unlikely to have 10 different aspects, so we need to to look at how the 10 measures and scores are correlated, to see if we are observing the same phenomenon multiple times. These correlations are shown in Table~\ref{tab:correl}
+\input{tabcorrel.tex}
+The only really large correlations are between the measures of staple thickness and area, and perhaps between Softness and Lustre.
+
+While we are with these correlations, we might as well ask how many independent factors are actually being measured by these 10 scores and measures. This question is very simply answered by a principal component analysis of the correlation matrix. The result is as follows
+\begin{verbatim}
+Importance of components:
+                          Comp.1    Comp.2     Comp.3     Comp.4     Comp.5
+Standard deviation     2.3050691 1.1534944 0.95193597 0.88132785 0.68889674
+Proportion of Variance 0.5313344 0.1330549 0.09061821 0.07767388 0.04745787
+Cumulative Proportion  0.5313344 0.6643893 0.75500751 0.83268139 0.88013926
+                           Comp.6     Comp.7     Comp.8     Comp.9     Comp.10
+Standard deviation     0.61463017 0.58058055 0.48182665 0.46392949 0.190724580
+Proportion of Variance 0.03777702 0.03370738 0.02321569 0.02152306 0.003637587
+Cumulative Proportion  0.91791629 0.95162366 0.97483936 0.99636241 1.000000000
+\end{verbatim}
+
+This shows that component 1 covers 53 percent of the total variation in 10 dimensional space, but if we want to describe 95 percent of the total variation we need 7 components. Therefore a lot of different things are being scored - the scores are not all manifestations of a single factor. 
+
+We take a quick look at what the components are, in terms of the original 10 traits. 
+\begin{verbatim}
+Loadings:
+          Comp.1 Comp.2 Comp.3 Comp.4 Comp.5 Comp.6 Comp.7 Comp.8 Comp.9
+StapMaxD  -0.375 -0.204 -0.226  0.181                       0.209  0.701
+StapMinD  -0.334 -0.365 -0.337  0.149 -0.123               -0.131 -0.646
+StapArea  -0.382 -0.250 -0.298  0.210                                   
+CompEx     0.319 -0.125         0.497  0.387 -0.524 -0.434 -0.135       
+Softness   0.355 -0.137 -0.268        -0.451  0.167 -0.223 -0.654  0.266
+Lustre     0.355 -0.216        -0.162 -0.408        -0.420  0.666       
+Whiteness  0.188  0.274 -0.779 -0.317  0.415                            
+PeelScore  0.337        -0.203  0.357 -0.289 -0.302  0.721  0.131       
+CrimpFreq         0.700 -0.134  0.546 -0.249  0.261 -0.204              
+Zigzag     0.308 -0.332         0.312  0.378  0.727         0.117       
+          Comp.10
+StapMaxD  -0.434 
+StapMinD  -0.406 
+StapArea   0.803 
+CompEx           
+Softness         
+Lustre           
+Whiteness        
+PeelScore        
+CrimpFreq        
+Zigzag           
+\end{verbatim}
+
+ In the above table of "loadings" the numbers are coefficients for each trait in an equation describing the component. For example Component 1 is
+\begin{displaymath}
+-0.376 * StapMaxD - 0.334 * StapMinD + ...... + 0.308 * Zigzag
+\end{displaymath}	
+
+The missing coefficients are not significantly different from zero.
+We see that Component 1 is something common to 9 of the 10 scores, while the other components are particular combinations or differences of scores. That is a commonly observed result. Hopefully it indicates that all scores except CrimpFreq have something to say about CrimpType. We shall see when we do the classification below.
+
+This presentation ignores some very considerable Flock differences, which will be shown later. Here we are just treating the data as a heterogeneous set of wools which we wish to classify.  That is a valid point of view, but it may not be what is needed if we wish to apply a classification procedure within one flock.
+
+\subsection{Canonical correlation analysis}
+
+\subsection{Linear discriminant functions}
+
+\subsection{Flock differences}
+
+\section{Discussion}
+
+ 
+
+\begin{thebibliography}{99}
+
+\bibitem{baum:81}
+Bauman, A.B. (1981) A simple apparatus for measuring the strength of wool.
+    Wool Tehnology and Sheep Breeding 24(4):165-167
+
+\bibitem{cool:62}
+Cooley, W.W. and Lohnes, P.R. (1962) Multivariate Procedures for the Behavioural Sciences. John Wile and Sons. New York.
+
+
+\bibitem{fras:60}
+Fraser, A.S. and Short, B.F. (1960) The Biology of the Fleece. Animal Research Laboratories Technical Paper No 3. CSIRO, Melbourne, 1960.
+
+\bibitem{hote:36}
+Hotelling, H. (1936) Relations between two sets of variates. Biometrika 28:321-377.
+
+\bibitem{jack:73}
+Jackson, N. (1973) A review of the wax/suint ratio of fleeces and its relationship to colour, fleece rot, dermatitis, blowfly strike and tip weathering. Australian Association of Stud Merino Breeders. Proceedings of a special conference on breeding aims in the light of recent developments and technology. University of NSW, 5th and 6th December, 1973
+
+\bibitem{jack:76}
+Jackson, N., Nay, T. and Turner, H.N. (1975) Response to selection in Australiam Merino sheep. VII. Phenotypic and genetic parameters for some wool follicle characteristics and their correlation with wool and body traits. Aust. J. Agric. Res. 26:937-57
+
+\bibitem{jack:16}
+Jackson, N. and Watts, J.E. (2016) Staple crimp formation in the fleece of Merino sheep. Unpublished manuscript, 18 May 2016.
+
+\bibitem{jack:16a}
+Jackson, N. and Watts, J.E. (2016a) Can we predict intrinsic fibre curvature from follicle curvature score? Report available from authors as a pdf document.
+
+\bibitem{jack:16b}
+Jackson, N. and Watts, J.E. (2016b) Can we predict intrinsic fibre curvature from follicle curvature score? Report available from authors as a pdf document.
+
+\bibitem{morr:67}
+Morrison, D.F. (1967) Multivariate Statistical Methods. McGraw-Hill. New York.
+
+\bibitem{onio:62}
+Onions, W.J. (1962) Wool: an introduction to its properties, varieties, uses
+     and production. Ernest Benn limited, London, 1962
+
+\bibitem{madd:88}
+Maddocks, I.G. and Jackson, N. (1988) Structural studies of sheep, cattle, and goat skin. CSIRO, Division of Aimal Production, Sydney.
+
+\bibitem{moor:84}
+Moore, G.P.M, and Jackson, N. (1984) A hypothesis implicating a founder cell population in the regulation of wool follicle formation and distibution in sheep skin. Journal of Embryology and Experimental Morphology, Vol 32, JEEM Congress Supplement, European Developmental Biology Congress, Abstracts, Southhampton, 2-7 Sept, 1984, p259
+
+\bibitem{moor:89}
+Moore, G.P.M., Jackson, N. and Lax, J. (1989) Evidence for a unique mechanism specifying both wool follicle density and fibre size in sheep selected for single skin and fleece characters, Genetical Research 53:57-62
+
+\bibitem{moor:96}
+Moore, G.P.M, Jackson, N., Isaacs, K. and Brown,G. (1996) J. Theoretical Biology 191:87-94
+
+\bibitem{powe:51}
+Power, Eileen (1951) Medieval People. Pelican Books, Harmondsworth, Middlesex, UK, 1951
+
+\bibitem{rpack:1}
+Available from https://cran.r-project.org/package=CCA
+
+\bibitem{rprog:13}
+R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  ISBN 3-900051-07-0, URL http://www.R-project.org/.
+
+\bibitem{ryde:68}
+Ryder, M.L. and Stevenson, S.K.(1968) Wool Growth. Academic Press, London.
+
+\bibitem{vena:99}
+Venables, W.N. and Ripley, B.D. (1999)
+Modern Applied Statistics with S-Plus, 3rd Ed. Springer, New York
+
+\bibitem{watt:16}
+Watts, J.E. and Jackson N. (2016) Measuring the wavelength and amplitude of crimp in Merino staples.   Report available from the authors as a pdf document.
+
+\bibitem{watt:17}
+Watts, J.E. and Jackson, N. (2017) Classifying sheep into crimp types using on-sheep visual wool scores and measures. Report available from authors as a pdf document.
+
+\bibitem{wool:94}
+WoolSpec(1994) Specification of Australian Wool and its Implications for Marketing and Processing. CSIRO Division of Wool Technology and Internaltional Wool Secretariat. Sydney, 23-24 November, 1994.
+\end{thebibliography}
+\end{document}
