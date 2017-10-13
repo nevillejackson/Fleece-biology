@@ -1,0 +1,56 @@
+%\documentclass{article}
+%\usepackage{lscape}
+%\usepackage{tablefootnote}
+%\begin{document}
+
+\begin{table}[htp]
+\centering
+\caption{Summary of percent success in classifying sheep on CrimpTypeFM with the recursive tree and linear discriminant function techniques. This is a step-up analysis starting with the most important on-sheep trait (CrimpShapeVis) and adding traits one at a time until the the simplest combination of traits that would achieve aroud 80 percent success was found}
+\label{tab:success}
+\vspace{0.1in}
+\begin{tabular}{|p{2.2in}|p{1.2in}|p{1.2in}|}  \hline
+  Trait Set & Recursive Tree & Linear Discriminant \\
+         & Percent Success & Percent Success  \\ \hline
+  CrimpShapeVis               & 72 & 70 \\
+  CrimpShapeVis + Ringlet     & 72 & 70 \\
+  CrimpShapeVis + CompEx      & 74 & 75 \\
+  CompEx                      & 68 & 68 \\
+  CrimpShapeVis + StapArea    & 77 & 73 \\
+  CrimpShapeVis + StapArea    & & \\
+  + CompEx                    & 78 & 78 \\
+  StapArea                    & 62 &    \\
+  StapMinD                    & 57 &    \\
+  StapMaxD                    & 64 &    \\
+  CrimpShapeVis + StapMaxD    & 78 & 75 \\
+  CrimpShapeVis + StapMaxD    & & \\
+  + CompEx                    & 79 & 78 \\
+  CrimpShapeVis + Lustre      & 75 & 75 \\
+  CrimpShapeVis + Softness    & 74 & 74 \\
+  CrimpShapeVis + StapMinD    & 73 & 72 \\
+  CrimpShapeVis + BridgeFibVis & 78 & 78 \\
+  BridgeFibVis                 & 71 & 69 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  +StapMaxD                    & 80 & 78 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + CompEx                     & 81 & 78 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + CompEx +StapMaxD           & 82 & 79 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + CompEx + StapMaxD           & & \\
+  + Lustre                     & 83 & 79 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + Lustre                     & & 79 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + Lustre + PeelScore         & & 79 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + Lustre + CrimpFreq         & & 80 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + StapMaxD + CrimpFreq       & & 79 \\
+  CrimpShapeVis + BridgeFibVis & & \\
+  + CompEx + CrimpFreq         & & 78 \\
+\hline 
+\end{tabular} 
+\end{table}
+
+
+%\end{document}
