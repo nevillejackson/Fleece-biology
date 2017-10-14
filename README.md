@@ -7,6 +7,12 @@ The subdirectory _crimpformation_ contains a theoretical study of crimp formatio
 ## Staple formation ##
 The subdirectory _stapleformation contains a work in progress  which investigates the extent to which we can predict the type of staple structure which will form given certain skin traits and fibre growth parameters.
 
+## Fibre curvature ##
+The subdirectory _fibrecurvature_ contains a study of whether intrinsic fibre curvature can be predicted from follicle curvature score
+
+## Cortex structure ##
+The subdirectory _cortexstructure_ contains a theoretical study  of how ortho/para cortex structure of a wool fibre affects intrinsic fibre curvature. It is based on the Timoshenko equation which describes the change in curvature of a bimetal strip when heated.
+
 ## What does this project hope to achieve? ##
-An understanding of how a sheep grows a fleece, of how various visually different fleece types occure, and whether one can infer backwards from fleece appearance to skin traits and fibre growth characteristics. This understanding is important in visual assessment of sheep, where measurement is neither practical nor economic.
+An understanding of how a sheep grows a fleece, of how various visually different fleece types occur, and whether one can infer backwards from fleece appearance to skin traits and fibre growth characteristics. This understanding is important in visual assessment of sheep, where measurement is neither practical nor economic.
 
