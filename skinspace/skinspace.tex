@@ -1,0 +1,193 @@
+%
+% Draft  document skinspace.tex
+% Looks at how follicle development may affect expansion of the skin
+%
+ 
+\documentclass[titlepage]{article}  % Latex2e
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{tikz}
+\usepackage{bm,longtable}
+\usepackage{textcomp}
+ 
+
+\title{Does follicle development affect the spatial layout of sheep skin?}
+\author{Neville Jackson and Jim Watts}
+\date{27 Jan 2018} 
+
+ 
+\begin{document} 
+
+
+ 
+\maketitle      
+\tableofcontents
+
+$\newcommand{\E}{\mathrm{E}}$
+$\newcommand{\Var}{\mathrm{Var}}$
+$\newcommand{\Cov}{\mathrm{Cov}}$ 
+$\newcommand{\SD}{\mathrm{SD}}$ 
+
+\clearpage
+\section{Introduction} 
+ An attempt was made , in Jackson and Watts(2017)~\cite{jack:17b} to put forward the hypothesis that wrinkles form in the foetus at the same stage as secondary follicle development so would be likely to affect secondary follicle density or S/P ratio or secondary fibre diameter. This was based on a somewhat obsure reference (Bogolyubsky (1940)~\cite{bogo:40}) which asserts that wrinkles were observed forming in foetal skin of Karakul and Merino lambs at around 100 days of gestation. There are no other studies of wrinkle development, but there is a considerable literature on follicle development ( see Fraser and Short(1960)~\cite{fras:60} and Maddocks and Jackson(1988)~\cite{madd:88} and Ryder and Stevenson(1968)~\cite{ryde:68} for reviews). There is some literature on collagen development in sheep skin, and we will look at that below.
+
+In Watts and Jackson(2017) and attempt was made to measure collagen type and content, and to relate it to follicle development and to wrinkle development. The study showed that soft, pliable skins with high compressibility had little or no wrinkle development , high follicle densities, fine secondary fibres, less curved follicles, less uneven follicles, and less uneven secondary fibres It was suggested taht there were two mechanisms involved
+\begin{itemize}
+\item a tradeoff relationship between fibroblast development and follicle development
+\item a mechanical interference of collagen fibrils with follicle shape and arrangement.
+\end{itemize}.
+It was not clear exactly what the mechanism was behind the relationship of compressibility to wrinkle. It was noted that dissection of layer 4 away from the dermis resulted in the wrinkles flattening out - so wrinkle is clearly an excess growth of dermis over that of layer 4, combined with an attachment of the dermis to layer 4.
+
+What we investigate here is the suggestion that it is the follicle development which causes the dermis to expand at a greater rate than layer4
+
+
+
+\section{The follicle development - dermal expansion hypothesis}
+We noted above that wrinkle development and follicle development occur at the same time in the developing foetal lamb - at about 100days. Wrinkles are certainly visually obvious at birth, and so are follicles because we can see the growing fibres in the birthcoat.
+
+It is one thing to say that because they occur together, wrinkles might affect follicle development. It is another thing to say, as we do here, that it is the other way around - that the growth and development of follicle tissue in the dermis is what causes the dermis to expand at a greater rate than the adjoining layer 4. That extra dermal expansion will not necessarily result in wrinkle - if layer 4 is tightly bound to the lower dermis ( presumably by excessive collagen formation) then the dermis will have to fold as it expands, but if the dermis is only loosely bound to layer 4, it can expand without folding .
+
+So if that is how it works, why do only Merino ( and Merino derived) sheep have wrinkle? Because only Merino sheep have the vastly greater development of secondary follicles with consequent higher S/P ratio and follicle branching.  In all non-Merino breeds the amount of follicle tissue laid down during secondary follicle development is not sufficient to expand the dermis enough to cause it to fold. 
+
+So if SRS-Merino has an even higher S/P ratio then normal Merinos, how is it that they do not develop even more skin folds? Because they also have 'loose' skin - that is skin in which the dermis is not tightly bound to layer 4, but is free to detach and move. The involvement of collagen amount and type in this 'looseness' is conjecture at this stage, but is supported by Watts and Jackson(2017)~\cite{watt:17b}
+
+
+\section{Materials and Methods}
+To investigate  the 'follicles cause dermal expansion' hypothesis, we need a measure of the amount of follicle tissue in skin.
+We start by noting that the diameter of a follicle stem at sebacious gland level is close to 3 times the diameter of the fibre it contains. So the area of follicle tissue per $mm^{2}$ at that level is
+\begin{displaymath}
+F_{a} = 10^{-6} F_{n} \pi \left[\frac{3D}{2}\right]^{2}
+\end{displaymath}
+$F_{a}$ will vary between 0 and 1 and will represent the follicle tissue area in $mm^{2}$ per $mm^{2}$, so it is unitless.
+
+We next note that the average length of follicles is represented by follicle depth (Fd) in $mm$.  So the volume of follicle tissue per $mm^{2}$  of cross section is
+\begin{displaymath}
+F_{v} = F_{a} Fd
+\end{displaymath}
+$F_{v}$ will be $mm^{3}$ of follicle tissue per $mm^{2}$ of cross section, so it will be in $mm$.
+
+The most relevant parameter to area expansion of the dermis is $F_{a}$, so we will be concentrating on $F_{a}$. We note that it is at sebacious gland level, so it is just the follicle stems. Accessory glands are not counted in this measure, only follicle walls and the contained fibre.
+
+\subsection{Sheep studied}
+We use the Carter(1968)~\cite{cart:68} to look at $F_{a}$ over a range of breeds.
+
+\subsection{Measurements}
+The following measurements and scores were available
+\begin{description}
+\item[SkinType] visual scores for sheep skin type. Four grades SRS, semi-SRS, flat, and tight, as defined by Watts et al (2017)~\cite{watt:17}.
+\item[TST] total skin thickness in mm. Measured with a ruler graduate in 0.1 mm divisions at 3x magnification on the midside skin sample trimmed of wool stuble and subdermal fat. It consists of epidermis, papillary layer, and reticular layer (layers 1 to 3).
+\item[CST] compressed skin thickness in mm. Measured on the trimmed sample with a Mitutoyo ballpoint depth guage ( graduated in 0.1 mm divisions) at four sites. Analyses are of the mean CST over 4 sites.
+\item[CMP] compressibility as a percentage. Calculated from CST and TST as $CMP = 100(TST-CST)/TST$. Measures the reduction in thickness under compression as a percentage of the uncompressed thickness.
+\item[SkinSoft] skin softness score or ease with which the skin bends or buckles. Five grades (1=hard, unable to bend), to (5=supple, bends easily). Assessed by manually bending the trimmed skin sample in two directions ( north-south = across the rows of follicle groups) and (east-west = along the rows of follicle groups).
+\item[S/P] ratio of secondary to primary follicle numbers. This ratio is normally used as a measure of secondary follicle density which is independent of skin expansion during growth. Measured on skin sections.
+\item[Fn] follicle number per unit area in follicles per $mm^{2}$. Measured on skin sections with a correction for shrinkage during processing
+\item[Dp] mean fibre diameter of secondary fibres in $\mu m$. Measured on skin sections.
+\item[DpSD] standard deviation of secondary fibre diameters in $\mu m$. Measured on skin sections.
+\end{description}
+
+
+\subsection{Statistical Methods}
+Data were imported into the R statistical program~\cite{rprog:13} and analysed using the {\em lm()} function for regressions, and the {\em aov()} function for analysis of variance.
+
+\section{Results}
+
+
+\clearpage
+\section{Discussion}
+
+
+
+
+
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem{bogo:40}
+ Bogolyubsky S.N. (1940) cited by Fraser A.S and Short B.F. (1960) The Biology of the Fleece. Animal Research Laboratories Technical Paper No 3. CSIRO Melbourne 1960.
+
+\bibitem{brow:68}
+Brown, G.H., and Turner, Helen Newton. (1968) Response to selection in Australian Merino sheep. II. Estimates of phenotypic and genetic parameters for some production traits in Merino ewes and an analysis of the possible effects of selection on them. Aust. J. Agric. Res. 19:303-22
+
+\bibitem{cart:43}
+Carter H.B. (1943) Studies in the biology of the skin and fleece of sheep. 1. The development and general histology of the follicle group in the skin of the Merino. 2. The use of tanned sheepskin in the study of follicle population density. 3. Notes on the arrangement, nomenclature, and variation of skin folds and wrinkles in the Merino. C.S.I.R. Bulletin No 164, Melbourne, 1943
+
+\bibitem{cart:68}
+Carter,H.B. (1968) Comparative Fleece Analysis Data for Domestic Sheep. The Principal Fleece Staple Values of Some Recognised Breeds. Agricultural Research Council, 1968
+
+\bibitem{fras:60}
+Fraser A.S and Short B.F. (1960) The Biology of the Fleece. Animal Research Laboratories Technical Paper No 3. CSIRO Melbourne 1960.
+
+\bibitem{gord:08}
+Gordon-Thompson, C., Botto, S.A., Cam, G.R., and Moore, G.P.H. (2008) Notch pathway gene expression and wool follicle cell fates. Aust. J. Exp. Agric. 48(5) 648-656
+
+\bibitem{jack:75}
+Jackson, N., Nay, T, and Turner, Helen Newton (1975) Response to selection in Australian Merino sheep. VII Phenotypic and genetic parameters for some wool follicle characteristics and their correlation with wool and body traits. Aust. J. Agric. Res. 26:937-57
+
+\bibitem{jack:15}
+Jackson, N. (2015) Genetic relationship betweeen skin and wool traits in Merino sheep. Incomplete manuscript.
+
+\bibitem{jack:17}
+Jackson, N. (2017) Genetics of primary and secondary fibre diameters and densities in Merino sheep. URL https://github.com/nevillejackson/atavistic-sheep/mev-rewrite/supplementary/genetic-parameters/psparam.pdf
+
+\bibitem{jack:17a}
+Jackson, N. (2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection ans estimates of genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
+
+\bibitem{jack:90}
+Jackson, N., Maddocks, I.G., Lax, J., Moore, G.P.M. and Watts, J.E. (1990) Merino Evolution, Skin Characteristics, and Fleece Quality. URL https://github.com/nevillejackson/atavistic-sheep/mev/evol.pdf 
+
+\bibitem{jack:17b}
+Jackson, N. and Watts, J.E. (2017) What is known about the genetics of wrinkle score in Merino sheep? URL https://github.com/nevillejackson/Fleece-genetics/wrinkle/wrinkle.pdf
+
+\bibitem{knig:93}
+Knight, K.R., Lepore, D.A., Horne, R.S., Ritz, M., Kumta, S. and O'Brian, B.M. (1993) Collagen content of uninjured skin and scar tissue in foetal and adult sheep. Int. J. Exp. Pathol. 74(6):583-591
+
+\bibitem{madd:88}
+Maddocks, I.G. and Jackson, N. (1988) Structural studies of sheep, cattle, and goat skin. CSIRO, Division of Aimal Production, Sydney.
+
+\bibitem{ment:80}
+Menton, D.N. and Hess, R.A. (1980) The ultrastructure of collagen in the dermis of tight-skin (Tsk) mutant mice. The Journal of Investigative Dermatology 74:139-147
+
+\bibitem{mitc:84}
+Mitchell, T.W. et al (1984) Wool Technology and Sheep Breeding, No IV, 200-206
+
+\bibitem{moor:89}
+Moore G.P.M., Jackson, N., and Lax, J. (1989) Evidence of a unique developmental mechanism specifying bot wool follicle density and fibre size in sheep selected for single skin and fleece characters. Genet. Res. Camb. 53:57-62
+
+\bibitem{moor:98}
+Moore, G.P.M., Jackson, N., Isaacs, K., and Brown, G (1998) J. Theoretical Biology 191:87-94
+
+\bibitem{nay:66}
+Nay, T. (1966) Wool follicle arrangement and vascular pattern in the Australian Merino. Aust. J. Agric. Res. 17:797-805
+
+\bibitem{rprog:13}
+R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  ISBN 3-900051-07-0, URL http://www.R-project.org/.
+
+\bibitem{ryde:68}
+Ryder, M.L. and Stevenson, S.K.(1968) Wool Growth. Academic Press, London.
+
+
+\bibitem{turn:56} 
+Turner, Helen Newton (1956) Anim. Breed. Abstr. 24:87-118
+
+\bibitem{turn:58}
+Turner, Helen Newton(1958) Aust. J. Agric. Res. 9:521-52
+
+\bibitem{turn:53}
+Turner, Helen Newton, Hayman, R.H., Riches, J.H., Roberts, N.F., and Wilson, L.T. (1953) Physical definition of sheep and their fleece for breeding and husbandry studies: with particular reference to Merino sheep. CSIRO Div. Anim. Hlth. Prod. Div. Rept. No. 4 (Ser SW-2 mimeo)
+
+\bibitem{turn:70}
+Turner, Helen Newton, Brooker M.G. and Dolling, C.H.S (1970) Response to selection in Australian Merino sheep. III Single character selection for high and low values of wool weight and its components. Aust.J.Agric.Res. 21:955-84
+
+\bibitem{watt:17}
+Watts, J.E., Jackson, N., and Ferguson, K.A. (2017) Improvements in fleece weight weight and wool quality of Merino sheep selected visually for high fibre density and length. URL https://github.com/nevillejackson/SRS-Merino/Paper\_2\_Revised\_10\_November\_2017.docx 
+
+\bibitem{watt:17b}
+Watts, J.E. and Jackson, N. (2017) Is collagen quantity and properties involved in wrinkle formation and/or in follicle development? URL https://github.com/nevillejackson/SRS-Merino/tree/master/supplementary/copllagen/collagen.pdf
+
+\bibitem{xavi:03}
+Xavier, S.P., Gordon-Thomson, C. Wynn, P.C., McCullagh, P., Thomson, P.C., Tomkins, L., Mason, R.S., and Moore, G.P.M.(2003) Evidence that Notch and Delta expressions have a role in dermal condensate aggregation during wool follicle initiation. Experimental Dermatology, 22:656-681
+
+\end{thebibliography}
+\end{document}
