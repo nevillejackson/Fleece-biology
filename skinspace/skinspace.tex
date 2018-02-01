@@ -51,6 +51,9 @@ So if that is how it works, why do only Merino ( and Merino derived) sheep have 
 
 So if SRS-Merino has an even higher S/P ratio then normal Merinos, how is it that they do not develop even more skin folds? Because they also have 'loose' skin - that is skin in which the dermis is not tightly bound to layer 4, but is free to detach and move. The involvement of collagen amount and type in this 'looseness' is conjecture at this stage, but is supported by Watts and Jackson(2017)~\cite{watt:17b}
 
+There is another clue in the fact that skin folds occur in a pattern over the body of a sheep. On the side of the sheep the folds run in a dorso-ventral direction. This corresponds to the direction in which rows of follicle groups run. What we call the E-W direction on an horizontal skin section corresponds to the dorso-ventral direction on the sheep. The rows of follicle groups run parallel to the folds of skin in a sheep with folds. The rows of follicle groups run parallel to the 'laneways' in a sheep without folds. It is clear what is happening. The downgrowths of follicle tissue into the dermis occur in rows ( because the follicle groups are in rows), so they push the dermis aside in rows as they make space to grow. If the dermis is going to expand and fold, it will fold in rows. If the dermis is going to just expand, because it is not bound to the subdermal tissue, there will occur rows of dermis pushed aside by the growing rows of follicles, and we will get 'laneways'. This is not proof, but it is very suggestive that secondary follicle development is involved in wrinkle formation, especially the branching secondary follicles as these are confined to close proximity to the follicle groups. One might object that skin folds are on a larger scale than rows of follicle groups. The answer is that scale does not matter - any sideways expansion will cumulate up to the larger scale of a fold.
+
+There is one contrary piece of evidence. Carter(1943)~\cite{cart:43} states that follicle groups start out in an orderly pattern in the lamb, but the pattern tends to disrupt as the sheep matures. Carter attributes this disruption to collagen growth affecting the follicle arrangement. We are saying here that follicle growth moves the collagen around, at least while the follicles are initiating. Perhaps both occur. Carter links excessive connective tissue growth with formation of wrinkles and folds. That is not necessarily incompatable with what we are proposing here, if connective tissue growth binds the dermis to the subdermal layers.
 
 \section{Materials and Methods}
 To investigate  the 'follicles cause dermal expansion' hypothesis, we need a measure of the amount of follicle tissue in skin.
@@ -67,6 +70,8 @@ F_{v} = F_{a} Fd
 $F_{v}$ will be $mm^{3}$ of follicle tissue per $mm^{2}$ of cross section, so it will be in $mm$.
 
 The most relevant parameter to area expansion of the dermis is $F_{a}$, so we will be concentrating on $F_{a}$. We note that it is at sebacious gland level, so it is just the follicle stems. Accessory glands are not counted in this measure, only follicle walls and the contained fibre.
+
+We note that it is possible to define $F_{a}$ for secondary follicles only, an that this may be the more relevant parameter. We also note that $F_{a}$ is relative to a 1 $mm^{2}$ area of adult skin, that is after the expansion of dermal tissue has occurred.
 
 \subsection{Sheep studied}
 We use the Carter(1968)~\cite{cart:68} to look at $F_{a}$ over a range of breeds.
@@ -90,6 +95,39 @@ The following measurements and scores were available
 Data were imported into the R statistical program~\cite{rprog:13} and analysed using the {\em lm()} function for regressions, and the {\em aov()} function for analysis of variance.
 
 \section{Results}
+\subsection{Breed comparisons of amount of follicle tissue per unit area}
+
+We look at the range of values for $F_{ap}$ and $F_{as}$ over all breeds sampled by Carter(1968)~\cite{cart:68}. These are shown as histograms in Figures~\ref{fig:faphist} and ~\ref{fig:fashist}.
+\input{figfaphist.tex}
+\input{figfashist.tex}
+We see a very considerable range in values for both $F_{ap}$ and $F_{as}$. A very small number of breeds have $F_{ap}$ larger than 0.10, whereas many breeds have $F_{as}$ larger than 0.10. 
+
+We need to identify the breeds. This is done in Table~\ref{tab:fabreed}
+\input{tabfabreed.tex}
+and we collapse these breeds into Types in Table~\ref{tab:fatype}
+\input{tabfatype.tex}
+Only the African and Indian hair sheep and the Carpetwools have $F_{ap}$ exceeding 0.10. 
+The breeds with $F_{as}$ exceeding 0.10 are the Merino and Merino derived breedsplus the Egyptian  Ossimi and Rahmani. Neither of these Egyptian breeds seem to be wrinkled, but the Merino and its derivatives certainly can be wrinkled.
+
+From these data Fas between 10 and 15 percent seems to be the cutoff point above which dermal expansion is too great and can lead to wrinkle. If the the follicles in a wrinkled sheep are 15-20 percent of the skin area, that means thet the amount of dermal expansion caused by the follicle formation can only be 15-20 percent. That seems a bit small to account for large folds. However, remember that $F_{as}$ is relative to a 1 $mm^{2}$ area after expansion has occurred. To check, we need a measure of dermal expansion. We attempt to develop that in the next section
+
+Before we leave Fas and Fap, we should look at the relation between them. Figure~\ref{fig:fasfap} showns the relationship between means of all 126 flocks sampled by Carter(1968)~\cite{cart:68}. It would seem that sheep either have a lot of primary follicle tissue, or a lot of secondary follicle tissue, but not both. It would seem that the limit is about 30 percent of skin area consisting of follicle tissue, and this can be all primaries, nearly all secondaries, or a mixture.  This is a classic demonstration of the pre-papilla cell hypothesis (Moore etal (1998)~\cite{moor:98}). 
+\input{figfasfap.tex}
+
+\subsection{Using $N_{p}$ as a measure of dermal expansion}
+It is often assumed that all sheep have the same density of primary follicles at the time when they initiate, and that subsequent differences in $N_{p}$ per unit area reflect differences in skin growth. Skin growth would include expansion of the dermis during secondary follicle initiation, as proposed here. 
+
+It is therefore of interest to have a look at $N_{p}$ variation in the Carte(1968)~\cite{cart:68} data, and in particular to see if it is lower in breeds which exhibit wrinkle. 
+
+Table~\ref{tab:nptype} shown the means of $N_{p}$ for the sheep type groupings of Carter(1968)~\cite{cart:68} and Table~\ref{tab:npbreed} shows the breed means. 
+\input{tabnptype.tex}
+\input{tabnpbreed.tex}
+There is no clear result. The Merino means are intermediate. Clearly growth differences are interfering with our attempt to use $N_{p}$ as an indicator of dermal expansion.
+
+\subsection{Data on variation within a wrinkled Merino flock}
+We have a set of data in which degree of wrinkle is actually recorded for each sheep as a scores for neck wrinkle and body wrinkle according to the photographic standards of Turner, etal (1953)~\cite{turn:53}. We also have skin histology measurements for these sheep, so we can calculate $F_{ap}$ and $F_{as}$. This flock is the CSIRO experimant known as AB32, for which genetic parameters are reported by Jackson(2017)~\cite{jack:17a}. There is also a summary of the genetic parameter estimates relevant to wrinkle score in Jackson and Watts(2017)~\cite{jack:17b}.
+
+What we do here is extend the genetic parameter estimates to include $F_{ap}$ and $F_{as}$. 
 
 
 \clearpage
@@ -130,7 +168,7 @@ Jackson, N. (2015) Genetic relationship betweeen skin and wool traits in Merino 
 Jackson, N. (2017) Genetics of primary and secondary fibre diameters and densities in Merino sheep. URL https://github.com/nevillejackson/atavistic-sheep/mev-rewrite/supplementary/genetic-parameters/psparam.pdf
 
 \bibitem{jack:17a}
-Jackson, N. (2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection ans estimates of genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
+Jackson, N. (2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection and estimates of genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
 
 \bibitem{jack:90}
 Jackson, N., Maddocks, I.G., Lax, J., Moore, G.P.M. and Watts, J.E. (1990) Merino Evolution, Skin Characteristics, and Fleece Quality. URL https://github.com/nevillejackson/atavistic-sheep/mev/evol.pdf 
