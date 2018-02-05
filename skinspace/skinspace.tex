@@ -138,8 +138,32 @@ There is no clear result. The Merino means are intermediate. Clearly growth diff
 \subsection{Data on variation within a wrinkled Merino flock}
 We have a set of data in which degree of wrinkle is actually recorded for each sheep as a scores for neck wrinkle and body wrinkle according to the photographic standards of Turner, etal (1953)~\cite{turn:53}. We also have skin histology measurements for these sheep, so we can calculate $F_{ap}$ and $F_{as}$. This flock is the CSIRO experimant known as AB32, for which genetic parameters are reported by Jackson(2017)~\cite{jack:17a}. There is also a summary of the genetic parameter estimates relevant to wrinkle score in Jackson and Watts(2017)~\cite{jack:17b}.
 
-The first thing we note is that if we look at the relationship of individual sheep Fas estimates and wrinkle scores we see nothing interesting. The correlation is near-zero. There is too much noise. The reason we see something with the Carter data above is that we looked at flock means, which wee meanss of around 20 animals. So what we propose to do here is to look at relationships using sire group means.  We actually list all 78 sire group means in Table~\ref{tab:smeans}.
+The first thing we note is that if we look at the relationship of individual sheep Fas estimates and wrinkle scores we see nothing interesting. The correlation is near-zero. There is too much noise. The reason we see something with the Carter data above is that we looked at flock means, which were means of around 20 animals. So what we propose to do here is to look at relationships using sire group means.  We actually list all 78 sire group means in Table~\ref{tab:smeans}.
 \input{tabsmeans.tex}
+Relationships among sire group means are a rough way of looking at genetic correlations. We use this approach, rather than a full genetic analysis, because we do not really know what what traits we are interested in yet.
+
+We start by looking at the sire group means correlation of $F_{as}$ with total wrinkle score (WrT). This is shown in Figure~\ref{fig:faswrt}
+\input{figfaswrt.tex}
+We see a positive correlation of 0.29, which is significant at $P<0.05$ for 74 sire groups.  The numbers labelling each point show that $N_{p}$ does not vary in any consistent way across this graph. We interpret this as follows. $F_{as}$ indicates likely dermal expansion due to secondary follicle development, so we would expect higher dermal expansion to be associated with higher wrinkle scores, and it comes out that way. We do not expect a very strong correlation, because wrinkle formation depends on collagen structure as wella s on follicle induced dermal expansion. $N_{p}$ indicates overall skin expansion, due to overall growth, as well as extra dermal expansion induced by follicle development. We do not expect a strong relationship of $N_{p}$ with wrinkle. 
+
+We next note that the scoring of wrinkle seems to be affected by size of the animal. Figure~\ref{fig:sawrt} shows that sheep with large surface area tend to get a lower wrinkle score.
+\input{figsawrt.tex}
+The correlation of Sarea with WrT is -0.30, significant at $P<0.05$. The number labels on the points again represt $N_{p}$, and this time there is a pattern. THe low $N_{p}$ sheep are high Sarea and low wrinkle. So it is reasonable to conclude that animals with high growth ( of the whole body, and the skin) stretch out their wrinkles which were formed as a lamb, and reduce the wrinkle score. This is probably what happens with British Longwool sheep, which were shown in the previous section to have quite a high $F_{as}$ value, but do not show wrinkle as an adult.
+
+So we need to try and take surface area into account. We note again that $N_{p}$ reflects both overall growth and extra skin expansion dure to secondary follicle development, while $Sarea$  reflects only overall growth. We therefore take the ratio $N_{p}/Sarea$ as an indicator of skin expansion 'corrected for' growth.  Figure~\ref{fig:fasfnpuaovsa} shows that $N_{p}/Sarea$ ratio is indeed correlated with $F_{as}$.
+\input{figfasfnpuaovsa.tex}
+The correlation is 0.33 which is significant at $P<0.01$.  The point labels show a tendency for high wrinkle scores to occur at high $F_{as}$ as observed in Figure~\ref{fig:faswrt}. There is no obvious relation of wrinkle score to $N_{p}/Sarea$ ratio. 
+
+The end point for this dataset is that we think we can measure the extra dermal expansion due to secondary follicle development, but it does not necessarily relate strongly to wrinkle scores, because wrinkle also depends on collagen development. There is no measure of collagen in this dataset, so that is about as far as we can proceed.
+
+\subsection{Rex mutation}
+It was noted in Jackson(2017)~\cite{jack:17c} that there was a substantial jump is S/P ratio during evolution of the Finewool Merino, and that this jump may have been produced by mutation at the Rex locus. In other species (cats, rodents) Rex mutation produces a high S/P ratio and a fine coat with no guard hairs and crimp waves in the fibres. 
+
+The other substantial difference between Australian Merinos and other breeds is wrinkle. It is not known when wrinkle appeared in Merino evolution. It is not documented whether Rex mutation in other species produces wrinkle. We thought we would have a look. By googling pictures in Rex mutant cats we uncovered the images shown in Figure~\ref{fig:rexcat1} of a Cornish Rex cat, and the image shown in Figure~\ref{fig:rexcat2} of a Devon Rex cat.
+%\input{figrexcat1.tex}
+%\input{figrexcat2.tex}
+We think the wrinkles are obvious. The Devon Rex also shows the wavy fibres clearly.
+
 
 
 
@@ -182,6 +206,9 @@ Jackson, N. (2017) Genetics of primary and secondary fibre diameters and densiti
 
 \bibitem{jack:17a}
 Jackson, N. (2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection and estimates of genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
+
+\bibitem{jack:17c}
+Jackson, N. (2017) What are the defining characteristics of a primitive sheep relative to a modern Merino sheep? URL https://github.com/nevillejackson/atavistic-sheep/mev-rewrite/suppelementary/primitive/primitive.pdf
 
 \bibitem{jack:90}
 Jackson, N., Maddocks, I.G., Lax, J., Moore, G.P.M. and Watts, J.E. (1990) Merino Evolution, Skin Characteristics, and Fleece Quality. URL https://github.com/nevillejackson/atavistic-sheep/mev/evol.pdf 
