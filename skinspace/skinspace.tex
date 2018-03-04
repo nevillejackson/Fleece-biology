@@ -106,6 +106,7 @@ Data were imported into the R statistical program~\cite{rprog:13} and analysed u
 
 \section{Results}
 \subsection{Breed comparisons of amount of follicle tissue per unit area}
+\label{sec:breed}
 
 We look at the range of values for $F_{ap}$ and $F_{as}$ over all breeds sampled by Carter(1968)~\cite{cart:68}. These are shown as histograms in Figures~\ref{fig:faphist} and ~\ref{fig:fashist}.
 \input{figfaphist.tex}
@@ -166,7 +167,47 @@ We think the wrinkles are obvious. The Devon Rex also shows the wavy fibres clea
 
 A similar search of Rex mutant rats and mice uncovered some images of rodents which were both Rex and Naked mutants, and in these the skin wrinkles were obvious. The wrinkles could not be seen on rodents with fur. A search of Rex mutant rabbits did not uncover any visually obvious wrinkle, but all the rabbits had long fur.
 
+\subsection{How much dermal expansion is required to form a fold?}
+We need to try and calculate whether a dermal expansion of up to 30 percent over the subdermal layers, as estimated in Section~\ref{sec:breed}, is sufficient for the dermal layer to form a fold. We do this with a simple physical model. 
 
+Figure~\ref{fig:model1} shows a piece of leather clamped to a board at two points 50m  apart. 
+\input{figmodel1.tex}
+The leather represents dermis, the board subdermal tissue. In this case the leather is clamped at 0 and 50mm representing collagen fibres linking the two layers at these two points. However because the leather segment ( 50mm) is the same as the board clamp distance, the leather lies flat, and there is no fold formed. 
+
+If we now increase the leather segment length to 60 mm, and clamp to the board at 50 mm, the leather forms a fold as in Figure~\ref{fig:model2} and Figure~\ref{fig:model3}
+\input{figmodel2}
+\input{figmodel3}
+We see that there is considerable fold formation witha 20 percent linear expansion of the leather over the board. The measured height of this fold was 16mm.
+
+This model is much larger than real sheepskin. About 10x larger. So if we divide all the results by 10, we are talking about 2 collagen attachment points of dermis to subdermis 5mm apart, a dermal expanded length of 6mm ( or 20 percent larger than subdermis), and the resulting fold being 1.6mm high. That is realistic, but folds on sheep are larger than that. 
+
+So, what specifications are required to get larger folds? We did this with the physical model, using distances between 'collagen attachments' of 30mm, 50mm, and 70mm in the model, corresponding approximately to 3, 5, and 7mm in real skin. For each of these we allowed the leather stip to be clamped at a range of mm (30 - 80 mm in the 30mm case, 50-120mm in the 50mm case, and 70-120mm in the 70mm case), representing dermal expansions over the range 0 to 1.6. The results are given in Table~\ref{tab:model}
+\input{tabmodel.tex}
+ We see that we can get folds up to 48m high ( approx 4.8mm on sheep)  but that this height of fold requires from 70 to 160 percent dermal expansion depending on the clamping width. The wider the clamping width, the less percentage dermal expansion needed to form a given height of fold.
+
+With very large folds, the 'bell shape' becomes more horseshoe shaped. Figure~\ref{fig:model4} shows the fold for a 50mm clamp width and a 120mm leather strip length ( a 140 percent expansion).
+\input{figmodel4.tex}
+This is what we might see in a large neck fold.
+
+We can show that the same 'law of folding' applies regardless of the distance between clamping points. In Figure~\ref{fig:hlplot} we plot all the data points from Table~\ref{tab:model}, showing that the ratio of Height to Width bears the same relation to the relative expansion of the leather strip((Len - Width)/Width) regardless of the clamping width. All points are on the same line.
+\input{fighlplot.tex}
+ 
+We can show that this 'law of folding' is a power curve ( of the form $y = aX^{b}$), by doing the log-log plot of the data of Figure~\ref{fig:hlplot}. This is shown in Figure~\ref{fig:loghlplot}.
+\input{figloghlplot.tex}
+We see that the log-log plot is perfectly linear. This proved that it is a power curve.  We can estimate the parameteres of the power curve by fitting a linear regression to the log-log plot ( ie $\log{y} = \log{a} + b \log{x)}$). When we do this we get
+\begin{eqnarray*}
+\log{a} & = & -0.246 \\
+b & = & 0.564
+\end{eqnarray*}
+ So the power curve is
+\begin{displaymath}
+\frac{H}{W} = 0.774 \left[\frac{L-W}{W}\right]^{0.564}
+\end{displaymath}
+ This was done at the scale of the model, but it applies to all scales, so it should be right for real sheepskin, provided the model is appropriate. One factor which should be mentioned is that the model has 'air' under the leather strip, in sheepskin this space is filled with dermal tissue. That may not make a great deal of difference. Most of the dermal expansion is at the epidermal edge of the dermis.
+
+The conclusion from the model and calculations seems to be that a 20  to 30 percent linear expansion due to secondary follicle development will make small folds, but not large folds. Some other factor leading to dermal expansion is required to get large 'neck' folds.  We do show that wider spacing of the collagen 'clamping' points leads to larger wrinkles.
+
+We should note that the model calculates linear expansion - ie in one direction. This is probably what happens. The rows of follicle groups grow line a 'wedge' into the dermis, and drive it 'sideways' rather than in all directions. So when we say that secondary follicle development leads to $0.2 mm^{2}$ per $mm^{2}$ of dermis, we are thinking of a 1mm by 1mm square of dermis becoming a 1mm by 1.2mm rectangle of dermis after secondary follicle development. This is in line with what happens on the sheep. The folds are very definately in one dimension.
 
 \clearpage
 \section{Discussion}
