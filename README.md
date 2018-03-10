@@ -16,6 +16,9 @@ The subdirectory _cortexstructure_ contains a theoretical study  of how ortho/pa
 ## Skin space ##
 The subdirectory _skinspace_ contains an exploration of the idea that secondary follicle development at 100 days is responsible for the excessive expansion of the area of the dermal layer of skin tissue which is one of the prerequisites for wrinkle or fold formation.
 
+## Collagen study ##
+The subdirectory _collagen_ contains a  link to a study of the role of soft and hard collagen in the dermis in wrinkle formation, follicle development and fibre growth. 
+
 ## What does this project hope to achieve? ##
 An understanding of how a sheep grows a fleece, of how various visually different fleece types occur, and whether one can infer backwards from fleece appearance to skin traits and fibre growth characteristics. This understanding is important in visual assessment of sheep, where measurement is neither practical nor economic.
 
