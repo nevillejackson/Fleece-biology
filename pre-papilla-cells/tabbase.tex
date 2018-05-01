@@ -1,0 +1,39 @@
+%\documentclass{article}
+%\usepackage{lscape}
+%\begin{document}
+
+\begin{table}[htp]
+\centering
+\caption{Base input parameters for package {\em ppcell}, their definition, and assumed average values for a Merino sheep} 
+\label{tab:base}
+\vspace{0.1in}
+\begin{tabular}{|p{0.5in}|p{2.0in}|p{1.2in}|p{0.5in}|}  \hline
+     Parameter & Description  & Units & Average value  \\ 
+\hline 
+  A    & Lower growth asymptote  & $gm$ & 0 \\
+  K    & Upper growth asymptote ( mature weight)  & $gm$ & 45000 \\
+  B    & Growth rate             & log(gm) per day & 0.028 \\ 
+ $\nu$ & Controls age at maximum growth rate & no units  & 1\\
+  Q    & Controls weight at maximum growth rate & no units  & 1000\\
+  C    & Controls upper asymptote & no units  & 1\\
+\hline
+  $S_{k}$ & Surface area constant for sheep & no units  & 9.0 \\
+  $t_{0}$ & Zero time for calculations & days & 60  \\
+  $t_{max}$ & Maximum time for calculations & days & 900 \\
+  $\delta t$ & Time increment for calculations & days & 1  \\
+  $L_{p}$  &  Number of primary follicle sites & number & 2e+06 \\
+  $S_{o}/P$ & Number of So sites per P site & no units  & 3 \\
+  $F_{r}$ & Follicle initiation rate per unit area per unit time & no per $cm^{2}$ per day  & 450\\
+  $T_{P}$ & Start time for P follicle inititation & days & 64 \\
+  $T_{So}$ & Start time for So follicle intiation & days & 86 \\
+  $(C_{n})_{0}$ &  Cell number at zero time & number & 1e+08 \\
+  $C_{P}$ & Mean number of pre-papilla cells per P follicle & number  & 65\\
+  $C_{So}$ & Mean number of pre-papilla cells per So follicle & number & 59 \\
+  $C_{Sd}$ & Mean number of pre-papilla cells per Sd follicle & number & 53 \\
+  $C_{b}$  & Cell birth probability & probability a randomly chosen cell divides in unit time  & .0764 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+%\end{document}
