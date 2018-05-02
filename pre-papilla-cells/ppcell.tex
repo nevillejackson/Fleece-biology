@@ -33,7 +33,7 @@ It has been shown that there  exists in the dermis of the the developing sheep f
 
 There also exist in the foetal dermis, specific locations, known as 'sites' , at which follicles can develop by attracting a number of pre-papilla cells, and intitating epidermal downgrowth. Not all follicles form at 'sites'. Primary follicles (P), and secondary-original (So) follicles (Fraser and Short(1960)~\cite{fras:60}) form at 'sites', secondary-derived follicles (Sd) form as outgrowths from the wall of So follicles, and produce fibres which emerge from a common follicle opening at the skin surface. Primary follicle initiation starts first ( at about 64 days), secondary original follicles start to form at around 85 days, and, when all sites are used up, Sd follicles form from about 100 days, and almost all follicle initiation is complete before birth at around 150 days. 
 
-While follicles are initiating the population of pre-papilla cells in the dermis is undergoing dynamic change. Cells are moving out of the population, to migrate to the sites of follicles, and to differentiate. Celss are also being added to the population by mitosis.
+While follicles are initiating the population of pre-papilla cells in the dermis is undergoing dynamic change. Cells are moving out of the population, to migrate to the sites of follicles, and to differentiate. Cells are also being added to the population by mitosis.
 
 \section{Materials and Methods}
 
@@ -68,7 +68,7 @@ The agreement is satisfactory. We therefore accept these parameters as a first a
 
 We now need to look at postnatal growth, that is the latter part of the sigmoid growth curve. We have some data on Merino lambs from birth up to 20 weeks ( 140 days) from Taplin and Everitt(1962)~\cite{tapl:62}. These  data have 4 groups of lambs with different feeding regimes. We plot all the data on top of Figure~\ref{fig:mfbwagefit} in Figure~\ref{fig:mlbwagefit}
 \input{figmlbwagefit.tex}
-We see that the theoretical growth curve does not match the postnatal data because it is too steep. So we modify the parameters as follows. We cange the growth rate parameter (B) to 0.028, and the parameter which positions the point of inflection (Q) to 1000. This leads to the plot shown in Figure~\ref{fig:mlbwagefit3}
+We see that the theoretical growth curve does not match the postnatal data because it is too steep. So we modify the parameters as follows. We change the growth rate parameter (B) to 0.028, and the parameter which positions the point of inflection (Q) to 1000. This leads to the plot shown in Figure~\ref{fig:mlbwagefit3}
 \input{figmlbwagefit3.tex}
 We see that our theoretical growth curve now follows the points well, except for the 20 week ( post weaning) weights shown as green dots to the right of the curve. Sheep grow at a slower rate as they mature. It is not possible with a sigmoidal curve like the Richards curve to make the growth rate slower above the point of inflection than below it. The curve is symmetric, in that sense. From the point of view of our model this is not a significant issue, the important thing being to get the prenatal and neonatal growth pattern realistic. We have done that, so we are going to stop here and use the growth curve of Figure ~\ref{fig:mlbwagefit3}.  This is an "average" curve. We can study small perterbations from the average ( eg a faster growth rate) simply by varying its parameters.
 
@@ -77,14 +77,14 @@ We see that our theoretical growth curve now follows the points well, except for
  Before follicles start to initiate there is a population of pre-papilla cells. This populaton is characterised by its population size ( cell number) $C_{n}$
 and its mitotic rate which we describe as its cell birth probability (probability that a cell chosen at random divides in a unit time ) $C_{b}$.
 
- The first follicles to form are called primary follicles. This activity begins at locations called 'sites'. There are a definite nunmer ($L_{p}$) of primary follicle sites on a sheep's skin. Primary follicle initiation begins at a foetal age of around 64 days ($T_{p}$), and ends when all the primary follicle 'sites' are used.
+ The first follicles to form are called primary follicles. This activity begins at locations called 'sites'. There are a definite number ($L_{p}$) of primary follicle sites on a sheep's skin. Primary follicle initiation begins at a foetal age of around 64 days ($T_{p}$), and ends when all the primary follicle 'sites' are used.
 
 Each primary follicle formed uses a number of pre-papilla cells. We call the average number of pre-papilla cells per primary follicle $C_{p}$. The rate at which follicles form we designate $F_{r}$. It is not dependent on time, or on the type of follicle being formed, or on the number of available sites or pre-papilla cells. It is simply the differentiation rate of follicles ( no of follicles per unit skin area per day). 
 
 We start calculating at a given day ($t$) , and while primary follicles are initiating ( ie beginning at time $T_{p}$, the time at which primary inittiation starts) we calculate
 \begin{eqnarray}
 \label{eqn:prim}
-P_{t} & = & P_{t-1} +  F_{r} * S \\
+P_{t} & = & P_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:prim2}
 D_{t} & = & P_{t} * C_{p} \\
 \label{eqn:prim3}
@@ -94,7 +94,7 @@ where
 \begin{description}
 \item[$P_{t}$] is number of primary follicles formed in time interval $t$
 \item[$D_{t}$] is number of pre-papilla cells which differentiate ( ie become papilla cells) in time interval $t$
-\item[$S$] is the surface area of skin on the sheep
+\item[$S_{t}$] is the surface area of skin on the sheep at time t
 \end{description}
 This is a recurrence equation, because each time round depends on values in the previous time round. The equations can be evaluated sequentially, starting from time zero. The calculation in equations~\ref{eqn:prim}, ~\ref{eqn:prim2}, and ~\ref{eqn:prim3} continues until all of the primary follicle sites are utilized ( ie until $ P_{t} = L_{p} $). 
 
@@ -103,12 +103,12 @@ In the period between primary follicle intitation and secondary follicle initiat
 \label{eqn:mult}
 (C_{n})_{t+1}  =  (C_{n})_{t} + C_{b} * (C_{n})_{t}
 \end{equation}
-The calculation in equation~\ref{eqn:mult} continues until the time $t$ reaches 
+The calculation in equation~\ref{eqn:mult} continues until the time $t$ reaches  $T_{So}$.
 
 When secondary original follicles begin to initiate ( ie beginning at time $t_{So}$ ) we calculate
 \begin{eqnarray}
 \label{eqn:so}
-So_{t} & = & So_{t-1} +  F_{r} * S \\
+So_{t} & = & So_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:so2}
 D_{t} & = & So_{t} * C_{s_{o}} \\
 \label{eqn:so3}
@@ -120,14 +120,14 @@ where
 \item[$C_{s_{o}}$] is the average number of pre-papilla cells per So follicle.
 \end{description}
 
-The calculation in equations ~\ref{eqn:so}, ~\ref{eqn:so2}, and ~\ref{eqn:so3} continues until all of the So follicle sites are utilised. There are typically 3 So sites per P follicle site ( because the follicles form in trio groups (Carter(1943)~\cite{cart:43}). So So follicles continue to form until $ So_{t} = L_{So} $  where $L_{So} = 3 * L_{p} $. It would be unusual for the number of prepapilla cells $(C_{n})_{t}$ to exhaust before all So sites are utilised. 
+The calculation in equations ~\ref{eqn:so}, ~\ref{eqn:so2}, and ~\ref{eqn:so3} continues until all of the So follicle sites are utilised. There are typically 3 So sites per P follicle site ( because the follicles form in trio groups (Carter(1943)~\cite{cart:43}). So So follicles continue to form until $ So_{t} = L_{So} $  where $L_{So} = 3 * L_{p} $. It would be unusual for the number of prepapilla cells $(C_{n})_{t}$ to exhaust before all So sites are utilised, in a Merino sheep, but this happens in non-Merino breeds. 
 
 After all of the So sites are utilized, any remaining pre-papilla cells have nowhere specific on the epidermis to initiate a follicle downgrowth, so what happens is that they form follicles by branching from the stem of existing follicles. The branches are termed secondary derived (Sd) follicles after Hardy and Lyne(1956)~\cite{hard:56}
 
-The initiation of Sd follicles continues immediately after all So sites are utilized, and continues until all of the remaining pre-papilla cells are differentiated. We calculate
+The initiation of Sd follicles continues immediately after all So sites are utilized, and continues until all of the remaining pre-papilla cells are differentiated. It is assumed that the initiation rate of Sd follicles is the same as that for follicles at sites. We calculate
 \begin{eqnarray}
 \label{eqn:sd}
-Sd_{t} & = & Sd_{t-1} +  F_{r} * S \\
+Sd_{t} & = & Sd_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:sd2}
 D_{t} & = & Sd_{t} * C_{s_{d}} \\
 \label{eqn:sd3}
@@ -160,7 +160,7 @@ S = S_{k} W^{2/3}
 \end{displaymath}
 which converts body weight ($W$) to surface area($S$).  The value ($S_{k} = 9$) is the value for sheep given by ...
 
- We set a range of day numbers starting from conception which is day zero.  We set $t_{0}$ to the day number at which the starting number of pre-papilla cells ($(C_{n})_{0}$) is specified. We set ($t_{max}$)  to the number of days at which adult weight would be achieved, approximately 900 days from conception for a typical sheep. We use a 1 day time increment ($\delta t$) for stepwise calculation.
+ We set a range of day numbers starting from conception which is day zero.  We set $t_{0}$ to the day number at which the starting number of pre-papilla cells ($(C_{n})_{0}$) is specified. This needs to be some time before primary follicle initiation commences. We set ($t_{max}$)  to the number of days at which adult weight would be achieved, approximately 900 days from conception for a typical sheep. We use a 1 day time increment ($\delta t$) for stepwise calculation.
 
  The number of primary follicle sites was approximated by taking a typical adult primary follicle density ( 2 follicles per $mm^{2}$) and multiplying by a typical adult Merino surface area ( 1 $m^{2}$ ), to obtain $2 x 10^{6}$ sites.
 
@@ -168,13 +168,13 @@ which converts body weight ($W$) to surface area($S$).  The value ($S_{k} = 9$) 
 
  The follicle initiation rate ($F_{r}$) is number of follicles forming per unit area per unit time. It is assumed to be the same at all times and for all types of follicle.  An adult primary density of 200 primaries per $cm^{2}$ converts back to a density at 64 days of about 4500 primaries per $cm^{2}$. As these forem in about 10 days, this requires a primary follicle initiation rate of 450 per $cm^{2}$ per day. We use this 'ballpark' figure for all follicles and all times.
 
- The start time for primary follicle initiation ($T_{P} = 64$ days) comes from Carter(1955)~\cite{cart:55}. It could be anywhere from 50 to 70 days. Similarly the start time for So follicle initiation ($T_{So} = 86$ days), could be anywhere from 85 to 100 days.
+ The start time for primary follicle initiation ($T_{P} = 64$ days) comes from Carter(1955)~\cite{cart:55}. It could be anywhere from 60 to 70 days. Similarly the start time for So follicle initiation ($T_{So} = 86$ days), could be anywhere from 85 to 100 days.
 
- The number of pre-papilla cells at time zero ($(C_{n})_{0} = 10_{8}$) is an absolute guess. We have no data on this. We do know that the final number of differentiated papilla cells in adult Merinos is between $2 10^{9}$ and $5 10^{9}$. We know this from counts of papilla cell numbers in skin sections from adult sheep. So this is an upper limit to the number of pre-papilla cells at time zero. We also know that there is possibly a {\em tradeoff} situation, whereby pre-papilla cells and fibroblasts are made from a common resource (Watts and Jackson(2018)~\cite{watt:18}), so that animals with a lot of collagen (ie wrinkled Merinos) are likely to have a lower number of pre-papilla cells.
+ The number of pre-papilla cells at time zero ($(C_{n})_{0} = 10_{8}$) is an absolute guess. We have no data on this. We do know that the final number of differentiated papilla cells in adult Merinos is between $2x10^{9}$ and $5x10^{9}$. We know this from counts of papilla cell numbers in skin sections from adult sheep. So this is an upper limit to the number of pre-papilla cells at time zero. We also know that there is possibly a {\em tradeoff} situation, whereby pre-papilla cells and fibroblasts are made from a common resource (Watts and Jackson(2018)~\cite{watt:18}), so that animals with a lot of collagen (ie wrinkled Merinos) are likely to have a lower number of pre-papilla cells.
 
  The average number of pre-papilla cells per follicle  is something for which we actually have some limited data. A sample of 42 sheep, from a CSIRO selection experiment with  4 lines selected for high and low fibre diameter and high and low staple length, were skin sampled and counts of dermal papilla cells per follicle bulb made. For 34 of these 42 sheep, an average fibre diameter measurement was available. The relationship obtained between average number of dermal papilla cells per follicle and average fibre diameter is shown in Figure~\ref{fig:dpccdiam}
 \input{figdpccdiam.tex}
- We can use this relationship to setup our starting values for average number of pre-papilla cells per follicle. Assume that the above relationship applies equally to all follicle types ( we have no information to the contrary), let us start with a sheep with $D_{P}=20$, $D_{So}=19$, and $D_{Sd}=18$ microns. The corresponding dermal papilla cell numbers are $C_{P}=65$, $C_{So}=59$, and $C_{Sd}=53$.  So we use these values as perhaps being typical of fine Merino sheep. We do not know if papilla cells continue to divide aftere they move to follicle bulbs and differentiate, so it is unclear whether the above data, which are for adult sheep, are relevant to estimating the number of pre-papilla cells actually used in forming a follicle in the foetus. For example, if there were one cell division after differentiation, the foetal numbers would be half the above estimates. We have no check on this.
+ We can use this relationship to setup our starting values for average number of pre-papilla cells per follicle. Assume that the above relationship applies equally to all follicle types ( we have no information to the contrary), let us start with a sheep with $D_{P}=20$, $D_{So}=19$, and $D_{Sd}=18$ microns. The corresponding dermal papilla cell numbers are $C_{P}=65$, $C_{So}=59$, and $C_{Sd}=53$.  So we use these values as perhaps being typical of fine Merino sheep. We do not know if papilla cells continue to divide after they move to follicle bulbs and differentiate, so it is unclear whether the above data, which are for adult sheep, are relevant to estimating the number of pre-papilla cells actually used in forming a follicle in the foetus. For example, if there were one cell division after differentiation, the foetal numbers would be half the above estimates. We have no check on this.
 
 There is other publishd data on dermal papilla cell numbers in follicles of other species. In mice, Chi, Wu, and Morgan(2013)~\cite{chi:13} observe that dermal papilla cell numbers vary between 20 and 100 per follicle, with guard hairs having more than other fibre types, and Zigzag fibres least. This agrees with our adult sheep estimates. The papilla cell numbers fluctuated with the mouse hair cycle, and their variation correlated with hair length and diameter. So the number of dermal papilla cells is not fixed for the life of a follicle, it can fluctuate with the hair cylcle, and fibre dimensionss fluctuate with it. Sheep are different from mice in that most of their follicles are in Anagen for long periods.  What we need to note here is a caution that adult dermal papilla cell numbers per follicle are not necessarily the numbers of pre-papilla cells used to initially form the follicle.
 
@@ -193,6 +193,8 @@ There is one further check on the feasability of our 20 starting parameters whic
 The remarks made above relating calculated results for various $C_{b}$ values to breed means are not meant to imply that breed differences  in density and S/P ratio are caused by differences in $C_{b}$. Other parameters from Table~\ref{tab:base} could also produce such differences. We shall see this in the results below where we look at each parameter in turn. Here, we were simply trying to show that the calculated results were in the feasible region, if we chose certain values for $C_{b}$.
 
 So we end with $C_{b}=0.0764$ as the base parameter value shown in Table~\ref{tab:base}, being half way between the values indicated from calculations of density and of S/P ratio. What does this mean? Well it says that on any one day 7.64 percent of the population of pre-papilla cells will divide. We have no idea if that is realistic, it simply makes the calculations work if we set it to that level. 
+
+To put this tiny value $C_{b}=0.0764$ in perspective, it will produce a doubling of the cell population in about 10 days, because $(1.0765)^{10} = 2.08$.
 
 We can now have a look at the detailed time series of development, as specified by the base parameter set. Figure~\ref{fig:basefollno} shows the cumulative numbers of each type of follicle initiated over the range of 60 to 900 days.
 \input{figbasefollno.tex}
