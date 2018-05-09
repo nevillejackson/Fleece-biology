@@ -1,0 +1,28 @@
+# functions
+export(
+  adultdensity,
+  as.plist,
+  density,
+  diameter,
+  folli,
+  fregion,
+  genlogist,
+  labplot2,
+  logist,
+  make.levels,
+  plotdens,
+  plotfollno,
+  plotoneparplus,
+  plotonepar,
+  plotthreepar,
+  plottptso,
+  varyonepar,
+  varytwopar
+)
+
+# import dependencies
+import()
+
+importFrom("graphics", "hist", "mtext", "par")
+importFrom("grDevices")
+importFrom("stats","coef","cor","fitted","lm","var")

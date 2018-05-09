@@ -1,0 +1,9 @@
+Package: ppcell
+Type: Package
+Title: Models growth of pre-papilla cell population and follicle initiation in sheep skin
+Version: 1.0-1
+Date: 2018-05-02
+Author: Neville Jackson
+Maintainer: Neville Jackson <nanddjackson@bigpond.com>
+Description: Models the dynamics of pre-papilla cell population numbers and the initiation of primary follicles, secondary original follicles  at sites in the dermis. Allows secondary derived follicles to initate as branches from other follicles. Demonstrates the dependence of final follicle density on the number of pre-papilla cells available at follicle initiation.
+License: GPL-2
