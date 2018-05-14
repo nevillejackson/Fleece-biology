@@ -1,73 +1,54 @@
 \name{plotonepar}
 \alias{plotonepar}
-%- Also NEED an '\alias' for EACH other topic documented here.
+\alias{plotoneparplus}
+\alias{plotthreepar}
+\alias{plottptso}
 \title{
-%%  ~~function to do ... ~~
+Plot various graphs showing effect of one parameter on adult density, at set levels of a second parameter.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Plot adult density against one parameter with separate lines ( point symbols) for levels of a second parameter, which is usually the cell birth probability.
 }
 \usage{
 plotonepar(param, which, values, out = "dens")
-}
-%- maybe also 'usage' for other objects documented here.
+plotoneparplus(param,which,values,other="cellbirthprob",
+      ovalues=c(.070,.073,.076,.0764),out="dens",myxlab=which)
+plotthreepar(param,which = c("pavecellno","soavecellno","sdavecellno"),
+      values = seq( 30,70,1),other="cellbirthprob",
+      ovalues=c(.070,.073,.076,.0764),out="dens",myxlab=which)
+plottptso(param,which = c("pstarttime","sostarttime"),
+      values = seq(63,65,0.1),other="cellbirthprob",
+      ovalues=c(.070,.073,.076,.0764),out="dens",myxlab=which)
+} 
 \arguments{
   \item{param}{
-%%     ~~Describe \code{param} here~~
+List item of parameters as described for function \code{folli()}
 }
   \item{which}{
-%%     ~~Describe \code{which} here~~
+Name of parameter which varies. For some functions this is a vector of parameter names.
 }
   \item{values}{
-%%     ~~Describe \code{values} here~~
+Vector of values for parameter which varies
+}
+  \item{other}{
+Name of parameter which is plotted as separate lines
+}
+  \item{ovalues}{
+Vector of values for \code{other} argument
 }
   \item{out}{
-%%     ~~Describe \code{out} here~~
+What to put on Y axis. Default is \code{"dens"} which means a density plot. Other option is \code{"sop"} which means plot S/P ratio instead of density.
 }
+  \itrem{myxlab}{
+Label for X axis
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
+Nothing is returned. These functions are for their plot side effect.
 }
 \author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Neville Jackson
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (param, which, values, out = "dens") 
-{
-    tmp <- varyonepar(param, which, values)
-    if (out == "dens") {
-        plot(tmp$values, tmp$dens, xlab = which, ylab = "Adult density ( no per mm^2)")
-    }
-    else {
-        plot(tmp$values, tmp$sop, xlab = which, ylab = "Adult S/P ratio")
-    }
-  }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ misc1 }
