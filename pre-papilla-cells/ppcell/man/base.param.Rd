@@ -1,49 +1,53 @@
 \name{base.param}
 \alias{base.param}
+\alias{fine.param}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Base parameter dataset
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+A list item containing values for each of the 20 parameters, as required for function \code{folli()}. This is just a starting set of parameter values which will produce a feasable result with function \code{folli()}.
 }
-\usage{data("base.param")}
+\usage{
+data(base.param)
+data(fine.param)
+}
 \format{
-  The format is:
 List of 15
- $ growth       :List of 6
-  ..$ lowasymp: num 0
-  ..$ upasymp : num 45000
-  ..$ rate    : num 0.028
-  ..$ maxpos  : num 1
-  ..$ wtatmax : num 1000
-  ..$ c       : num 1
- $ surfareaconst: num 9
- $ ztime        : num 60
- $ maxtime      : num 900
- $ timeincrement: num 1
- $ psiteno      : num 2e+06
- $ sopratio     : num 3
- $ follinitrate : num 450
- $ pstarttime   : num 64
- $ sostarttime  : num 86
- $ zcellno      : num 1e+08
- $ pavecellno   : num 65
- $ soavecellno  : num 59
- $ sdavecellno  : num 53
- $ cellbirthprob: num 0.0764
+\describe{
+ \item{$ growth} {List of 6
+  \describe{
+    \item{$ lowasymp}{ num 0}
+    \item{$ upasymp}{ num 45000}
+    \item{$ rate}{ num 0.028}
+    \item{$ maxpos}{ num 1}
+    \item{$ wtatmax}{ num 1000 }
+    \item{$ c}{ num 1}
+  }
+ }
+ \item{$ surfareaconst}{ num 9}
+ \item{$ ztime}{ num 60}
+ \item{$ maxtime}{ num 900}
+ \item{$ timeincrement}{ num 1}
+ \item{$ psiteno}{ num 2e+06}
+ \item{$ sopratio}{ num 3}
+ \item{$ follinitrate}{ num 450}
+ \item{$ pstarttime}{ num 64}
+ \item{$ sostarttime}{ num 86}
+ \item{$ zcellno} {num 1e+08}
+ \item{$ pavecellno}{ num 65}
+ \item{$ soavecellno}{ num 59}
+ \item{$ sdavecellno}{ num 53}
+ \item{$ cellbirthprob}{ num 0.0764}
 }
+}
+
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+The alternative set of parameters \code{fine.param} is the same except that the numbers of papilla cells per follicle are les, resulting in smaller follicles and finer fibre diameters.
 }
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
+
 \examples{
 data(base.param)
-## maybe str(base.param) ; plot(base.param) ...
+folli(base.param)
 }
 \keyword{datasets}

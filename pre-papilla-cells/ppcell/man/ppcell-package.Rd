@@ -3,34 +3,40 @@
 \alias{ppcell}
 \docType{package}
 \title{
-\packageTitle{ppcell}
+Calculate dynamics of pre-papilla cell numbers in developing sheep foetus
 }
 \description{
-\packageDescription{ppcell}
+Calculations for investigating the dynaics of pre-papilla cell numbers in the developing sheep foetus, and its effect on follicle development.
 }
 \details{
+\tabular{ll}{
+Package: \tab ppcell\cr
+Type: \tab Package\cr
+Version: \tab 1.0-1\cr
+Date: \tab 2018-05-14\cr
+License: \tab GPL-2 \cr
+}
+This package provides tools for simulation of the effect of pre-papilla cell numbers on follicle development, including plotting of results and investigating combinations of parameters which lead to particular outcomes.
 
-The DESCRIPTION file:
-\packageDESCRIPTION{ppcell}
-\packageIndices{ppcell}
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
+You may wish to use this software if you are interested in wool follicle development and wool growth.
+
+The main functions in this package are:
+\describe{
+\item{folli}{calculates cell numbers and follicle formation}
+\item{fregion}{investigates feasable regions in the parameter space}
+\item{plotxxx}{plotting routines}
+}
+
+There are also some datasets which are starting values for the 20 parameters required.
 }
 \author{
-\packageAuthor{ppcell}
+Neville Jackson
 
-Maintainer: \packageMaintainer{ppcell}
+Maintainer: Neville Jackson <nanddjackson@bigpond.com>
 }
 \references{
-~~ Literature or other references for background information ~~
+  ppcell.pdf
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
 \examples{
-~~ simple examples of the most important functions ~~
 }

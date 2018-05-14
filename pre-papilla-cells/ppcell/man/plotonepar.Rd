@@ -39,7 +39,7 @@ Vector of values for \code{other} argument
   \item{out}{
 What to put on Y axis. Default is \code{"dens"} which means a density plot. Other option is \code{"sop"} which means plot S/P ratio instead of density.
 }
-  \itrem{myxlab}{
+  \item{myxlab}{
 Label for X axis
 }
 }

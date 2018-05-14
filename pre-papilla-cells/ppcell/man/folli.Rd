@@ -11,9 +11,8 @@ folli(param)
 }
 
 \arguments{
-  \item{param} list object containing containing values set for 20 parameters  as follows:
-\describe{
-\item{growth}{list object containing growth curve parameters as follows:}
+  \item{param}{list object containing containing values set for 20 parameters  as follows:}
+  \item{growth}{list object containing growth curve parameters as follows:
   \describe{
   \item{lowasymp}{lower asymptote of growth curve (usually zero)}
   \item{upasymp}{upper asymptote of growth curve. This is adult weight in $gm$.}
@@ -22,6 +21,7 @@ folli(param)
   \item{wtatmax}{controls weight at maximum growth rate}
   \item{c}{controls upper asymptote (usually 1).}
   }
+}
 \item{surfareaconst}{constant converting weight in gm to surface area in $cm^{2}$}
 \item{ztime}{zero time for calculation. this is the day number at which initial pre-papilla cell number is specified}
 \item{maxtime}{ending day number for calculations. should correspond to adult sheep}
@@ -32,7 +32,6 @@ folli(param)
 \item{pstarttime}{day no for start of P follicle initiation}
 \item{sostarttime}{day no for start of So follicle initiation}
 
-}
 }
 
 \details{
@@ -76,7 +75,7 @@ The document ppcell.pdf has a bibliography of literature references
 Neville Jackson
 }
 \note{
-\code{folli()(} will only calculate for one set of parameters at a time. See \code{fregion()} for an example of how to make multiple calls varying some parameters}
+\code{folli()} will only calculate for one set of parameters at a time. See \code{fregion()} for an example of how to make multiple calls varying some parameters
 }
 
 

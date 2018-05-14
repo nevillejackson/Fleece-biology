@@ -2,31 +2,24 @@
 \alias{mlbw.df}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Merino lamb body weights from birth to 140 days
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+Merino lamb body weights for 4 groups of Merino lambs on different levels of nutrition
 }
-\usage{data("mlbw.df")}
+\usage{data(mlbw.df)}
 \format{
   A data frame with 56 observations on the following 3 variables.
   \describe{
-    \item{\code{Age}}{a numeric vector}
+    \item{\code{Age}}{a numeric vector - age in days starting from birth}
     \item{\code{Group}}{a factor with levels \code{HH} \code{HL} \code{LH} \code{LL}}
-    \item{\code{Weight}}{a numeric vector}
+    \item{\code{Weight}}{a numeric vector - weights of lambs in Kg}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
+Taplan and Everitt(1962) URL https://pdfs.semanticscholar.org/90b6/db6e9763d25add182220c0b369023072d41b.pdf
 }
 \examples{
 data(mlbw.df)
-## maybe str(mlbw.df) ; plot(mlbw.df) ...
 }
 \keyword{datasets}

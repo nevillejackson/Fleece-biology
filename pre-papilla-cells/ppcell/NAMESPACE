@@ -24,5 +24,4 @@ export(
 import()
 
 importFrom("graphics", "hist", "mtext", "par")
-importFrom("grDevices")
 importFrom("stats","coef","cor","fitted","lm","var")

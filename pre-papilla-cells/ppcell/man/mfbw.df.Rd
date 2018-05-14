@@ -2,30 +2,23 @@
 \alias{mfbw.df}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Sheep foetal body weight data
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+Foetal weights in grams for Merino lambs from 53 to 137 days of gestation. 
 }
-\usage{data("mfbw.df")}
+\usage{data(mfbw.df)}
 \format{
   A data frame with 43 observations on the following 2 variables.
   \describe{
-    \item{\code{Age}}{a numeric vector}
-    \item{\code{FoetWt}}{a numeric vector}
+    \item{\code{Age}}{a numeric vector - age in days}
+    \item{\code{FoetWt}}{a numeric vector - weights in grams}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
+Metcalf etal (1962) Quart. J. exp. Physiol. XLVII(4) 305-313
 }
 \examples{
 data(mfbw.df)
-## maybe str(mfbw.df) ; plot(mfbw.df) ...
 }
 \keyword{datasets}
