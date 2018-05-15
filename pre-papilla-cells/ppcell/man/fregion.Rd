@@ -10,12 +10,18 @@ To search for feasable regions of the parameter space need to generate results f
 }
 \usage{
 fregion(base.param)
-as.plist(base.param)
+as.plist(v,base.param)
 make.levels(base.param, nlevels)
 }
 \arguments{
   \item{base.param}{
 The base parameters dataset as found in file \code{base.param.rda}
+}
+  \item{v}{
+A vector of parameters to be turned into  a list item like \code{base.param}
+}
+  \item{nlevels}{
+Number of levels to use for each parameter varied
 }
 }
 \details{

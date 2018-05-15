@@ -8,7 +8,6 @@ export(
   fregion,
   genlogist,
   labplot2,
-  logist,
   make.levels,
   plotdens,
   plotfollno,
@@ -23,5 +22,5 @@ export(
 # import dependencies
 import()
 
-importFrom("graphics", "hist", "mtext", "par")
+importFrom("graphics", "legend", "plot", "points", "text", "mtext", "par")
 importFrom("stats","coef","cor","fitted","lm","var")

@@ -15,7 +15,7 @@ data(fine.param)
 \format{
 List of 15
 \describe{
- \item{$ growth} {List of 6
+ \item{$ growth}{List of 6
   \describe{
     \item{$ lowasymp}{ num 0}
     \item{$ upasymp}{ num 45000}
@@ -34,7 +34,7 @@ List of 15
  \item{$ follinitrate}{ num 450}
  \item{$ pstarttime}{ num 64}
  \item{$ sostarttime}{ num 86}
- \item{$ zcellno} {num 1e+08}
+ \item{$ zcellno}{num 1e+08}
  \item{$ pavecellno}{ num 65}
  \item{$ soavecellno}{ num 59}
  \item{$ sdavecellno}{ num 53}

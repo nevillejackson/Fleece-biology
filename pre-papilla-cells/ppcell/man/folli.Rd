@@ -11,8 +11,9 @@ folli(param)
 }
 
 \arguments{
-  \item{param}{list object containing containing values set for 20 parameters  as follows:}
-  \item{growth}{list object containing growth curve parameters as follows:
+  \item{param}{list object containing containing values set for 20 parameters  as follows:
+ \describe{
+ \item{growth}{list object containing growth curve parameters as follows:
   \describe{
   \item{lowasymp}{lower asymptote of growth curve (usually zero)}
   \item{upasymp}{upper asymptote of growth curve. This is adult weight in $gm$.}
@@ -20,20 +21,24 @@ folli(param)
   \item{maxpos}{controls age at maximum growth rate}
   \item{wtatmax}{controls weight at maximum growth rate}
   \item{c}{controls upper asymptote (usually 1).}
-  }
+  }}
+ \item{surfareaconst}{constant converting weight in gm to surface area in $cm^{2}$}
+ \item{ztime}{zero time for calculation. this is the day number at which initial pre-papilla cell number is specified}
+ \item{maxtime}{ending day number for calculations. should correspond to adult sheep}
+ \item{timeincrement}{time step size used in calculation. typically 1 day}
+ \item{psiteno}{number of primary follicle sites per head}
+ \item{sopratio}{number of So follicle sites per P follicle site}
+ \item{follinitrate}{follicle initiation rate, no per timeincrement per $cm^{2}$}
+ \item{pstarttime}{day no for start of P follicle initiation}
+ \item{sostarttime}{day no for start of So follicle initiation}
+ \item{zcellno}{number of pre-papilla cells at time zero}
+ \item{pavecellno}{average number of papilla cells per P follicle}
+ \item{soavecellno}{average number of papilla cells per So follicle}
+ \item{sdavecellno}{average number of papilla cells per Sd follicle}
+ \item{cellbirthprob}{probability that a cell divides in time inteval \code{timeincrement}}
+ }
 }
-\item{surfareaconst}{constant converting weight in gm to surface area in $cm^{2}$}
-\item{ztime}{zero time for calculation. this is the day number at which initial pre-papilla cell number is specified}
-\item{maxtime}{ending day number for calculations. should correspond to adult sheep}
-\item{timeincrement}{time step size used in calculation. typically 1 day}
-\item{psiteno}{number of primary follicle sites per head}
-\item{sopratio}{number of So follicle sites per P follicle site}
-\item{follinitrate}{follicle initiation rate, no per timeincrement per $cm^{2}$}
-\item{pstarttime}{day no for start of P follicle initiation}
-\item{sostarttime}{day no for start of So follicle initiation}
-
 }
-
 \details{
 The function calculates cell numbers and follicle numbers at a range of times from \code{ztime} up to \code{maxtime} in steps of \code{timeincrement}.
 }
@@ -84,7 +89,7 @@ The functions \code{fregion()}, \code{density()}, \code{adultdensity()}, and \co
 The data \code{base.param}
 }
 \examples{
-library(ppcell)
+data(base.param)
 base.out <- folli(base.param)
 }
 
