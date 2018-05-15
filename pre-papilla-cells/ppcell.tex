@@ -290,7 +290,9 @@ We rather fear that the answer to the above question could be a wide range of va
 
 We tried a more restricted set of parameter values. We left the growth parameters fixed , and held the numbers of papilla cells per follicle fixed ( effectively that holds fibre diameter fixed). We looked at 5 levels of each of the remaining 7 parameters. A mere $5^7 = 78125$ combinations. We then selected out those with a final density in a very narrow range ( eg 25 to 25.1) and found that just about all levels of each of the 7 parameters could lead to this result. We doubled the range of the 5 levels of each parameter and recomputed. Same result. What is happening is that if you choose one level of one parameter, the other 6 parameters just juggle around to force the resultant density to $25 to 25.1$. The parameters exhibit what is called redundancy - they are not all necessary as some can stand in for others and lead to the same effect.
 
-It would be much more elegant for us to think a bit harder about the biology of development, and perhaps come up with a reparameterization to a smaller set of less redundant parameters. We have already noted that the number of pre-papila cells at time zero, and the cell birth probability must be related. Also the start times of development for P and So follicles must have a certain separation because P initiation always completes before So initiation starts. Quite a number of parameter combinations lead to results which 'run away', that is Sd initiation never ceases because the follicle initiation rate never catches up with the cell birth rate. That is clearly unbiological.  In the real world some of these partameters are clearly dependent on one another, and cannot be just chosen independently as we have rashly done in our calculations. Learning about that is the key to fixing it.
+It would be much more elegant for us to think a bit harder about the biology of development, and perhaps come up with a reparameterization to a smaller set of less redundant parameters. We have already noted that the number of pre-papila cells at time zero, and the cell birth probability must be related. Also the start times of development for P and So follicles must have a certain separation because P initiation always completes before So initiation starts. Quite a number of parameter combinations lead to results which 'run away', that is Sd initiation never ceases because the follicle initiation rate never catches up with the cell birth rate. That is clearly unbiological.  In the real world some of these partameters are clearly dependent on one another, and cannot be just chosen independently as we have rashly done in our calculations. Learning about that is the key to fixing it. 
+
+If we were able to study variation in the 20 parameters from sheep to sheep, and could look at their joint distribution, we would undoubtedly find that some subsets were correlated. With that information we would be able to make a much more refined attempt at seeing which parameter combinations would lead to a nominal outcome.
 
 
 
@@ -365,4 +367,11 @@ Watts, J.E., and Jackson, N. (2018) zIs collagen quantity and properties involve
 Xavier, S.P., Gordon-Thomson, C. Wynn, P.C., McCullagh, P., Thomson, P.C., Tomkins, L., Mason, R.S., and Moore, G.P.M.(2003) Evidence that Notch and Delta expressions have a role in dermal condensate aggregation during wool follicle initiation. Experimental Dermatology, 22:656-681
 
 \end{thebibliography}
+
+\appendix
+\section{Appendix}
+The parameter {\em cellbirthprob} is defined in a different way from the approach biologists normally use to describe mitotic rates. We need to bring the two together.
+
+
+
 \end{document}
