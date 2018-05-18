@@ -88,7 +88,7 @@ P_{t} & = & P_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:prim2}
 D_{t} & = & P_{t} * C_{p} \\
 \label{eqn:prim3}
-(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} + D_{t}
+(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} - D_{t}
 \end{eqnarray}
 where 
 \begin{description}
@@ -112,7 +112,7 @@ So_{t} & = & So_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:so2}
 D_{t} & = & So_{t} * C_{s_{o}} \\
 \label{eqn:so3}
-(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} + D_{t}
+(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} - D_{t}
 \end{eqnarray}
 where
 \begin{description}
@@ -131,7 +131,7 @@ Sd_{t} & = & Sd_{t-1} +  F_{r} * S_{t} \\
 \label{eqn:sd2}
 D_{t} & = & Sd_{t} * C_{s_{d}} \\
 \label{eqn:sd3}
-(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} + D_{t}
+(C_{n})_{t+1} & = & (C_{n})_{t} + C_{b} * (C_{n})_{t} - D_{t}
 \end{eqnarray}
 where
 \begin{description}
@@ -358,10 +358,12 @@ R Core Team (2013). R: A language and environment for statistical
 Ryder, M.L. and Stevenson, S.K.(1968) Wool Growth. Academic Press, London.
 
 \bibitem{tapl:62}
-Taplan, D.E., and Everitt, G.C. (1962) The influence of prenatal nutrition on postnatal performance of Merino lambs. Waite Agricultural Research Institute, University of Adelaide. 72-81 URL https://pdfs.semanticscholar.org/90b6/db6e9763d25add182220c0b369023072d41b.pdf
+Taplan, D.E., and Everitt, G.C. (1962) The influence of prenatal nutrition on postnatal performance of Merino lambs. Waite Agricultural Research Institute, University of Adelaide: 72-81
+URL https://pdfs.semanticscholar.org/90b6/
+db6e9763d25add182220c0b369023072d41b.pdf
 
 \bibitem{watt:18}
-Watts, J.E., and Jackson, N. (2018) zIs collagen quantity and properties involved in wrinkle formation and/or in follicle development? URL https://github.com/nevillejackson/SRS-Merino/tree/master/supplementary/collagen/collagen.pdf
+Watts, J.E., and Jackson, N. (2018) Is collagen quantity and properties involved in wrinkle formation and/or in follicle development? URL https://github.com/nevillejackson/SRS-Merino/tree/master/supplementary/collagen/collagen.pdf
 
 \bibitem{xavi:03}
 Xavier, S.P., Gordon-Thomson, C. Wynn, P.C., McCullagh, P., Thomson, P.C., Tomkins, L., Mason, R.S., and Moore, G.P.M.(2003) Evidence that Notch and Delta expressions have a role in dermal condensate aggregation during wool follicle initiation. Experimental Dermatology, 22:656-681
@@ -372,6 +374,62 @@ Xavier, S.P., Gordon-Thomson, C. Wynn, P.C., McCullagh, P., Thomson, P.C., Tomki
 \section{Appendix}
 The parameter {\em cellbirthprob} is defined in a different way from the approach biologists normally use to describe mitotic rates. We need to bring the two together.
 
+If all cells are dividing, the number of cells at time $t$ is given by
+\begin{displaymath}
+N_{t} = N_{0} 2^{tf}
+\end{displaymath}
+where
+\begin{description}
+\item[$N_{0}$] is initial number of cells
+\item[$f$] is frequency of cell cycles per unit time ( eg 1 cell cycle per day)
+\item[$N_{t}$] is number of cells at time $t$
+\end{description}
+This is known as geometric or exponential growth.  It assumes that every cell doubles ( in number) every cell cycle, so the daughter cells double again in the next cycle. The duration of a cell cycle is $1/f$.  The doubling time is also $1/f$. 
+
+If only a fraction of the cells are dividing, we have two populations, dividing cells and resting cells. Let us define
+\begin{description}
+\item[$F$] the fraction of cells which are dividing
+\item[$M_{i}$] the number of cells after $i$ cell cycles
+\item[$n$] the number of cell cycles observed
+\end{description}
+
+The number of cells after one cell cycle is
+\begin{displaymath}
+M_{1} = (1-F) M_{0} + 2 F M_{0}
+\end{displaymath}
+so $(1-F)$ is the fraction that do not divide and their numbers stay the same, while $F$ is the fraction that do divide and their numbers double.
+
+After two cell cycles the new number of cells is
+\begin{displaymath}
+M_{2} = (1-F) M_{0} + (1-F)( 2 F M_{0}) + 2F (2F M_{0})
+\end{displaymath}
+
+After several cycles  the cell numbers grow to
+\begin{displaymath}
+M_{i} = M_{0} \left[ \frac{1}{2} + \frac{1}{2}\sum_{i=1}^{n} (2 F)^{i} \right]
+\end{displaymath}
+where $i = 0..n$ is the number of cell cycles that have been observed.
+
+In terms of the above, our {\em cellbirthprob} parameter is
+\begin{displaymath}
+C_{b} = f F
+\end{displaymath}
+that is it incorporates both the cell cycle length and the fraction of cells dividing.
+
+Our parameter $C_{b}$ is used in a different way. We write a recursive or differ
+ence relationship
+\begin{eqnarray*}
+(C_{n})_{t} & = & (C_{n})_{t-1} + C_{b} (C_{n})_{t-1} \\
+           & = & (1 +  C_{b})(C_{n})_{t-1}
+\end{eqnarray*}
+So $C_{b}$ is used to calculate cell numbers at time $t$ from cell numbers at time $t-1$.  Our equations~\ref{eqn:prim3}, ~\ref{eqn:so3}, and ~\ref{eqn:sd3} are as above, except the number of cells lost thru differentiation has to be subtracted. 
+
+We can write out cell numbers equation as a prediction starting from time zero, as follows
+\begin{displaymath}
+(C_{n})_{t} = \left[(1 +  C_{b})^t\right] (C_{n})_{0}
+\end{displaymath}
+
+This is a simple power law or exponential function. It is analagous to the case above for all cells dividing, where the $2$ has been replaced by $(1+C_{b})$ and the $tf$ replaced by $t$
 
 
 \end{document}
