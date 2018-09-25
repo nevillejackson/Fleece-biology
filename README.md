@@ -22,6 +22,9 @@ The subdirectory _collagen_ contains a  link to a study of the role of soft and 
 ## Pre-papilla cell theory ##
 The subdirectory _pre-papilla-cells_ contains R software and an investigative writeup of numerical aspects of the pre-papilla cell theory of follicle development.
 
+## Fibre diameter and fibre length growth rate ##
+The subdirectory _diamlen_ contains a discussion document intended as a medium for setting research directions on the topic of what controls variation in fibre diameter between individual fibres within a fleece.
+
 ## What does this project hope to achieve? ##
 An understanding of how a sheep grows a fleece, of how various visually different fleece types occur, and whether one can infer backwards from fleece appearance to skin traits and fibre growth characteristics. This understanding is important in visual assessment of sheep, where measurement is neither practical nor economic.
 
