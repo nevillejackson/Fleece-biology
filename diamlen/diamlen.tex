@@ -7,6 +7,7 @@
 \usepackage{graphicx,lscape,subfigure}
 \usepackage{bm}
 \usepackage{textcomp}
+\usepackage{tikz}
  
 
 \title{Questions regarding developmental control of fibre diameter and fibre length growth rate in sheep}
@@ -111,6 +112,27 @@ One thing is certain. We need to get quantitative.  That is what the next sectio
 
 \section{Fibre length growth rate and fibre diameter}
 This is about quantifying individual fibre length growth rates and fibre diameters and trying to write some equations defining how length growth rate and diameter are related to each other and to other things. So we are putting explanations on hold and trying to establish some facts.
+
+\subsection{Understanding how one follicle functions}
+We need to tackle this before looking at variations between follicles. For the present purpose, one fibre grown over a nominal time interval can be described as a cylinder of keratin with a length $(L)$ and diameter$(D)$. We are neglecting internal structure and shape (curvature and cross section) and are not allowing diameter to vary along the length of the cylinder. 
+
+The amount of keratin material in the cylinder can be described by its volume $(V)$, which is related to length and diameter by an identity $V = \frac{\pi}{4} D^{2} L$. So we have 3 variables, V, D, and L. What the identity relationship says is that only 2 of the three could be under independent biological control.  The third is automatically fixed by the other two. 
+
+So we already have a problem. Which 2 of the 3 are under biological control?  There are three possibilites summarized in Figure~\ref{fig:vdl}.
+\input{figvdl.tex}
+We think the correct causal model is Figure 2(b). This corresponds to transforming the volume equation to
+\begin{displaymath}
+L = \frac{V}{\frac{\pi}{4} d^{2}}
+\end{displaymath}
+So we are saying that $D$ and $V$ are what is biologically determined, and $L$ is simply a consequence of setting $D$ and $V$. 
+
+How do we justify that? Lets start with an analogy. Take a beaker of glass beadsand pour them into a measuring cylinder. The beads form a stack of diameter equal to the diameter of the mesuring cylinder, and the height of the stack corresponds to $L$. Put a larger beaker of beads into the cylinder and the diameter stays the same, but $L$ increases. Use a smaller cylinder with the same volume of beads and diameter of the stack will be less, but $L$ will be greater. 
+
+So, to what extent is the growth of a wool fibre like making a cylindrical stack of glass beads? We say it is exactly like it mathematically, but not , of course, physically. To justify that we need to identify the biological factors which correspond to the volume of beads and the setting of the diameter of the cylinder. Here is our best guess
+\begin{description}
+\item[$V$] volume is an easy guess. Each glass bead corresponds to a cortical cell. So $V$ is the total volume of cortical cells (per unit time). That in turn depends on the number of cells (per unit time) and the average cell volume. That in turn depends on the number of basal cells in the bulb ( the cells which divide to form the cortical cells) and their mitotic rate, and certain cortical cell differentiation processes which determine their average volume.
+\item[$D$] diameter is more difficult. Some of the basal bulb cells divide to form cortical cells which migrate up to form fibre. Some of the basal cells divide to form cells which migrate up to form the inner root sheath, which is not part of the fibre, and is eventually resorbed. It would seem that follicles which produce larger fibres have larger bulbs, larger stems, larger papilla cavities, and more papilla cells in the papilla cavity. We might guess that the papilla cells influence the size of the array of basal cells which become fibre. The only thing we know is that size can vary with time (eg nutritional effects, photoperiod effects, hair growth cycle effects) in an adult follicle and that the diameter of the fibre varies with it. There are also genetic differences in  average follicle size between animals.  There are also developmental differences in average size between P, So, and Sd follicles. There is also variation in size within each of these follicle types.
+\end{description}
 
 \subsection{Fibre growth equations}
 \subsection{Data on length growth rate and diameter for individual fibres}
