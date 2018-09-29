@@ -160,11 +160,43 @@ V_{0} = \frac{\pi}{4} D^{2} L_{0}
 \end{displaymath}
 where $V_{0}$ and $L_{0}$ refer to the volume and length of a {\em virtual} fibre which would contain all the bulb cells and have no cell length expansion.
 
-If only a fraction $\gamma$ of bulb cells enter the fibre, we have $V_{f} = \gamma V_{0}$, and the diameter will be reduced to $D_{f} =  $. So we have another {\em virtual} fibre which contain a fraction $\gamma$ of the bulb cells, but with no cell expansion. For this {\em virtual} fibre we have $V_{f} = \frac{\pi}{4} D^{2}_{f} L_{0}$.
+If only a fraction $\gamma$ of bulb cells enter the fibre, we have $V_{f} = \gamma V_{0}$, and the diameter will be reduced to $D_{f} =  $. So we have another {\em virtual} fibre which contain a fraction $\gamma$ of the bulb cells, but with no cell expansion. For this {\em virtual} fibre we have $V_{f} = \frac{\pi}{4} D^{2}_{f} L_{0}$. The subscript $f$ refers to this {\em virtual} fibre.
 
-If we now expand the length of the cortical cells by $\lambda$, we have $L_{d} = \lambda L_{0}$, and diameter will stay the same at $D_{fd} = D_{f}$, so for the real fibre we have $V_{fd} =  \frac{\pi}{4} D_{fd}^{2} L_{d}$.
+If we now expand the length of the cortical cells by $\lambda$, we have $L_{d} = \lambda L_{0}$, and diameter will stay the same at $D_{fd} = D_{f}$, so for the real fibre we have 
+\begin{displaymath}
+V_{fd} =  \frac{\pi}{4} D_{fd}^{2} L_{d}
+\end{displaymath}
+ The subscript $d$ refers to this {\em differentiated} fibre, that is to the actual fibre. So this is just the equation for the volume of the real fibre, as a cylinder. We can substitute for $L_{d}$ and $D_{fd}$ and get
+\begin{displaymath}
+V_{fd} =  \frac{\pi}{4} \gamma D_{0}^{2} \lambda L_{0} 
+\end{displaymath}
+
+This ties together 5 parameters $(V_{fd}, D_{0}^{2}, \gamma, L_{0}, and \lambda)$ , but it is not quite the form we want. $(V_{fd}$ is a result, $L_{0}$ is an intermediate, and only $D_{0}^{2}, \gamma, and \lambda$ are biological variables. We need to get the right hand side of the equations  purely in terms of biological variables, and we need equations for 3 results, $V_{fd}$, $D_{fd}$, and $L_{d}$. Getting that is a fairly simple transformation which leads to
+\begin{eqnarray}
+\label{eqn:bead1}
+V_{fd}  & = & \gamma \lambda V_{0} \\
+\label{eqn:bead2}
+D_{fd}^{2} & = & \gamma D_{0}^{2} \\
+\label{eqn:bead3}
+L_{d}  & = & \lambda \left [ \frac{V_{0}}{\frac{\pi}{4} D_{0}^{2}} \right ]
+\end{eqnarray}
+
+Equations ~\ref{eqn:bead1}, ~\ref{eqn:bead2}, and ~\ref{eqn:bead3} are our equations of fibre growth, given the modified  glass beads in a cylinder model. They predict the volume growth rate, diameter, and length growth rate of a fibre given the biological parameters $D_{0}$, $\gamma$, $\lambda$, and $V_{0}$. We summarize these 4 biological parameters and their meaning in Table~\ref{tab:4param}
+\input{tab4param.tex}
+We see in Table~\ref{tab:4param} that parameter $V_{0}$ is complex. It is meant to sum up all the output of the follicle bulb, that is the bulb produces a certain volume of cells per unit time. If we delve into how the bulb does this we can break $V_{0}$ up into a number of subparameters. We are going to try and get away with just havin one parameter for bulb function.
+
+We also see something important in equation~\ref{eqn:bead2}. Fibre diameter depends only on two things - the diameter of the follicle wall $(D_{0})$ and the proportion of bulb cells that go into fibre $(\gamma)$. In particular it does not depend on the bulb activity. We interpret $(D_{0})$ as a general follicle size parameter - large follicles are large all over - ie in diameter and length and bulb size and papilla size. There are only two ways a follicle can alter the diameter of its fibre - get bigger overall, or alter the proportion of cells going into fibre. 
+
+In contrast, length growth rate is far more complicated. It depends on bulb cell volume per unit time, it depends inversely on how much of that volume is required to form the diameter, and it depends in cortical cell length expansion during differentiation. So a follicle can alter its length growth rate output by churning out more bulb cells, by changing fibre diameter, or by changing the cortex structure formed during differentiation so that length expansion is changed.
+ 
+Volume growth rate (equation~\ref{eqn:bead1}), which is the same thing as fibre weight if there is no medullation,  does not depend on $(D_{0})$. It cancels out in doing the substitutions to get equation~\ref{eqn:bead1}. That is a little strange. What it is saying is that it doesnt matter whether you spread a certain volume of cells over a large or a small diameter cylinder, the volume stays the same. It is all about the volume of material the bulb produces in the first place ( modified by $\gamma$ and $\lambda$). Wool production is basically follicle bulb output. Diameter is something else.
+
+We need to look at some data to see if our 3 equations stand up to scrutiny. 
 
 \subsection{Data on length growth rate and diameter for individual fibres}
+
+\subsection{Quantitative genetic data on fibre diameter}
+
 \subsection{Cell model for fibre growth}
 
 \section{Discussion}
