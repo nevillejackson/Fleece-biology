@@ -99,7 +99,7 @@ Is there any way we can address these issues. Yes. The paper says
 Maybe we should request access to these data, and see if we can redo the analyses separately for follicle number and fibre diameter. That would at least address the third point above.
 
 \subsection{Follicle groups}
-One of the messages from the classic papers of H.B. Carter (Carter(1943)~\cite{cart:43} and Carter and Hardy (1947)~\cite{cart:47}) is that the {\em trio group} of three primary follicles and numbers of associated secondary follicles is the {\em biological unit} of sheep skin. What happens inside one trio group is repeated all over the woolgrowing surface, with some variations according to body sites. Whan you switch to  a different sheep, you may get a slightly differnet trio group, but it is again repeated all over the body.
+One of the messages from the classic papers of H.B. Carter (Carter(1943)~\cite{cart:43} and Carter and Hardy (1947)~\cite{cart:47}) is that the {\em trio group} of three primary follicles and numbers of associated secondary follicles is the {\em biological unit} of sheep skin. What happens inside one trio group is repeated all over the woolgrowing surface, with some variations according to body sites. When you switch to  a different sheep, you may get a slightly differnet trio group, but it is again repeated all over the body.
 
 So it has to be said that a large part of variation in fibre diameter between fibres within a fleece is due to variations in follicle and skin structure within the trio group. So studying trio groups is an important approach to trying to understand what controls fibre diameter variation. 
 
@@ -160,7 +160,7 @@ V_{0} = \frac{\pi}{4} D^{2} L_{0}
 \end{displaymath}
 where $V_{0}$ and $L_{0}$ refer to the volume and length of a {\em virtual} fibre which would contain all the bulb cells and have no cell length expansion.
 
-If only a fraction $\gamma$ of bulb cells enter the fibre, we have $V_{f} = \gamma V_{0}$, and the diameter will be reduced to $D_{f} =  $. So we have another {\em virtual} fibre which contain a fraction $\gamma$ of the bulb cells, but with no cell expansion. For this {\em virtual} fibre we have $V_{f} = \frac{\pi}{4} D^{2}_{f} L_{0}$. The subscript $f$ refers to this {\em virtual} fibre.
+If only a fraction $\gamma$ of bulb cells enter the fibre, we have $V_{f} = \gamma V_{0}$, and the diameter will be reduced to $D_{f}^{2} =  \gamma D_{0}^{2} $ or $D_{f} =  \sqrt{\gamma D_{0}} $. So we have another {\em virtual} fibre which contain a fraction $\gamma$ of the bulb cells, but with no cell expansion. For this {\em virtual} fibre we have $V_{f} = \frac{\pi}{4} D^{2}_{f} L_{0}$. The subscript $f$ refers to this {\em virtual} fibre.
 
 If we now expand the length of the cortical cells by $\lambda$, we have $L_{d} = \lambda L_{0}$, and diameter will stay the same at $D_{fd} = D_{f}$, so for the real fibre we have 
 \begin{displaymath}
@@ -171,7 +171,7 @@ V_{fd} =  \frac{\pi}{4} D_{fd}^{2} L_{d}
 V_{fd} =  \frac{\pi}{4} \gamma D_{0}^{2} \lambda L_{0} 
 \end{displaymath}
 
-This ties together 5 parameters $(V_{fd}, D_{0}^{2}, \gamma, L_{0}, and \lambda)$ , but it is not quite the form we want. $(V_{fd}$ is a result, $L_{0}$ is an intermediate, and only $D_{0}^{2}, \gamma, and \lambda$ are biological variables. We need to get the right hand side of the equations  purely in terms of biological variables, and we need equations for 3 results, $V_{fd}$, $D_{fd}$, and $L_{d}$. Getting that is a fairly simple transformation which leads to
+This ties together 5 parameters $(V_{fd}, D_{0}^{2}, \gamma, L_{0}, and \lambda)$ , but it is not quite the form we want. $V_{fd}$ is a result, $L_{0}$ is an intermediate, and only $D_{0}^{2}, \gamma, and \lambda$ are biological variables. We need to get the right hand side of the equations  purely in terms of biological variables, and we need equations for 3 results, $V_{fd}$, $D_{fd}$, and $L_{d}$. Getting that is a fairly simple transformation which leads to
 \begin{eqnarray}
 \label{eqn:bead1}
 V_{fd}  & = & \gamma \lambda V_{0} \\
@@ -187,11 +187,26 @@ We see in Table~\ref{tab:4param} that parameter $V_{0}$ is complex. It is meant 
 
 We also see something important in equation~\ref{eqn:bead2}. Fibre diameter depends only on two things - the diameter of the follicle wall $(D_{0})$ and the proportion of bulb cells that go into fibre $(\gamma)$. In particular it does not depend on the bulb activity. We interpret $(D_{0})$ as a general follicle size parameter - large follicles are large all over - ie in diameter and length and bulb size and papilla size. There are only two ways a follicle can alter the diameter of its fibre - get bigger overall, or alter the proportion of cells going into fibre. 
 
-In contrast, length growth rate is far more complicated. It depends on bulb cell volume per unit time, it depends inversely on how much of that volume is required to form the diameter, and it depends in cortical cell length expansion during differentiation. So a follicle can alter its length growth rate output by churning out more bulb cells, by changing fibre diameter, or by changing the cortex structure formed during differentiation so that length expansion is changed.
+In contrast, length growth rate is far more complicated. It depends on bulb cell volume per unit time, it depends inversely on how much of that volume is required to form the diameter (of the fibre plus inner root sheath ie $D_{0}$), and it depends on cortical cell length expansion during differentiation. So a follicle can alter its length growth rate output by churning out more bulb cells, by changing (fibre plus inner root sheath) diameter, or by changing the cortex structure formed during differentiation so that length expansion is changed.
  
-Volume growth rate (equation~\ref{eqn:bead1}), which is the same thing as fibre weight if there is no medullation,  does not depend on $(D_{0})$. It cancels out in doing the substitutions to get equation~\ref{eqn:bead1}. That is a little strange. What it is saying is that it doesnt matter whether you spread a certain volume of cells over a large or a small diameter cylinder, the volume stays the same. It is all about the volume of material the bulb produces in the first place ( modified by $\gamma$ and $\lambda$). Wool production is basically follicle bulb output. Diameter is something else.
+Volume growth rate (equation~\ref{eqn:bead1}), which is the same thing as fibre weight if there is no medullation and specific gravity is not varying,  does not depend on $(D_{0})$. It cancels out in doing the substitutions to get equation~\ref{eqn:bead1}. That is a little strange. What it is saying is that it doesnt matter whether you spread a certain volume of cells over a large or a small diameter cylinder, the volume stays the same. It is all about the volume of material the bulb produces in the first place ( modified by $\gamma$ and $\lambda$). Wool production is basically follicle bulb output. Diameter is something else.
 
-We need to look at some data to see if our 3 equations stand up to scrutiny. 
+We need to look at some observations to see if our 3 equations stand up to scrutiny. 
+
+\subsection{Sources of variation in fibre diameter}
+We have the classic study of Dunlop and McMahon(1974)~\cite{dunl:74} which used data from a range of sources to come up with a partitioning of variance of fibre diameter into along fibre, between fibre, between sites over the body of the sheep, and between sheep. The aim was to see how these sources contributed to the overall variance of diameter which one would obtain by measuring a core sample froma bale. The result obtained was  20 percent between sheep,  60 percent between fibres, 10 percent between sites, and 10 percent along the fibre. The most important source of variation in fibre diameter is therefore between fibres within one body site on a sheep, suggesting that variation within the follicle group is the major factor. 
+
+We need to expand that a bit for our purposes, because we want to know about follicle function in relation to variation of fibre diameter. So we make the following categories and attempt to review what is known about follicle function in relation to each
+\begin{description}
+\item[Genetic lines]
+\item[Sheep within a flock] Henderson(1965)~\cite{hend:65} developed a technique for digesting skin so that single follicles could be dissected out with the fibre intact, allowing measurement of follicle dimensions and fibre diameter and length. He found strong correlations of follicle length , papila volume and bulb diameter with fibre diameter when he studied variation between follicles within a sheep, but could not find these correlations at a between sheep level. He also found strong between sheep correlations of follicle length with fibre length, but correlations of papilla volume with fibre length were lower.  He also noted that nutrition and photoperiodicity affected the amount of germinative tissue in the follicle bulb. Henderson's study is a mixed bag.
+\item[Body sites]
+\item[Nutrition]
+\item[Photoperiod] Priestley and Rudall (1965)~\cite{prie:65}noted that in winter thinning of the fleece in Herdwick sheep, the inner root sheath becomes thicker on one side in some primary follicles which continue to grow fibres in the winter months.
+\item[Hair cycle] Straile(1965)~\cite{stra:65} observed in rabbits that when hairs change in diameter as they go thru stages of the hair growth cycle, the follicle outer root sheath does not change its size, but instead the inner root sheath changes in a way which complements the changes in fibre diameter. This complementary change in the inner root sheath occurs in Huxleys layer, which is the central of three sublayers found in the inner root sheath. 
+Priestley and Rudall (1965)~\cite{prie:65} found the same for zigzag fibres in rats, and also noted that the proportion of bulb output going to the fibre ( rather than the inner root sheath) coud be less than 50 percent.
+\item[Follicle types within a group] Schinckel(1961)~\cite{schi:61} noted that types of hair follicles that grow large hairs have large bulbs and dermal papillae, whereas types that grow small hairs have small bulbs and dermal papillae. Straile (1965)~\cite{stra:65} notes this, but also argues that bulb size is more strongly correlated with size of the hair plus inner root sheath, than with size of the hair alone.
+\end{description}
 
 \subsection{Data on length growth rate and diameter for individual fibres}
 
@@ -212,6 +227,9 @@ Carter, H.B. (1943) Studies in the Biology of the Skin and Fleece of Sheep. 1. T
 \bibitem{cart:47}
 Carter, H.B. and Hardy, M.H. (1947) Studies in the Biology of the Skin and Fleece of Sheep. 4. The hair follicle group and its topographical variations in the skin of the Merino foetus. CSIR Bulletin No 215, Melbourne, 1947
 
+\bibitem{dunl:74}
+Dunlop, A.A., and McMahone P.R. (1974)  The relative importance of sources of variation in fibre diameter for Australian Merino sheep. Aust. J. agric. Res. 25:167-81
+
 \bibitem{fras:51}
 Fraser, A.S. and Short, B.F. (1951) Competition between skin follicles in sheep. Nature 167:202-203
 
@@ -223,6 +241,9 @@ Fraser, A.S.(1953) Factors in the genetic determination of fleece structure in s
 
 \bibitem{fras:60}
 Fraser, A.S. and Short, B.F. (1960) The Biology of the Fleece. Animal Research Laboratories Technical Paper No 3. CSIRO, Australia, 1960
+
+\bibitem{hend:65}
+Henderson, A.E., (1965) Relationship of wool follicle and wool fibre dimensions. Biology of Skin and Hair Growth. Proc. Symposium Canberra, Aust, 1964 Ed A.G Lyne and B.F Short.
 
 \bibitem{hori:53}
 Horio, M. and Kondo, T. (1953) Text. Res. J. 23:373
@@ -256,6 +277,9 @@ Nay, T. and Jackson, N. (1973) Effect of changes in nutritional level on the dep
 Onions, W.J. (1962) Wool: an introduction to its properties, varieties, uses
      and production. Ernest Benn limited, London, 1962
 
+\bibitem{prie:65}
+Priestley, G.C. and Rudall, K.M. (1965) Modifications in the Huxley layer associated with changes in fibre diameter and output. Biology of Skin and Hair Growth. Proc. Symposium Canberra, Aust, 1964 Ed A.G Lyne and B.F Short.
+
 \bibitem{rprog:13}
 R Core Team (2013). R: A language and environment for statistical
   computing. R Foundation for Statistical Computing, Vienna, Austria.
@@ -263,6 +287,12 @@ R Core Team (2013). R: A language and environment for statistical
 
 \bibitem{ryde:55}
 Ryder, M.L. (1955) The blood supply to the wool follicle. Proc. Int. Wool Textile Res. Conf. Aust. 1955. Volume F. pp63-90
+
+\bibitem{schi:61}
+Schinckel, P.G. (1961) Mitotic activity in wool follicle bulbs. Aust. J. biol. Sci. 14:659-76
+
+\bibitem{stra:65}
+Straile, W.E. (1965) Root sheath - dermal papilla relationships and the control of hair growth. Biology of Skin and Hair Growth.  Proc. Symposium Canberra, Aust, 1964 Ed A.G Lyne and B.F Short.
 
 \bibitem{swan:93}
 Swan, P.G. (1993) Objective measurement of fibre crimp curvature and the bulk compressional properties of Australian wools. PhD Thesis, University of NSW, March 1993 
