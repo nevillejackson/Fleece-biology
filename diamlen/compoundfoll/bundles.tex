@@ -1,0 +1,194 @@
+%
+% Draft  document bundles.tex
+% Notes on genetic analysis of ab32 and ab20 skin and wool data
+%
+ 
+\documentclass[titlepage]{article}  % Latex2e
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{bm,longtable}
+\usepackage{textcomp}
+ 
+
+\title{ Compound follicles in Merino sheep and fibre diameter}
+\author{Neville Jackson }
+\date{10 Oct 2018} 
+
+ 
+\begin{document} 
+ 
+\maketitle      
+\tableofcontents
+
+
+\clearpage
+\section{Introduction} 
+We are interested in knowing how the various types of follicles found in a trio group vary in fibre diameter. There is ample data in diameter of fibres from primary follicles and secondary follicles, for example Carter(1968)~\cite{cart:68} documents mean Dp and Ds for a wide range of sheep breeds. For the Australian Merino strains in Carter's survey, Dp was larger than Ds by amounts varying from -0.6 to 3 microns for fine-wool strains, 4 to 7 microns for medium wool strains, and 7 to 8 microns for strong wool strains. Another way of expressing this is to say that the ratio Dp/Ds varied from 0.9 up to 1.4. Carter's survey did not include data on modern SRS Merinos. A full comparison, including modern SRS data can be found in Jackson(2017)~\cite{jack:17b}
+
+What is much less avilable is data on the diameters of the various types of secondary follicles and their fibres.  Merino sheep have an S/P ratio greater than 10, and up to 40, the Merino-derived breeds are around 10, and all other breeds have S/P ration of 3 to 7. This very substantial difference has been achieved by forming compound follicles (Hardy and Lyne(1956)~\cite{hard:56} ). The cell biology mechanism behind formation of compound follicles has been explained by Moore et al (1998)~\cite{moor:98}. It involves a population of pre-papilla cells which aggregate at follicle sites in the developing foetal skin. The numbers of papilla cells which aggregate at each site determine the size of the follicle that develops and the diameter of the fibre that it grows. If there are pre-papilla cells left over after all sites have been used, they form extra follicles by branching from existing follicles. Merino sheep have lots of pre-papilla cells and form many branching follicles, mostly secondary follicles, but branching primary follicles have also been observed. There is a small amount of data linking papilla cell number to fibre diameter collected by Dr Philip Moore. These have been re-presented and re-analysed in Jackson and Moore(2018)~\cite{jamo:18} where Figure 4 on page 10 shows quite clearly that fibre diameter is related to number of papilla cells per follicle.
+
+Apart from that, we have just one small study of the number of branches in compound follicles. We are going to attempt here to see if the number of branches in a compound follicle influences fibre diameter.
+
+\section{ Sheep population studied}
+Data from CSIRO sheep breeding experiments (AB16a and AB17 in CSIRO jargon) are utilised.  These are all medium and fine wool Merino sheep. These experiments were started by Dr Alex Fraser in 1954. They consisted of 2 lines of medium Merino sheep selected for high and low S/P ratio, and two lines of fine Merino sheep selected for high and low primary follicle density. There is a writeup by Rendel and Nay(1978)~\cite{rend:78}
+
+From the 1971 drop in the above 4 selection lines six male and six female sheep were chosen at random, for detailed study of compound follicles. So 12 sheep from each of 4 selected lines , making a total of 48 sheep.
+
+
+\section{Traits measured}
+Biopsy samples were serial sectioned down to sebaceous gland level. Sections were stained with Haematoxylin, Eosin and picric acid.  A section was chosen, as near to the skin surface as possible, so that fibres could be seen emerging from a common root sheath.  Counts were made of the numbers of fibres emerging from a follicle, for a sample of both primary and secondary follicles. It was not possible to determine which fibre was emerging from the secondary original follicle.
+
+Observations were also available , on the same 48 sheep, of follicle number per unit area (Fn), S/P ratio (Fr), and primary follicle number per unit area (Fp). Average fibre diameter (Diam) by the airflow technique was also available.
+
+
+\section{Statistical techniques}
+Fibre counts were summarized as the relative frequency of follicles with various numbers of emerging fibres, and as the relative frequency of fibres emerging from follicles of various bundle sizes. 
+
+The mean size ( ie number of branches) of secondary follicles was calculated in the usual mannar summing the products of class frequencies and class values.
+
+The regression of average fibre diameter on mean size of secondary follicles was calculated with and without additional predictor variables Fn, Fr, and Fp, using the R function {\em lm()}. The R statistical software~\cite{rprog:13} is free and open source software and is available for Windows, Mac, and Linux systems. Using additional predictor variables enables us to study the effect of bundle size on fibre diameter  as a partial regression holding other variables constant. 
+
+\section{Results}
+The difference between the four selected lines in the usual skin measurements ( Fn, Fr, and Fp) are shown in Table~\ref{tab:meanskin}
+\input{tabmeanskin.tex}
+One can see that there has been a substantial direct response to selection in all four lines, and that there have been correlated changes in the unselected traits.
+
+The counts of fibres emerging from common follicle root sheaths are summarized in Table~\ref{tab:freqfoll}
+\input{tabfreqfoll.tex}
+Differences between the selected lines are not immediately obvious. There is a strain difference, the Fp+ and Fp- sheep are finewool Merinos and they have a higer proportion of single fibre follicles, both primary and secondary. Also the Fr+ selected line tend to have a higer proportion of very highly branched follicles than the Fr- line. 
+
+To see the differences more clearly we compute the mean secondary follicle size for each of the selected line x sex groups. These are given in Table~\ref{tab:meansize}, along with the mean fibre diameter for each group.
+\input{tabmeansize.tex}
+To see the relationship we need to plot the data of Table~\ref{tab:meansize}. We do this in Figure~\ref{fig:1617bundledia}
+\input{fig1617bundledia.tex}
+So we have a suggestion of a relationship, but it is not significant. 
+
+It is possible that some other variables are involved in determining diameter. To look into this we will add other variables to the regression. We will look at overall density (Fn), S/P ratio (Fr), and primary density (Fp).
+
+We added, in turn, Fn, Fr, and Fp to the regression fit of diameter on mean secondary follicle bundle size.  The result is shown in Table~\ref{tab:aovreg}
+\input{tabaovreg.tex}
+Table~\ref{tab:aovreg} shows that the regression of diameter on Fn is significant, both on its own ( last section of table) and in the presence of mean secondary bundle size.  It also shows that regression of diameter on mean secondary bundle size is not significant on its own ( first section of table) but is marginally significant ( 8 percent probability) in the presence of Fn. The othe variables had no significant relationship with diameter.
+
+We can illustrate this multiple regression of diameter on secondary bundle size and Fn by plotting the fitted value ( ie the diameter estimated from the multiple regression equation) against the actual diameter, for out eight data points. This is shown in Figure~\ref{fig:multireg}
+\input{figmultireg.tex}
+That is a much better fit than Figure~\ref{fig:1617bundledia}. The $R^{2}$ value has increased from 0.27 to 0.89.
+
+To prove that the improvement is not all due to adding Fn, we look at the regression of diameter on Fn alone. This is the last section in Table~\ref{tab:aovreg}. The $R^{2}$ value here is 0.79. So it is not quite as good without secondary follicle bundle size. Secondary follicle bundle size contributes something when added on top of Fn, but it is only just significant and it only lifts the $R^{2}$ value from 0.79 to 0.89.
+
+\clearpage
+\section{Discussion}
+
+\clearpage
+
+\begin{thebibliography}{99}
+
+\bibitem{cart:43}
+Carter, H.B. (1943) Studies in the biology of the skin and fleece of sheep. CSIRO (Aust) Bull. No. 164
+
+\bibitem{cart:68}
+Carter,H.B. (1968) Comparative Fleece Analysis Data for Domestic Sheep. The Principal Fleece Staple Values of Some Recognised Breeds. Agricultural Research Council, 1968
+
+
+\bibitem{chap:65}
+Chapman, R.E. (1965) The ovine arrector pili musculature and crimp formation 
+    in wool. In "Biology of the Skin and Hair Growth" Angus and Robertson,
+    Sydney, Ed. A.G. Lyne and B.F. Short. pp 201-232
+
+\bibitem{hard:56}
+Hardy, M.H. and Lyne, A.G. (1956) The prenatal development of wool follicles in Merino sheep. Aust. J. biol. Sci. 9:423-441
+
+\bibitem{hori:53}
+Horio, M. and Kondo, T. (1953) Text. Res. J. 23:373
+
+\bibitem{jack:17}
+Jackson, N.(2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection and estimates of additive genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
+
+\bibitem{jack:17a}
+Jackson, N. and Watts, J.E. (2017) What is known about the genetics of wrinkle score in Merino sheep? URL https://github.com/nevillejackson/Fleece-genetics/tree/master/wrinkle/wrinkle.pdf
+
+\bibitem{jack:75}
+Jackson, N., Nay T. and Turner, Helen Newton (1975) Response to selection
+    in Australian Merino sheep. VII Phenotypic and genetic parameters for
+    some wool follicle characteristics and their correlation with wool and
+    body traits. Aust. J. Agric. Res. 26:937-57
+
+\bibitem{jack:15}
+Jackson, N. and Watts, J.E. (2016) Staple crimp formation in the fleece of Merino sheep. 
+Report available from the authors as a pdf document.
+
+\bibitem{jack:16a}
+Jackson, N.  and Watts J.E. (2016) Can we predict intrinsic fibre curvature from follicle curvature score? Report available from the author as a pdf document.
+
+\bibitem{jack:15b}
+Jackson, N. (2015) An Overview of the R package dmm.
+    From http://cran.r-project.org/package=dmm
+    Or https://github.com/cran/dmm
+
+\bibitem{jack:86}
+Jackson, N. Lax, J. and Wilson, R.L.(1986) Sex and selection for fleece weight in Merino sheep. Zeitschrift fur Tierzuchtung und Zuchtungsbiologie. Bd. 103:97-115
+
+\bibitem{jack:17b}
+Jackson, N. (2017) What are the defining characteristics of a primitive sheep relative to a modern Merino sheep? https://github.com/nevillejackson/atavistic-sheep/tree/master/mev-rewrite/supplementary/primitive/primitive.pdf
+
+\bibitem{jack:18}
+Jackson, N. and Watts, J. E. (2018) Does follicle development affect the spatial layout of sheep skin? URL https://github.com/nevillejackson/Fleece-biology/tree/master/skinspace/skinspace.pdf
+
+\bibitem{jamo:18}
+Jackson, N. and Moore, G.P.M (2018) Dynamics of pre-papilla cell numbers in sheep foetus and effect on follicle development. URL https://github.com/nevillejackson/Fleece-biology/tree/master/pre-papilla-cells/ppcell.pdf
+
+\bibitem{lync:97}
+Lynch, M. and Walsh, B. (1997) Genetics and Analysis of Quantitative Traits. Sinauer, Massachusetts, USA, 1997
+
+\bibitem{moor:89}
+Moore, G.P.M, Jackson, N. and Lax, J. (1989) Evidence of a unique developmental mechanism specifying both wool follicle density and fibre size in sheep selected for single skin and fleece characters. Genet. Res. Camb.  53:57-62
+
+\bibitem{moor:98}
+Moore, G.P.M., Jackson, N., Isaacs, K., and Brown, G (1998) J. Theoretical Biology 191:87-94
+
+\bibitem{nago:81}
+Nagorcka, B.N. (1981) Theoretical mechanism for crimp.
+     Aust J. Biol. Sci. 34: 189-209
+
+\bibitem{onio:62}
+Onions, W.J. (1962) Wool: an introduction to its properties, varieties, uses
+     and production. Ernest Benn limited, London, 1962
+
+\bibitem{rend:78}
+Rendel, J.M. and Nay, T. (1978) Selection for high and low ratio and high 
+    and low primary density in Merino sheep. 
+    Aust. J. Agric. Res. 29:1077-86
+
+\bibitem{rprog:13}
+R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  ISBN 3-900051-07-0, URL http://www.R-project.org/.
+
+\bibitem{sear:92}
+Searle, S.R., Casella, G., and McCullock, C.E. (1992) Variance Components.
+    John Wiley and Sons, New York.
+
+
+\bibitem{swan:93}
+Swan, P.G. (1993) Objective measurement of fibre crimp curvature and the bulk compressional properties of Australian wools. PhD Thesis, University of NSW, March 1993 
+
+\bibitem{wats:77}
+Watson, N., Jackson, N. and Whiteley, K.J. (1977) Inheritance of the resistance
+    to compression property of Austrailian Merino wool and its genetic 
+    correlation with follicle curvature and various wool and body 
+    characters. Aust. J. Agric. Res. 28:1083-94
+
+\bibitem{wola:14}
+Wolak, M.E. (2014) nadiv: an R package to create relatedness matrices for
+    estimating non-additive genetic variances in animal models.
+    Methods in Ecology and Evolution 3:792-796.
+
+\bibitem{turn:68}
+Turner, H.N., Dolling, C.H.S, and Kennedy, J.F. (1968) Response to selection in Australian Merino sheep. I Selection for high clean wool weight with aceiling on fibre diameter and degree of skin wrinkle. Aust.J.agric.Res. 19:79-112
+
+\bibitem{turn:53}
+Turner, H.N., Hayman, R.H., Riches, J.H., Roberts, N.F., and Wilson, L.T. (1953) Physical definition of sheep and their fleece for breeding and husbandry studies, with particular reference to Merino sheep. CSIRO Aust. Div. Anim. Hlth. Prod. Divl. Rep. No 4 (Series S.W. -2)
+
+\end{thebibliography}
+
+
+\end{document}
+
