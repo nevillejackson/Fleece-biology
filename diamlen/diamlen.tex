@@ -149,9 +149,9 @@ We have a data set in which counts of follicles within a trio group and trio gro
 
 
 \subsection{Conclusion on sharing and {\em locale} effect}
-The mere idea of unequal sharing of some resource among follicles does not help much sort out why the shares are unequal. That is what we need to know - who or what is dealing out the resource unequally, and on what basis.
+The mere idea of unequal sharing of some resource among follicles does not help much sort out why the shares are unequal. That is what we need to know -  what is dealing out the resource unequally, and on what basis.
 
-We have introduced the {\em locale} concept into sharing because we are convinced that all the sharing action due to the way follicles develop is within trio groups. Other sharing effects, such as the effect of level of nutrition of the animal we leave as global. The best place to study {\em locale} effects is in the birthcoat. Attempts to analyse variation in adult diameter into {\em locale} and other sources were only partly successful due to limitations in available data.
+We have introduced the {\em locale} concept into sharing because we are convinced that all the sharing action due to the way follicles develop is within trio groups. Trio groups are a repeating biological unit. If we understand one trio group, we go a long way toward understanding the whole skin and fleece. Other sharing effects, such as the effect of level of nutrition of the animal we leave as global. The best place to study {\em locale} effects is in the birthcoat. Attempts to analyse variation in adult diameter into {\em locale} and other sources were only partly successful due to limitations in available data.
 
 One thing is certain. We need to get quantitative.  That is what the next section is about. We try to get some real data on length and diameter, and to write some equations describing follicle function.
 
@@ -298,11 +298,11 @@ This is what one would expect if diameter were controlled by more than one mecha
 \section{Can we enhance the papilla cell model to account for fibre diameter?}
 We have as a starting point the maths described by Jackson and Moore(2018)~\cite{jack:18}. This uses a recurrence relationship to keep track of pre-papilla cell population numbers, allowing for subtractions due to agglomeration at follicle sites, and additions due to mitoses in the unagglomerated pre-papilla cell population. The process continues until all cells agglomerate.
 
-Fibre diameter for each follicle is considered to be entirely determined by papila cell number per follicle, and that in turn is simply set as an input parameter. It is this aspect of the model which is considered to be in need of enhancement.
+ In the current papilla cell model, fibre diameter for each follicle is considered to be entirely determined by papila cell number per follicle, and that in turn is simply set as an input parameter. It is this aspect of the model which is considered to be in need of enhancement.
 
-We have uncovered a number of things which we think are sufficient to ge tus started with a new follicle development model. We summarize these here
+We have uncovered a number of things which we think are sufficient to get us started with a revised follicle development model. We summarize these here
 \begin{itemize}
-\item fibre diameter control starts with the first formed fibres in the foetus. We need to start our modelling of diameter at that point, not just calculate an adult diameter at the end of follicle development. That means we need to model ll the growth stages of the birthcoat, including phenomena such as "prenatal check", and then continue on with the growing animal after birth.
+\item fibre diameter control starts with the first formed fibres in the foetus. We need to start our modelling of diameter at that point, not just calculate an adult diameter at the end of follicle development. That means we need to model all the growth stages of the birthcoat, including phenomena such as "prenatal check", and then continue on with the growing animal after birth.
 \item we have separated a number of factors involved in diameter control. We list them here
   \begin{itemize}
     \item papilla cell number or "base"
@@ -310,8 +310,10 @@ We have uncovered a number of things which we think are sufficient to ge tus sta
     \item global effects of nutrition
     \item hair growth cycle effects or photoperiod
   \end{itemize}
-Any realistic model for diameter is going to have to make some account of all four. We will initially focus on the first two. We will assume that these four factors do not interact, ie that their contributions can simply be added together. If , for example, the number of papilla cells ina n aggregate is affected by {\em locale} we have a much more complicated situation.
-\item we need to consider either fibre volume or length growth rate in addition to diameter.  If we model each follicles wool growth the equations of fibre growth require five parameters, one of which is diameter.
+Any realistic model for diameter is going to have to make some account of all four. We will initially focus on the first two. We will assume that these four factors do not interact, ie that their contributions can simply be added together. If , for example, the number of papilla cells in an aggregate is affected by {\em locale} we have a much more complicated situation. There is however a link between papilla cell number and locale - if primary follicles start with a small papilla cell number this leads to an increased number of secondary derived follicles and therefore an increased within trio group density and therefore a different locale. This will have to be taken into account.  Specifying papilla cell number at least partially specifies locale.
+\item we need to consider either fibre volume or length growth rate in addition to diameter. There are two parameters needed to specifiy follicle output, diameter and one of length or volume.  If we model follicle wool growth the equations of fibre growth require five parameters.
+\item we need to model variance of diameter, as well as mean. That will happen if we work at the follicle level.
+\item trio groups are a repeating biological unit. If we can model one trio group, we can model the whole fleece, with minor modification to deal with body site variations. That is both a considerable simplification and a clue as to how to proceed.
 \end{itemize}
 
 

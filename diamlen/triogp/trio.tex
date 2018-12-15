@@ -1,0 +1,253 @@
+%
+% Draft  document trio.tex
+% Notes on genetic analysis of ab32 and ab20 skin and wool data
+%
+ 
+\documentclass[titlepage]{article}  % Latex2e
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{bm,longtable}
+\usepackage{textcomp}
+\usepackage{tikz}
+ 
+
+\title{ Trio follicle  groups in Merino sheep and fibre diameter}
+\author{Neville Jackson , Paul Swan, and Jim Watts}
+\date{3 Dec 2018} 
+
+ 
+\begin{document} 
+ 
+\maketitle      
+\tableofcontents
+
+
+\clearpage
+\section{Introduction} 
+We are interested in knowing how important is the local environment within a trio group (which we call {\em locale}) in control of fibre diameter. 
+
+
+\section{ Sheep population studied}
+ Data were collected from 12 Merino flocks sampled at various times over the years 2001 to 2016. The sheep sampled ranged in age from 13 to 24 months, and ther were some rams and some ewes. Numbers of sheep per flock varied from 11 to 82. There were 82 ewes and 257 rams, a total of 339 sheep.
+ The flocks were mostly bred towards SRS Merion type, but there were two which were normal Merinos.
+
+
+\section{Traits measured}
+Biopsy samples were serial sectioned down to sebaceous gland level. Sections were stained with Nile Blue sulphate. Under the microscope follicle trio groups were identified and the area of the groups and its follicle count obtained. Several trio groups were measured per sheep and the measurements averaged.
+
+In addition follicles were chosen at random within a groups and their distance from their nearest neighbour measured.
+
+Observations were also available , on the same 339 sheep, of follicle number per unit area (Fn), S/P ratio (Fr), and primary follicle number per unit area (Fp). Average diameter of primary fibre (Dp) and of secondary fibres (Ds), and of all fibres (Dskin). Diameters were measured on skin sections.
+
+All the measured traits are summarised below
+
+\begin{description}
+\item[Dp]  mean diameter of primary fibres $(\mu m^2)$.
+\item[SDDp] standard deviation of diameter of primary fibres $(\mu m^2)$.
+\item[Ds] mean diameter of secondary fibres $(\mu m^2)$.
+\item[SDDs] standard deviation of diameter of secondary fibres $(\mu m^2)$.
+\item[SovP] ratio of number of secondary follicles to number of primary follicles. No units
+\item[Fn] follicle number per $mm^2$. Determined by counting follicles in skin sections viewed under a projection microscope at 50x magnification.
+\item[IGNorth]  inter-group distance in the north direction $(\mu m)$. Distance between adjacent follicle groups measured from the outer edge of the sebaceous glands of the primary central follicle to the lateral margin of the follicle group above it. The 'North' direction on a skin section is defined as the 'top' of the image when the rows of follicle groups are from side to side and the primary fibres are on the 'top' margin of the groups.
+\item[IGSouth] inter-group distance in the South direction $(\mu m)$. Measured from the lateral margin of the same follicle group as used for IGNorth to the outer edge of the sebacious glands of the central primary follicle of the follicle group below it.
+\item[IGEast] inter-group distance in the East direction $(\mu m)$.
+\item[IGWest] inter-group distance in the West direction $(\mu m)$.
+\item[FollGpArea] mean area of a follicle group $(mm^2)$.
+\item[AreaPerFoll] mean area per follicle calculated as FollGpArea/FollperGp $(mm^2)$
+\item[IntGpDens] density of follicles within a follicle group $(no per mm^2)$
+\item[FollperGp] mean number of follicles per group
+\item[IFDist] mean inter-follicle distance $(\mu m)$. Measured as the distance between a follicle and its nearest neighbour.
+\item[IGNorth]  inter-group distance in the north direction $(\mu m)$. Distance between adjacent follicle groups measured from the outer edge of the sebaceous glands of the primary central follicle to the lateral margin of the follicle group above it. The 'North' direction on a skin section is defined as the 'top' of the image when the rows of follicle groups are from side to side and the primary fibres are on the 'top' margin of the groups.
+\item[IGSouth] inter-group distance in the South direction $(\mu m)$. Measured from the lateral margin of the same follicle group as used for IGNorth to the outer edge of the sebacious glands of the central primary follicle of the follicle group below it.
+\item[IGEast] inter-group distance in the East direction $(\mu m)$.
+\item[IGWest] inter-group distance in the West direction $(\mu m)$.
+\item[FollCurv] follicle curvature score. 1 = straight, 7 = curved.
+\item[FollDep] follicle depth vertically from skin surface to bulb $(mm)$.
+
+\end{description}
+ In addition we calculate the following from the above basic traits
+\begin{description}
+\item[Fnp] number of primary follicles per $mm^2$. Calculated as $Fnp = Fn/(Sovp + 1)$.
+\item[Fns] number of secondary follicles per $mm^2$. Calculated as $Fns = Fnp * Sovp$.
+\item[Dskin] mean fibre diameter $(\mu m)$. Obtained from fibre measurements on skin sections.
+\item[SDDskin] standard deviation of fibre diameter $(\mu m)$. Obtained from fibre measurements on skin sections.
+\end{description}
+ In addition the following fibre length measurements were made
+\begin{description}
+\item[FibLen] mean fibre length per unit time $(mm/day)$. Obtained by withdrawing 50 fibres from n staples and measuring the stretched length.
+\item[SDFiblen] standard deviation of fibre length per unit time $(mm/day)$.
+\item[CVFiblen] coefficient of variation of fibre length, as a percentage.
+\end{description}
+
+
+
+\section{Statistical techniques}
+We use the R Statistical Language~\cite{rprog:13} to analyse thes data. The techniques used involve fitting a number of linear models, with fixed effects for Flock, Age, and Sex taken out, and with fibre diameter predicted from regressions on various skin measurements. This allowed us to assess, at the between sheep level, how much the trio group specific parameters contributed to diameter, compared with the overall parameters such as follicle density (Fn). 
+
+We analyse mean diameter of primary and secondary fibres separately. These should not differ - the {\em locale} effect should affect primary and secondary follicles equally. This is not to say tha primary and secondary follicles can not differ in mean diameter.  They clearly can,  but that is mediated via other factors, not the {\em locale} environment, which should be equal for all follicles at a given time, although it can vary with time, as seen in the birthcoat. 
+
+We also analyse standard deviation of diameter of primary and secondary fibres. THe {\em locale} might influence variability between follicles simply by determining whether the follicles are under stress or free to vary.
+
+
+\section{Results}
+We start with a linear model which will remove fixed efects of Flock, Sex, and Age, so that what we are studying is variation between sheep within a flock. The model is of the form
+\begin{equation}
+\label{eqn:fullmod}
+D = \mu + Flock + Sex + b_{Age} + \sum_{i=1}^{i=n} b_{i}X{i}
+\end{equation}
+where
+\begin{description}
+\item[$D$] is fibre diameter
+\item[$Flock$] is a fixed effect for one of 11 flocks
+\item[$Sex$] is a fixed effect for one of two sexes
+\item[$b_{Age}$] is a regression on age in months 
+\item[$\sum_{i=1}^{i=n} b_{i}X{i}$] are regressions on a number of covariates $X_{i}$
+\end{description}
+
+Fitting this model leads to an analysis of variance of diameter and to estimates of the various regression coefficients and fixed effects.
+
+\subsection{All covariates included}
+We start with a model including all possible covariates.  This is just to set a baseline. It is not a good way to achieve an in intelligent interpretation. It just singles out all the covariates that might be part of locale and sums up how much sheep to sheep variation in diameter they might explain.
+
+We start with analyses of variance from fitting this model to Dp and Ds. These are shown in Table~\ref{tab:dpdsallaov}
+\input{tabdpdsallaov.tex}
+For primary fibres, the effects that are both large and significant and IntGpDens, Fn, FollCurv, and FollDep. The $R^{2}$ value is 0.385 ( $R = 0.621$).
+
+For secondary fibres the effects that are both large and significant are IntGpDens, Fn, and FollCurv. There are also smaller and more marginally significant effects of IGNorth, IGSouth, Np, and AreaPerFoll. FollDep is close to significant (13 percent)  . The $R^{2}$ value is 0.439 ($R = 0.662$)
+
+There is clearly a lot of sheep to sheep variation in Dp and Ds which is not explained by the {\em locale} effects. That is to be expected. Variation in papilla cell number per follicle also affects diameter, and is not part of the {]em locale} effect.
+
+The actual partail regression coefficients for the fit of Table~\ref{tab:dpdsallaov} are given in Table~\ref{tab:dpdsallcoef}.
+\input{tabdpdsallcoef.tex}
+We have omitted the Flock and Sex effects.  The magnitudes of these partial regressions are difficult to interpret alone as they are relative to the mean of each covariate. That is why the covariate means are included in Table~\ref{tab:dpdsallcoef}. If we just lookat the signs there are some interesting things - the Fn coefficients are negative so high density iplies low diameter. But the coefficients for IntGpDens are positive? That opens up a whole lot of questions which tend to undermine the usefullness of this full model fit. These are {\em partial} regressions - so the coefficient for IntGpDens is adjusted so that all other covariates are equal - in particular it is the effect of IntGpDens when Fn is help constant. We need to think about what that means.  Not here. The following sections resolve this issue. 
+
+The other large and significant effects (FollCurv and FollDep) seem to have coefficients with an appropriate sign.
+
+We endthis section with a note about multiple regression. If covariates are correlated, their effects can be difficult to separate. That is the case here. Table~\ref{tab:covcor} presents the correlations between all of the covariates.
+\input{tabcovcor.tex}
+We see that Fn is highly correlated with IntGpDens and AreaPerFoll and that these latter 2 are also highly correlated with each other. The remainiong correlations are manageable. We attack this issue with a different approach on the following sections.
+
+\subsection{Components of follicle density (Fn)}
+\subsubsection{Fn alone}
+\subsubsection{Groups per unit area and follicles per group}
+\subsubsection{Intra group density and trio group area ratio}
+
+\subsection{Things other than density}
+
+
+\clearpage
+\section{Discussion}
+We have shown that mean fibre diameter is affected by follicle number per unit area (Fn) and mean secondary follicle bundle size. 
+
+So, if we are willing to assume that density variation causes diameter variation,  .... says that 70 percent of diameter variation is globally determined, and anothe 20 percent is locally determined, and the final 10 percent is unexplained. 
+
+
+
+\clearpage
+
+\begin{thebibliography}{99}
+
+\bibitem{cart:43}
+Carter, H.B. (1943) Studies in the biology of the skin and fleece of sheep. CSIRO (Aust) Bull. No. 164
+
+\bibitem{cart:68}
+Carter,H.B. (1968) Comparative Fleece Analysis Data for Domestic Sheep. The Principal Fleece Staple Values of Some Recognised Breeds. Agricultural Research Council, 1968
+
+
+\bibitem{chap:65}
+Chapman, R.E. (1965) The ovine arrector pili musculature and crimp formation 
+    in wool. In "Biology of the Skin and Hair Growth" Angus and Robertson,
+    Sydney, Ed. A.G. Lyne and B.F. Short. pp 201-232
+
+\bibitem{hard:56}
+Hardy, M.H. and Lyne, A.G. (1956) The prenatal development of wool follicles in Merino sheep. Aust. J. biol. Sci. 9:423-441
+
+\bibitem{hori:53}
+Horio, M. and Kondo, T. (1953) Text. Res. J. 23:373
+
+\bibitem{jack:17}
+Jackson, N.(2017) Genetic relationship between skin and wool traits in Merino sheep. Part I Responses to selection and estimates of additive genetic parameters. URL https://github.com/nevillejackson/Fleece-genetics/tree/master/skinandfleeceparameters/ab3220/skinwool1.pdf
+
+\bibitem{jack:17a}
+Jackson, N. and Watts, J.E. (2017) What is known about the genetics of wrinkle score in Merino sheep? URL https://github.com/nevillejackson/Fleece-genetics/tree/master/wrinkle/wrinkle.pdf
+
+\bibitem{jack:75}
+Jackson, N., Nay T. and Turner, Helen Newton (1975) Response to selection
+    in Australian Merino sheep. VII Phenotypic and genetic parameters for
+    some wool follicle characteristics and their correlation with wool and
+    body traits. Aust. J. Agric. Res. 26:937-57
+
+\bibitem{jack:15}
+Jackson, N. and Watts, J.E. (2016) Staple crimp formation in the fleece of Merino sheep. 
+Report available from the authors as a pdf document.
+
+\bibitem{jack:16a}
+Jackson, N.  and Watts J.E. (2016) Can we predict intrinsic fibre curvature from follicle curvature score? Report available from the author as a pdf document.
+
+\bibitem{jack:15b}
+Jackson, N. (2015) An Overview of the R package dmm.
+    From http://cran.r-project.org/package=dmm
+    Or https://github.com/cran/dmm
+
+\bibitem{jack:86}
+Jackson, N. Lax, J. and Wilson, R.L.(1986) Sex and selection for fleece weight in Merino sheep. Zeitschrift fur Tierzuchtung und Zuchtungsbiologie. Bd. 103:97-115
+
+\bibitem{jack:17b}
+Jackson, N. (2017) What are the defining characteristics of a primitive sheep relative to a modern Merino sheep? https://github.com/nevillejackson/atavistic-sheep/tree/master/mev-rewrite/supplementary/primitive/primitive.pdf
+
+\bibitem{jack:18}
+Jackson, N. and Watts, J. E. (2018) Does follicle development affect the spatial layout of sheep skin? URL https://github.com/nevillejackson/Fleece-biology/tree/master/skinspace/skinspace.pdf
+
+\bibitem{jamo:18}
+Jackson, N. and Moore, G.P.M (2018) Dynamics of pre-papilla cell numbers in sheep foetus and effect on follicle development. URL https://github.com/nevillejackson/Fleece-biology/tree/master/pre-papilla-cells/ppcell.pdf
+
+\bibitem{lync:97}
+Lynch, M. and Walsh, B. (1997) Genetics and Analysis of Quantitative Traits. Sinauer, Massachusetts, USA, 1997
+
+\bibitem{moor:89}
+Moore, G.P.M, Jackson, N. and Lax, J. (1989) Evidence of a unique developmental mechanism specifying both wool follicle density and fibre size in sheep selected for single skin and fleece characters. Genet. Res. Camb.  53:57-62
+
+\bibitem{moor:98}
+Moore, G.P.M., Jackson, N., Isaacs, K., and Brown, G (1998) J. Theoretical Biology 191:87-94
+
+
+\bibitem{onio:62}
+Onions, W.J. (1962) Wool: an introduction to its properties, varieties, uses
+     and production. Ernest Benn limited, London, 1962
+
+\bibitem{rend:78}
+Rendel, J.M. and Nay, T. (1978) Selection for high and low ratio and high 
+    and low primary density in Merino sheep. 
+    Aust. J. Agric. Res. 29:1077-86
+
+\bibitem{rprog:13}
+R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  ISBN 3-900051-07-0, URL http://www.R-project.org/.
+
+
+
+\bibitem{swan:93}
+Swan, P.G. (1993) Objective measurement of fibre crimp curvature and the bulk compressional properties of Australian wools. PhD Thesis, University of NSW, March 1993 
+
+\bibitem{wats:77}
+Watson, N., Jackson, N. and Whiteley, K.J. (1977) Inheritance of the resistance
+    to compression property of Austrailian Merino wool and its genetic 
+    correlation with follicle curvature and various wool and body 
+    characters. Aust. J. Agric. Res. 28:1083-94
+
+\bibitem{wola:14}
+Wolak, M.E. (2014) nadiv: an R package to create relatedness matrices for
+    estimating non-additive genetic variances in animal models.
+    Methods in Ecology and Evolution 3:792-796.
+
+\bibitem{turn:68}
+Turner, H.N., Dolling, C.H.S, and Kennedy, J.F. (1968) Response to selection in Australian Merino sheep. I Selection for high clean wool weight with aceiling on fibre diameter and degree of skin wrinkle. Aust.J.agric.Res. 19:79-112
+
+\bibitem{turn:53}
+Turner, H.N., Hayman, R.H., Riches, J.H., Roberts, N.F., and Wilson, L.T. (1953) Physical definition of sheep and their fleece for breeding and husbandry studies, with particular reference to Merino sheep. CSIRO Aust. Div. Anim. Hlth. Prod. Divl. Rep. No 4 (Series S.W. -2)
+
+\end{thebibliography}
+
+
+\end{document}
+
