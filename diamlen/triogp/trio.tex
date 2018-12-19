@@ -92,7 +92,7 @@ We also analyse standard deviation of diameter of primary and secondary fibres. 
 We start with a linear model which will remove fixed efects of Flock, Sex, and Age, so that what we are studying is variation between sheep within a flock. The model is of the form
 \begin{equation}
 \label{eqn:fullmod}
-D = \mu + Flock + Sex + b_{Age} + \sum_{i=1}^{i=n} b_{i}X{i}
+D = \mu + Flock + Sex + b_{Age} Age + \sum_{i=1}^{i=n} b_{i}X{i}
 \end{equation}
 where
 \begin{description}
@@ -124,10 +124,34 @@ The other large and significant effects (FollCurv and FollDep) seem to have coef
 
 We endthis section with a note about multiple regression. If covariates are correlated, their effects can be difficult to separate. That is the case here. Table~\ref{tab:covcor} presents the correlations between all of the covariates.
 \input{tabcovcor.tex}
-We see that Fn is highly correlated with IntGpDens and AreaPerFoll and that these latter 2 are also highly correlated with each other. The remainiong correlations are manageable. We attack this issue with a different approach on the following sections.
+We see that Fn is highly correlated with IntGpDens and AreaPerFoll and that these latter 2 are also highly correlated with each other. The remaining correlations are manageable. We attack this issue with a different approach on the following sections.
 
 \subsection{Components of follicle density (Fn)}
+We attack the relationship of Fn with diameter by breaking Fn into components and seeing which components affect diameter. Before we do that we need an analysis regressing diameter on Fn alone.
+
 \subsubsection{Fn alone}
+We study Fn alone by omitting every covariate except Fn from equation~\ref{eqn:fullmod}. The fixed effects remain, but apart from that, we just fit a simple ( rather than partial) regression of mean diameter on Fn. As before we do this for Dp and Ds separately. 
+
+We make one further change. We take logs of both sides of the fitted model so that we have
+\begin{equation}
+\label{eqn:lnd}
+ln(D) = \mu + Flock + Sex + b_{Age} Age + b_{Fn} ln(Fn)
+\end{equation}
+This is done because we need to use logs in the following sections and we want logs here for comparison.
+
+The analyses of variance for fitting log(Dp) and log(Ds) to log(Fn) as in model ~\ref{eqn:fnmod} as shown in Table~\ref{tab:dpdsfnaov}
+\input{tabdpdsfnaov.tex}
+The  simple regression on log(Fn) is highly significant for both Dp and Ds, as in the full model. There are more degrees of freedom in this fit, because some of the covariates used in the full model did not have complete observations. The residual degrees of freedom have increased from 195 to 324. 
+
+The $R^{2}$ value is $0.373$ for Dp ( $R = 0.611$). The $R^{2}$ value is $0.402$ for Dp ( $R = 0.634$). These are only slightly less than the values for the full model. Fn is practically everything when it comes to control of diameter.
+
+The simple regression of log(Dp) on log(Fn) was $-0.2183$, and for log(Ds) on log(Fn) was $-0.1949$. So we have in effect two simple regression equations
+\begin{eqnarray}
+log(Dp) & = & Mean - 0.2183 * log(Fn) \\
+log(Ds) & = & Mean - 0.1949 * log(Fn) 
+\end{eqnarray}
+These are probably not fsignificantly different. Density affects all follicles, regardless of origin.
+
 \subsubsection{Groups per unit area and follicles per group}
 \subsubsection{Intra group density and trio group area ratio}
 
