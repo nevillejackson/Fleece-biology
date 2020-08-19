@@ -25,6 +25,9 @@ The subdirectory _pre-papilla-cells_ contains R software and an investigative wr
 ## Fibre diameter and fibre length growth rate ##
 The subdirectory _diamlen_ contains a discussion document intended as a medium for setting research directions on the topic of what controls variation in fibre diameter between individual fibres within a fleece.
 
+## Follicle curvature ##
+The subdirectory _folliclecurvature_ contains an investigation of the two curvatures hypothesis which proposes that there are two causal factors for follicle curvature, one diameter related and one collagen related
+
 ## What does this project hope to achieve? ##
 An understanding of how a sheep grows a fleece, of how various visually different fleece types occur, and whether one can infer backwards from fleece appearance to skin traits and fibre growth characteristics. This understanding is important in visual assessment of sheep, where measurement is neither practical nor economic.
 
