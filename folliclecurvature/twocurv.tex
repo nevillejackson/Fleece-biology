@@ -6,7 +6,7 @@
 
 
 % Authors packages
-\usepackage{graphicx,lscape,subfigure,caption}
+\usepackage{graphicx,lscape,subfigure}
 \usepackage{caption,rotating}
 \usepackage{tikz}
 \usepackage{bm,longtable}
@@ -84,14 +84,38 @@ This is hardly convincing evidence. The degree of curvature is slight. It is sus
 \section{Follicle curvature and collagen}
 As part of a study of association of collagen amount and type with wrinkle, it was observed that sheep in two groups chosen as wrinkle-free or wrinkled differed in amount and type of collagen in the lower dermis (Watts et al. (2020)~\cite{watts-2020}, but also differed in follicle curvature.  The group means for follicle curvature, and for fibre diameter, are shown in Table~\ref{tab:curv}
 \input{tabcurv.tex}
+The groups were chosen to differ in wrinkle. It has been proposed that the observed collagen difference is the cause of the difference in wrinkle (Watts et al. (2020)~\cite{watts-2020}). We are wondering whether the collagen difference is not also the cause of the difference in follicle curvature. 
+
+What we propose is that presence of hard collagen in foetal skin during follicle development causes developing follicles to bend.  There is visual evidence of this occuring. Dreyer et al. (1983)~\cite{dreyer-1983} published a photomicrograph of Karakul sheep foetal skin in vertical section at 128 days. We reproduce it here in Figure~\ref{fig:dreyer}
+\input{figdreyer.tex}
+We quote Dreyer et al
+\begin{quote}
+"The impression gained was that owing to the vigour of the follicle bulb, the constituent collagen fibres of the hypodermis were displaced in some cases, but no real piercing of that tissue took place. In other cases it would appear theat the follicle bulb and the papilla were undergoing some degree of flattening due to growth pressure on the barrier layer......This barrier effect could also explain the deflection of the bulb to any side as it reacts to the force exerted by downward growth"
+\end{quote}
+This clearly establishes that the dark stained collagen layer in Figure~\ref{fig:dreyer} acts as a barrier to downward growth of follicles.  If the follicles continue to grow, they must deflect sideways, and this will result in a curved follicle.
+
+\section{Follicle curvature without collagen}
+All follicles in non-Merino breeds of sheep have a slight degree of curvature, and their fibres or staples have a range of crimp frequencies less than one up to about 4 crimps per cm.  We may have to exclude Downs wool breeds, here because they have very curved and tangled follicles, and I suspect they have hard collagen induced follicle curvature like Merinos.
+
+We have to consider what causes the curvature of follicles in sheep which do not have hard collagen? The first thing to note is it appears to be quite strongly related to fibre diameter. There are data supporting this in Figure~\ref{fig:crimpdiam} and in the subsection below.
+
+We have to suppose that this is just the inherant asymmetric design of all follicles and that larger follicles with larger fibres are just built to a design with a larger radius of curvature.
+
+\subsection{Data supporting proposal that curvature relates to diameter in non-Merino breeds, but not in Merino}
+The breed survey data of Carter(1968)~\cite{carter-1968} offer some support. There are no follicle or fibre curvature measurements, but there is crimp frequency and diameter. So we shall look at the crimp/diameter relationship  across breeds in particular comparing non-Merino with Merino data. Figure~\ref{fig:cartcrimpdia} plots breed means of fibre diameter against crimp frequency
+\input{figcartcrimpdia.tex}
+There is a clear straight line relationship for crimp frequencies up to about 4 crimps per cm. In the Merino range ( 4 to 8 crimps per cm) there is no relationship at all, and there is one Downs wool breed mean in that range. 
+
+These data have limitations. There are not enough replicate points. We are using crimp frequency as a proxy for follicle curvature. Each point is a mean of about 20 sheep sampled from one flock representing the breed. The only positive is that it extends Figure~\ref{fig:crimpdiam} into the non-Merino breeds.
 
 \section{Can we separate two causes for curvature?}
 We are proposing that there is one follicle curvature, that all sheep have, that is related to fibre diameter and follicle size, and that there is a second follicle curvature that only Merinos have, that is caused by  presence of hard Type I collagen in the lower dermis.
 
-Can we separate these {\em two curvatures} by analysing data? 
+Can we separate these {\em two curvatures} by analysing data?  I propose that we can use regression analysis to remove the diameter related part of follicle curvature variation, and then study the remaining variation ans see if it relates to collagen measurements.
 
-\section{Data supporting proposal that curvature relates to diameter in non-Merino breeds, but not in Merino}
-The breed survey data of Carter(1968)~\cite{carter-1968} offer some support. There ar eno follicle or fibre curvature measurements, but there is crimp frequency and diameter. So we shall look at the crimp/diameter relationship  across breeds in particular comparing non-Merino with Merino data.
+\subsection{ Does diameter corrected follicle curvature relate to collagen measurements?}
+
+\subsection{ What else does diameter corrected follicxlce curvature relate to?}
 
 \section{Mechanisms}
 
