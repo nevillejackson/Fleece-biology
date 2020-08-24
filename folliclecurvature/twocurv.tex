@@ -104,7 +104,7 @@ We have to suppose that this is just the inherant asymmetric design of all folli
 \subsection{Data supporting proposal that curvature relates to diameter in non-Merino breeds, but not in Merino}
 The breed survey data of Carter(1968)~\cite{carter-1968} offer some support. There are no follicle or fibre curvature measurements, but there is crimp frequency and diameter. So we shall look at the crimp/diameter relationship  across breeds in particular comparing non-Merino with Merino data. Figure~\ref{fig:cartcrimpdia} plots breed means of fibre diameter against crimp frequency
 \input{figcartcrimpdia.tex}
-There is a clear straight line relationship for crimp frequencies up to about 4 crimps per cm. In the Merino range ( 4 to 8 crimps per cm) there is no relationship at all, and there is one Downs wool breed mean in that range. 
+There is a clear straight line relationship for crimp frequencies up to about 4 crimps per cm. In the Merino range ( 4 to 8 crimps per cm) there is no relationship at all, and there is one outlier Downs wool breed mean in that range. 
 
 These data have limitations. There are not enough replicate points. We are using crimp frequency as a proxy for follicle curvature. Each point is a mean of about 20 sheep sampled from one flock representing the breed. The only positive is that it extends Figure~\ref{fig:crimpdiam} into the non-Merino breeds.
 
@@ -114,6 +114,15 @@ We are proposing that there is one follicle curvature, that all sheep have, that
 Can we separate these {\em two curvatures} by analysing data?  I propose that we can use regression analysis to remove the diameter related part of follicle curvature variation, and then study the remaining variation ans see if it relates to collagen measurements.
 
 \subsection{ Does diameter corrected follicle curvature relate to collagen measurements?}
+The only available data that include collagen measurements, follicle curvature and fibre diameter are  from the collagen/wrinkle experiments reported by Watte et al. (2020)~\cite{watts-2020}. Taking all available data from this experiment, we look first at the regression of follicle curvature on mean fibre diameter. This is shown in Figure~\ref{fig:fcd}
+\input{figfcd.tex}
+Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related. 
+
+What we do is remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals Fc|D (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist}
+\input{figresidhist}
+So this new variable $(Fc | D)$ has nearly as big a range as Fc and has a reasonable normal-looking distribution (this was tested with residual plots).
+
+We can now look to see if this remaining variation in Fc is related to collagen measurements.
 
 \subsection{ What else does diameter corrected follicxlce curvature relate to?}
 
