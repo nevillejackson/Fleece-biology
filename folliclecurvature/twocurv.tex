@@ -118,11 +118,15 @@ The only available data that include collagen measurements, follicle curvature a
 \input{figfcd.tex}
 Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related. 
 
-What we do is remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals Fc|D (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist}
+What we do is remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals $Fc | D$ (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist}
 \input{figresidhist}
 So this new variable $(Fc | D)$ has nearly as big a range as Fc and has a reasonable normal-looking distribution (this was tested with residual plots).
 
-We can now look to see if this remaining variation in Fc is related to collagen measurements.
+We can now look to see if this remaining variation in Fc is related to collagen measurements. This relation is shown in Figure~\ref{fig:fcadjdxcoll}
+\input{figfcadjdxcoll.tex}
+So Fc adjusted for D does related to collagen. There are only 17 points because this work was incomplete whn Jim Watts passed away. Only 17 sheep had Fc and D and Collagen measurements.
+
+It is worth looking at the residuals from the fit in Figure~\ref{fig:fcadjdxcoll} to see how much variation in Fc still remains, unexplained by either D or Collagen.  We can do this by looking at variances. Variance of Fc was 1.91. Variance of Fc adjusted for D was 1.30. Variance of Fc adjusted for both D and Collagen was 1.04. So we have explained about half the variance of Fc using D and Collagen. The remaining half is probably measurement error, that is errors in scoring Fc and also errors in the D and Collagen measurements used for adjustment.
 
 \subsection{ What else does diameter corrected follicxlce curvature relate to?}
 
