@@ -132,6 +132,15 @@ There are issues with this analysis
 \end{itemize}
 
 \subsection{ Lets do it all again using multiple regression}
+Just to show that the conclusions from the stepwise analysis of previous section are OK, we do a multiple regression of follicle curvature  on fibre diameter and collagen optical density. The result is summarised in Table~\ref{tab:mreg}
+\input{tabmreg.tex}
+The regression on $D$ is significant, that on $C$ is not, but it is at least positive. To interpret this multiple regression equation we need to convert the coefficients to standardized partial regression coefficients. THe standard deviations for $D$ and $C$ are $\sigma_{D} = 1.0645$ and $\sigma_{C} = 85844$. We multiply the coefficients in Table~\ref{tab:mreg} by these to get the standardised partial regression coefficients $\beta_{D} = 0.8366$ and $\beta_{C} = 0.4454$. The proportions of variance explained are therefore the squares of these $\beta's$ , ie .6998 and .1983. These sum to .8982, so we have explained 89\% of ther varaince of $Fc$ and the remainder $(1-.8982 = .1018)$ shows 10 percent of the varaince unexplained.
+
+This is not exactly the same as the stepwise analysis of the previous section, and the reason is that more than 17 observations were used for the first step ( regression of $Fc$ on $D$). 
+
+One can express the outcome of this multiple regression analysis as a path diagram (Wright(...)~\cite{wright-}). The path diagram is shown in Figure~\ref{fig:path}
+%\input{figpath.tex}
+
 
 \subsection{ What else does diameter corrected follicle curvature relate to?}
 
