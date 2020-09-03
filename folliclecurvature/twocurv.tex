@@ -112,7 +112,7 @@ Can we separate these {\em two curvatures} by analysing data?  I propose that we
 \subsection{ Does diameter corrected follicle curvature relate to collagen measurements?}
 The only available data that include collagen measurements, follicle curvature and fibre diameter are  from the collagen/wrinkle experiments reported by Watts et al. (2020)~\cite{watts-2020}. Taking all available data from this experiment, we look first at the regression of follicle curvature on mean fibre diameter. This is shown in Figure~\ref{fig:fcd}
 \input{figfcd.tex}
-Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related. 
+Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related.  The problem is this observed relationship is positive - the finer fibre diameter are {\em less} curved. According to the Carter(1968)~\cite{carter-1968} data this relationship should be negative. There is no ready explanation. The data may have been biased by choosing sheep that were extremes of wrinkle.
 
 We remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals $Fc | D$ (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist}
 \input{figresidhist}
@@ -129,9 +129,10 @@ There are issues with this analysis
 \item the data are from a designed experiment in which sheep were chosen from 2 commercial flocks to represent extremes of wrinkle-free or wrinkled. The analysis did not fit Flock or SkinType effects. This would have removed most of the variation, especially in collagen density. 
 \item the stepwise adjustment is not the conventional way of analysing effects of 2 variables on a third variate.  We do it stpewise first, so we can grasp what is happening. 
 \item there is insufficient data
+\item the diameter effect on follicle curvature is positive . We are proposing that in general it should ne negative.
 \end{itemize}
 
-\subsection{ Lets do it all again using multiple regression}
+\subsubsection{ Lets do it all again using multiple regression}
 Just to show that the conclusions from the stepwise analysis of previous section are OK, we do a multiple regression of follicle curvature  on fibre diameter and collagen optical density. The result is summarised in Table~\ref{tab:mreg}
 \input{tabmreg.tex}
 The regression on $D$ is significant, that on $C$ is not, but it is at least positive. To interpret this multiple regression equation we need to convert the coefficients to standardized partial regression coefficients. THe standard deviations for $D$ and $C$ are $\sigma_{D} = 1.0645$ and $\sigma_{C} = 85844$. We multiply the coefficients in Table~\ref{tab:mreg} by these to get the standardised partial regression coefficients $\beta_{D} = 0.8366$ and $\beta_{C} = 0.4454$. The proportions of variance explained are therefore the squares of these $\beta's$ , ie .6998 and .1983. These sum to .8982, so we have explained 89\% of ther varaince of $Fc$ and the remainder $(1-.8982 = .1018)$ shows 10 percent of the varaince unexplained.
@@ -139,10 +140,14 @@ The regression on $D$ is significant, that on $C$ is not, but it is at least pos
 This is not exactly the same as the stepwise analysis of the previous section, and the reason is that more than 17 observations were used for the first step ( regression of $Fc$ on $D$). 
 
 One can express the outcome of this multiple regression analysis as a path diagram (Wright(...)~\cite{wright-}). The path diagram is shown in Figure~\ref{fig:path}
-%\input{figpath.tex}
+\input{figpath.tex}
+Figure~\ref{fig:path} is just an illustration of how the present data supports the hypothesis that there are diameter-related and collagen-related parts of follicle curvature. 
+
+The big issue is that the standardized partial regression for diameter is positive, where we are proposing that it should be negative if all other effects are averaged out properly.  We therefore have to shelve this analysis, and try to do something on a larger and more typical Merino dataset.
 
 
-\subsection{ What else does diameter corrected follicle curvature relate to?}
+\subsection{ Follicle curvature analysis in a large Merino dataset}
+ There are plenty of large follicle curvature datasets on Merinos. The problem is none of them have collagen measurements. What we propose to do is to use wrinkle score as a {\em proxy} for collagen. Either raw wrinkle score, or perhaps wrinkle score adjusted for S/P ratio (this would hopefully represent the part of wrinkle reflecting collagen amount and type).
 
 \section{Mechanisms}
 
