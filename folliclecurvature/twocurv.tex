@@ -112,10 +112,14 @@ Can we separate these {\em two curvatures} by analysing data?  I propose that we
 \subsection{ Does diameter corrected follicle curvature relate to collagen measurements?}
 The only available data that include collagen measurements, follicle curvature and fibre diameter are  from the collagen/wrinkle experiments reported by Watts et al. (2020)~\cite{watts-2020}. Taking all available data from this experiment, we look first at the regression of follicle curvature on mean fibre diameter. This is shown in Figure~\ref{fig:fcd}
 \input{figfcd.tex}
-Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related.  The problem is this observed relationship is positive - the finer fibre diameter are {\em less} curved. According to the Carter(1968)~\cite{carter-1968} data this relationship should be negative. There is no ready explanation. The data may have been biased by choosing sheep that were extremes of wrinkle.
+Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related.  The problem is this observed relationship is positive - the finer fibre diameter are {\em less} curved. According to our hypothesis (which is supported by the Carter(1968)~\cite{carter-1968} data), this relationship should be negative. 
 
-We remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals $Fc | D$ (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist}
-\input{figresidhist}
+THIS IS A SERIOUS ISSUE WHICH PUS A QUESTION OVER THE HYPOTHESIS THAT PART OF FIOLLICLE CURVATURE IS DIAMETER RELATED. IT WAS THOUGHT THAT THE CARTER DATA IN Figure~\ref{fig:cartcrimpdia} SUPPORTED A DIAMETER-RELATED EFFECT ON CURVATURE. THAT MAY BE WRONG. wE NEED TO PAUSE AND DO 2 THINGS : 1. LOOK AT A LARGER DATA SET ( THE PRESENT SMALL DATA SET MAY BE BIASED FOR SOME REASON) and 2. THINK WHETHER OUR INTERPRETATION OF  Figure~\ref{fig:cartcrimpdia} IS CORRECT
+
+THE FOLLOWING SECTION DETAILING AN ANALYSIS WHICH DEPENDS ON THE CURVATURE/DIAMETER RELATIONSHIP HAS BEEN PUT INTO TINY FONT, INDICATING THAT IT MAY BE WRONG OR INAPPROPRIATE. 
+
+\begin{tiny}
+ We remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals $Fc | D$ (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist} \input{figresidhist}
 So this new variable $(Fc | D)$ has nearly as big a range as Fc and has a reasonable normal-looking distribution (this was tested with residual plots). The mean is zero because they are relativ to the mean curvature at a given diameter.
 
 We can now look to see if this remaining variation in $Fc | D$ is related to collagen measurements. This relation is shown in Figure~\ref{fig:fcadjdxcoll}
@@ -145,6 +149,7 @@ Figure~\ref{fig:path} is just an illustration of how the present data supports t
 
 The big issue is that the standardized partial regression for diameter is positive, where we are proposing that it should be negative if all other effects are averaged out properly.  We therefore have to shelve this analysis, and try to do something on a larger and more typical Merino dataset.
 
+\end{tiny}
 
 \subsection{ Follicle curvature analysis in a large Merino dataset}
  There are plenty of large follicle curvature datasets on Merinos. The problem is none of them have collagen measurements. What we propose to do is to use wrinkle score as a {\em proxy} for collagen. Either raw wrinkle score, or perhaps wrinkle score adjusted for S/P ratio (this would hopefully represent the part of wrinkle reflecting collagen amount and type).
