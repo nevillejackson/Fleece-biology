@@ -114,42 +114,8 @@ The only available data that include collagen measurements, follicle curvature a
 \input{figfcd.tex}
 Figure~\ref{fig:fcd} shows all data points, the regression line $(Fc ~  -7.68   + 0.621 * D)$ and the product moment correlation $(0.61)$. So part of the follicle curvature of these sheep is clearly diameter related.  The problem is this observed relationship is positive - the finer fibre diameter are {\em less} curved. According to our hypothesis (which is supported by the Carter(1968)~\cite{carter-1968} data), this relationship should be negative. 
 
-THIS IS A SERIOUS ISSUE WHICH PUTS A QUESTION OVER THE HYPOTHESIS THAT PART OF FIOLLICLE CURVATURE IS DIAMETER RELATED. IT WAS THOUGHT THAT THE CARTER DATA IN Figure~\ref{fig:cartcrimpdia} SUPPORTED A DIAMETER-RELATED EFFECT ON CURVATURE. THAT MAY BE WRONG. WE NEED TO PAUSE AND DO 2 THINGS : 1. LOOK AT A LARGER DATA SET ( THE PRESENT SMALL DATA SET MAY BE BIASED FOR SOME REASON) and 2. THINK WHETHER OUR INTERPRETATION OF  Figure~\ref{fig:cartcrimpdia} IS CORRECT
+THIS IS A SERIOUS ISSUE WHICH PUTS A QUESTION OVER THE HYPOTHESIS THAT PART OF FIOLLICLE CURVATURE IS DIAMETER RELATED. IT WAS THOUGHT THAT THE CARTER DATA IN Figure~\ref{fig:cartcrimpdia} SUPPORTED A DIAMETER-RELATED EFFECT ON CURVATURE. THAT MAY BE WRONG. WE NEED TO PAUSE AND DO 3 THINGS : 1. LOOK AT A LARGER DATA SET ( THE PRESENT SMALL DATA SET MAY BE BIASED FOR SOME REASON) and 2. THINK WHETHER OUR INTERPRETATION OF  Figure~\ref{fig:cartcrimpdia} IS CORRECT, and 3. SEE IF WE CA ANALYSE THIS SMALL DATASET ANOTHER WAY
 
-THE FOLLOWING SECTION DETAILING AN ANALYSIS WHICH DEPENDS ON THE CURVATURE/DIAMETER RELATIONSHIP HAS BEEN PUT INTO TINY FONT, INDICATING THAT IT MAY BE WRONG OR INAPPROPRIATE. 
-
-\begin{tiny}
- We remove this diameter related part of follicle curvature by computing the residuals for follicle curvature in Figure~\ref{fig:fcd}. We call these residuals $Fc | D$ (follicle curvature adjusted for diameter) and the computed residuals are shown as a histogram in Figure~\ref{fig:residhist} \input{figresidhist}
-So this new variable $(Fc | D)$ has nearly as big a range as Fc and has a reasonable normal-looking distribution (this was tested with residual plots). The mean is zero because they are relativ to the mean curvature at a given diameter.
-
-We can now look to see if this remaining variation in $Fc | D$ is related to collagen measurements. This relation is shown in Figure~\ref{fig:fcadjdxcoll}
-\input{figfcadjdxcoll.tex}
-So Fc adjusted for D does related to collagen. There are only 17 points because this work was incomplete whn Jim Watts passed away. Only 17 sheep had Fc and D and Collagen measurements.
-
-It is worth looking at the residuals from the fit in Figure~\ref{fig:fcadjdxcoll} to see how much variation in Fc still remains, unexplained by either D or Collagen.  We can do this by looking at variances. Variance of Fc was 1.91. Variance of Fc adjusted for D was 1.30. Variance of Fc adjusted for both D and Collagen was 1.04. So we have explained about half the variance of Fc using D and Collagen. The remaining half is probably measurement error, that is errors in scoring Fc and also errors in the D and Collagen measurements used for adjustment.
-
-There are issues with this analysis
-\begin{itemize}
-\item the data are from a designed experiment in which sheep were chosen from 2 commercial flocks to represent extremes of wrinkle-free or wrinkled. The analysis did not fit Flock or SkinType effects. This would have removed most of the variation, especially in collagen density. 
-\item the stepwise adjustment is not the conventional way of analysing effects of 2 variables on a third variate.  We do it stpewise first, so we can grasp what is happening. 
-\item there is insufficient data
-\item the diameter effect on follicle curvature is positive . We are proposing that in general it should ne negative.
-\end{itemize}
-
-\subsubsection{ Lets do it all again using multiple regression}
-Just to show that the conclusions from the stepwise analysis of previous section are OK, we do a multiple regression of follicle curvature  on fibre diameter and collagen optical density. The result is summarised in Table~\ref{tab:mreg}
-\input{tabmreg.tex}
-The regression on $D$ is significant, that on $C$ is not, but it is at least positive. To interpret this multiple regression equation we need to convert the coefficients to standardized partial regression coefficients. THe standard deviations for $D$ and $C$ are $\sigma_{D} = 1.0645$ and $\sigma_{C} = 85844$. We multiply the coefficients in Table~\ref{tab:mreg} by these to get the standardised partial regression coefficients $\beta_{D} = 0.8366$ and $\beta_{C} = 0.4454$. The proportions of variance explained are therefore the squares of these $\beta's$ , ie .6998 and .1983. These sum to .8982, so we have explained 89\% of ther varaince of $Fc$ and the remainder $(1-.8982 = .1018)$ shows 10 percent of the varaince unexplained.
-
-This is not exactly the same as the stepwise analysis of the previous section, and the reason is that more than 17 observations were used for the first step ( regression of $Fc$ on $D$). 
-
-One can express the outcome of this multiple regression analysis as a path diagram (Wright(...)~\cite{wright-}). The path diagram is shown in Figure~\ref{fig:path}
-\input{figpath.tex}
-Figure~\ref{fig:path} is just an illustration of how the present data supports the hypothesis that there are diameter-related and collagen-related parts of follicle curvature. 
-
-The big issue is that the standardized partial regression for diameter is positive, where we are proposing that it should be negative if all other effects are averaged out properly.  We therefore have to shelve this analysis, and try to do something on a larger and more typical Merino dataset.
-
-\end{tiny}
 
 \subsection{Follicle curvature and fibre diameter in Merinos}
 \label{sec:pubcor}
@@ -163,7 +129,7 @@ This is more complicated. At least at the genetic level, follicle curvature is n
 
 It is conceivable that follicle curvature in Sd fibres is different, and that would explain why Merinos have a different Fc x D relationship. One way in which curvature of Sd follicles could be different is that Sd follicles are formed at the same time as collagen is formed , at around 100 days of gestation. So collagen may only interfere with the curvature of Sd fibres.  
 
-\subsubsection{Does Dp corrected follicle curvature relate to collagen measurements?}
+\subsection{Does Dp corrected follicle curvature relate to collagen measurements?}
 We attempt to repeat the above rejected analysis, using Dp to remove the follicle size effect on follicle curvature, instead of D.
 
 Table~\ref{fig:fcdp} shows follicle curvature plotted against primary fibre diameter for the data from the collagen/wrinkle experiment of Watts et al.(2020)~\cite{watts-2020}.
@@ -172,13 +138,25 @@ The correlation is positive, and almost identical to the correlation of Fc x D. 
 
 We can not proceed with the use of Dp to adjust Fc in this small dataset. 
 
-\subsubsection{Can we do the stepwise analysis in reverse order, adjusting follicle curvature first for collagen?}
-This is a last ditch desperate approach. We are trying to prove that collagen affects follicle curvature. The diameter effect on follicle curvature is the nuisance relationship which should be adjusted out. But that is proving difficeult,  so we can try adjusting out the collagen effect on curvature, and see what variation remains.
+\subsection{Can we do the stepwise analysis in reverse order, adjusting follicle curvature first for collagen?}
+This is a last ditch desperate approach. We are trying to prove that collagen affects follicle curvature. The diameter effect on follicle curvature is the nuisance relationship which should be adjusted out first. But that is proving difficeult,  so we can try adjusting out the collagen effect on curvature, and see what variation remains.
 
 Figure~\ref{fig:fccoll} shows the plot of follicle curvature against collagen measurement. 
 \input{figfccoll.tex}
-The correlation is positive (0.55), as expected.  The regression line was $Fc ~ 0.9601 + 5.843e-03 * C $.  
+The correlation is positive (0.55), as expected.  The regression line was $Fc ~ 0.9601 + 5.843e-03 * C $.   The wrinkled sheep (labelled B) have more collagen and a higher follicle curvature, so the difference between the wrinkled and wrinkle-free groups is contributing to the correlation and the regression.
 
+We can now look to see what variation  remains in $Fc | C$, by computing the residuals for follicle curvature in Figure~\ref{fig:fccoll}. These residuals are shown as a histogram in Figure~\ref{fig:fcadjchist}. 
+\input{figfcadjchist.tex}
+
+The mean in Figure~\ref{fig:fccoll} is zero because the regression fit takes out the mean of Fc as well as its regression on C. There is still a considerable amount of variation in Fc remaining after adjusting for collagen. The variance of Fc is 2.104. The variance of $Fc | C$ is 1.470. The collagen explains about 30 percent of the variance of Fc, but 70 percent remains unexplained. This unexplained 70 percent of Fc contains measuring errors and the mysterious-supposedly-diameter-related-part-of-Fc.
+
+So let us see what $Fc | C$ relates to?  Table~\ref{tab:fcadjccor} shows correlatios of  $Fc | C$ with all other available traits.
+\input{tabfcadjccor.tex}
+There is a positive correlation of $Fc | C$ with fibre diameter. Since this positive relation is what we find perplexing, we look closely ata scatterplot (Figure~\ref{fig:fcadjcxd}
+\input{figfcadjcxd.tex}
+We see that most of the correlation comes from the group difference between wrinkled and wrinkle-free sheep. However the correlation within each group is still positive. We can therefore conclude that while the group difference introduces a potential bias in the correlation, it does not change the sign. There is a bigger issue here than a bit of bias in this rather limited dataset.
+
+We have to find another way of splitting Fc into two components. No amount of fiddling of this small dataset will produce a result which supports our hypothesis of a negative diameter related curvature component. It does support existence of a positive collagen related curvature component. 
 
 
 \subsection{ Follicle curvature analysis in a large Merino dataset}
