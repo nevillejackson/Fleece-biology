@@ -1,0 +1,57 @@
+% curvparam.tex
+% May 2020
+% association of follicle curvature with other skin and fleece traits 
+
+\documentclass{article}
+
+
+% Authors packages
+\usepackage{graphicx,lscape,subfigure}
+\usepackage{caption,rotating}
+\usepackage{tikz}
+\usepackage{bm,longtable}
+\usepackage{textcomp}
+\usepackage{url}
+
+
+\begin{document}
+
+
+\title{Follicle curvature parameters}
+\author{Neville Jackson}
+\date{31 Aug 2020}
+
+\maketitle
+
+
+
+\section{Introduction}
+Genetic and phenotypic parameter estiamtes for follicle curvature are documented. An attempt is made to interpret the covariance structure of follicle curvaturee and other wool and skin traits, in the light of the two curvatures hypothesis.
+
+\section{Parameters}
+Genetic parameters for follicle curvature were first published by Jackson, Nay, and Turner (1975)~\cite{jackson-1975}. Those estimates are reproduced in Table~\ref{tab:jnt}
+\input{tabjnt.tex}
+There are strong genetic correlations of follicle curvature with wrinkle and crimp frequency, and moderate genetic correlations with density, diameter, length yield and clean wool weight.  Environmental correlations are not strong, and in the cases of clean wool weight and body weight are opposite in sign to the genetic correlations.
+In this study the heritability of follicle curvature was $0.40 \pm 0.06$.
+In a canonical analysis of genetic covariance between wool and skin traits, follicle curvature featured in two of an estimated three independent linear functiuons of skin traits which were correlated with wool traits. This means that follicle curvature affects wool traits in at least two independent ways. 
+
+A better set of parameter estimates with more traits and estimated with modern ML techniques can be found in Jackson (2017a)~\cite{jackson-2017a}. The parametes for follicle curvature from this source are  reproduced in Table~\ref{tab:ab32}
+\input{tabab32.tex}
+These are generally in agreement with Table~\ref{tab:jnt}. When we separate fibre diameter into Dp (diameter of primary fibres) and Ds (diameter of secondary fibres), we find that the positice correlation of Fc with D (overall diameter) applies only to diameter of secondary fibres (Ds). Dp has a negative genetic correlation with Fc, and a positive environmental correlation, leading to a phenotypic correlation which is effectively zero. 
+
+This is interesting because the proposition that there is a component of Fc that is related to follicle size  ( ie large follicles with large fibres are less curved) seems to apply only to primary fibres.  I suspect that it might apply also to So (secondary original) fibres, but we do not have data to show that. So fibres would be buried in with Sd fibres and any effect would be swamped by the vast number of Sd fibres.
+
+The correlation of Fc with follicle depth (Fd) supports this - the genetioc correlation is negative and the environmental correlation is positive, as with Dp. Measurement of Fd seems to be unduly affected by the depth of primary fibres. 
+
+The other correlations of note are with the various crimp measures, with yield, and with wrinkle score.
+
+\section{Crimp and curvature}
+We need an aside detailing exactly what staple crimp is, and how it relates to intrinsic fibre curvature, and to follicle curvature.
+
+\section{Similarity of the follicle curvature and wrinkle correlations}
+If, as is suspected, both wrinkle and follicle curvature have a component which is due to effectss of amount and tyoe of collagen in the lower dermis, then one would expect correlations of other traitrs with wrinkle and with follcile curvature to be similar. 
+
+\bibliographystyle{plain}
+\bibliography{curvparam}
+
+\end{document}
