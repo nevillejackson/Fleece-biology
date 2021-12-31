@@ -41,16 +41,83 @@ These are generally in agreement with Table~\ref{tab:jnt}. When we separate fibr
 
 This is interesting because the proposition that there is a component of Fc that is related to follicle size  ( ie large follicles with large fibres are less curved) seems to apply only to primary fibres.  I suspect that it might apply also to So (secondary original) fibres, but we do not have data to show that. So fibres would be buried in with Sd fibres and any effect would be swamped by the vast number of Sd fibres.
 
+The strong genetic correlation of Fc with Ds (0.72) seems to be outside of our assumption of 2 factors ( negative follicle size and collagen) affecting follicle curvture. Small follicles are supposed to be more curved, and this certainly applies across non-merino breeds. But the genetic correlation says large secondary follicles/fibres are more curved in Merinos. This requires further investigation, there may be a third factor which affects curvature in secondary follicles only? It is not density - the genetic correlations of Fc with primary density and secondary density are essentially the same ( -0.44 and -0.50). 
+
 The correlation of Fc with follicle depth (Fd) supports this - the genetioc correlation is negative and the environmental correlation is positive, as with Dp. Measurement of Fd seems to be unduly affected by the depth of primary fibres. 
 
 The other correlations of note are with the various crimp measures, with yield, and with wrinkle score.
 
+\section{Similarity of the follicle curvature and wrinkle correlations}
+If, as is suspected, both wrinkle and follicle curvature have a component which is due to effects of amount and type of collagen in the lower dermis, then one would expect correlations of other traits with wrinkle and with follicle curvature to be similar. 
+
+There indeed is a very close correspondence between the genetic correlations of wrinkle with other traits and the genetic correlations of follicle curvature with other traits. We plot these in Figure~\ref{fig:rgplotfcwrt}.
+\input{figrgplotfcwrt.tex}
+This is clear evidence that WrT and Fc are genetically similar, as the genetic correlation between them of 0.69 indicates. It is assumed that this strong genetic relationship arises because collagen amount and type in the lower dermis is a common cause of both wrinkle formation and follicle curvature.
+
+
 \section{Crimp and curvature}
 We need an aside detailing exactly what staple crimp is, and how it relates to intrinsic fibre curvature, and to follicle curvature.
 
-\section{Similarity of the follicle curvature and wrinkle correlations}
-If, as is suspected, both wrinkle and follicle curvature have a component which is due to effectss of amount and tyoe of collagen in the lower dermis, then one would expect correlations of other traitrs with wrinkle and with follcile curvature to be similar. 
+Intrinsic curvature of a fibre is the curvature with which it comes out of the follicle. Fibres can be made to take any 'set' curvature simply by treating with jeat and moisture while deforming the curve. A 'set' is like a 'perm' . A 'set' can always be relaxed out by putting a fibre in dilute alkaine solution. This is how intrinsic curvature is measured - relax a fibre in alkaline solution and it curls up like a hose - the radius of the 'hose' is the radius of intrinsic curvature. Curvature is normally expressed as $1/radius$ in radians per mm or $180/radius$ in degrees per mm.
 
+Follicle curvature is the same as intrinsic curvature. There is a formula for putting follicle curvature score into intrinsic radius. It is 
+\begin{equation}
+\label{eqn:in-follicle}
+C = 0.1840 + 0.2620 Fc
+\end{equation}
+where $C$ is fibre curvature in radians per mm.
+The development of this formula is documented  in Jackson and Watts (2016)~\cite{jackson-2016}.
+
+When fibres emerge from follicles and make a staple, they take a 'set'. So the curvature of fibres {\em in situ} in a staple is not , in general the same as intrinsic curvature. In the most common form of staple crimp ( the stretched helix crimp form),   the fibres follow a helical or dished sine wave path . The parameters of a helix are
+\begin{description}
+\item[$a$] the radius of the cylinder
+\item[$2\pi b$] the pitch (that is longitudinal distance travelled in one full turn, commonly known as the wavelength ). So $b$ is the pitch per radian
+\end{description}
+If the fibre   emerges from the follicle as a  compressed helix with parameters $a_{c}$ and $b_{c}$, and is then stretched to a configuration with parameters $a_{s}$ and $b_{s}$ then 
+
+\begin{displaymath}
+a_{c}^{2} + b_{c}^{2}  =  a_{s}^{2} + b_{s}^{2}
+\end{displaymath}
+holds, and we can assume  $b_{c} = 0$ , so that 
+
+\begin{displaymath}
+a_{c}   =  \sqrt{a_{s}^{2} + b_{s}^{2}}
+\end{displaymath}
+so the intrinsic radius $a_{c}$ with which the fibre emergesd can be calculated from the radius $a_{s}$ and pitch $b_{s}$ observed in the staple. Pitch is $\lambda/2\pi$ where $\lambda$ is wavelength, and $a_{s}$ is amplitude of the dished sine wave. Crimp frequency is $f = 1/\lambda$. So one must know both the frequency and amplitude of staple crimp to calculate intrinsic radius. 
+
+There is no particular reason for intrinsic radius to be correlated with crimp frequency, since it also depends on amplitude. However it would seem that in the staple crimp case fibres with a large intrinsic radius form staple crimp with a low frequency {\em and}  a large amplitude. The biological reason for this is obscure. There is no physical reason; one can make a spring with any amplitude and any wavelength, in all combinations.
+
+What is clear is that crimp frequency or wavelength are not the same thing as intrinsic radius or curvature. They are correlated, that is all we can say. To use crimp frequency as a {\em proxy} trait for fibre curvature is a risky move.
+
+It is worth noting the formulae for fibre length
+\begin{eqnarray*}
+ L_{c} & = & 2 \pi T a_{c}  \\
+ L_{s} & = & 2 \pi T \sqrt{a_{s}^{2} + b_{s}^{2}}
+\end{eqnarray*}
+where $T$ is the number of 360 degree turns of the helisx, ie the number of crimps in a staple.
+
+Staple length is $2 \pi T b_{s}$ so it depends on wavelength or frequency alone. The fibre length to staple length ratio is $a_{c}/b_{s}$. 
+
+There is some concern about measurements of fibre curvature made on staples because these techniques would measure $a_{s}$ rather than $a_{c}$.
+
+None of the above applies if staple crimp is not a stretched helix. The case of unfolded helix is covered in Jackson and Watts (2016)~\cite{jackson-2016a}
+
+\section{Some genetic correlation matrices interpreted}
+We start by examining genetic correlations for five traits shown in Table~\ref{tab:rg5}
+\input{tabrg5.tex}
+If we take eigenvalues of this matrix , they are all greater than zero, so it is positive definite, but the fifth eigenvalue is 2.5e-8, which is effectively zero, and the fourth eigenvalue is only 0.3.  So these 5 traits represent at the most 4 independent things, and probably only 3.  The eigenvalues sum to 5, because this is a correlation matrix with 5 traits, each with a standardised variance of 1.
+
+% So what are these independent factors that the 5 traits represent? To get a definition of the independent factors we do either a principal components analysis or a singular value decomposition. The result of that is shown in Table~\ref{tab:pc5}
+% \input{tabpc5.tex}
+% The columns in Table~\ref{tab:pc5} are the 4 factors, and the figures in each column are the {\em loadings} or weights which express the comtributions of the traits to a given factor. The fifth factor is negligable. 
+
+So what are these independent factors that the 5 traits represent? To get a definition of the independent factors we do a factor analysis, extracting 2 independant factores. The result is shown in Table~\ref{tab:fa5}
+\input{tabfa5.tex}
+The section in Table~\ref{tab:fa5} headed 'Loadings' shows what each factor is in terms of the original 5 traits. Factor1 is clearly every trait except Ds. Factor2 is WrT, Ds and Fc. So I would identify Factor1 with amount of collagen formation in the dermis, and Factor 2 with secondary follicles growing coarse fibres. Both factors affect wrinkle. We are interested here in what affects curvature. Factor1 affects curvature, and we know that collagen affects curvature, so that is taken as obvious. What is interesting is that factor 2 affects curvature. This suggests that secondary follicles growing coarse fibres may increase curvature, as well as wrinkle. So there is the diameter related curvature component again, and it is again in the wrong direction - coarse Ds and high Fc go together?
+
+The situation with crimp frequency is interesting. It goes along with curvture in Factor1, but in the opposite direction and not as strongly in Factor2. So Factor2 makes fibres with a small radius of curvature (high curvature) but a long wavelength (low crimpfrequency). That is strange?
+
+The 2 factors account for 75 percent of variance. 
 \bibliographystyle{plain}
 \bibliography{curvparam}
 
